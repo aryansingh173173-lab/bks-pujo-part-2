@@ -665,15 +665,15 @@
       "<h3>" + escapeHtml(demo.feedTitle) + "</h3>" +
       "<div class='nrb-feed-frame'>" +
       "<svg class='nrb-feed-schematic' viewBox='0 0 320 120' aria-hidden='true' focusable='false'>" +
-      "<rect x='8' y='18' width='304' height='84' rx='6' fill='#1c0a0e' stroke='#f3d9b4' stroke-width='1.4'/>" +
+      "<rect x='8' y='18' width='304' height='84' rx='6' fill='#a8264b' stroke='#f5e9d0' stroke-width='1.4'/>" +
       "<ellipse cx='108' cy='62' rx='58' ry='28' fill='#143d4a'/>" +
       "<ellipse cx='108' cy='62' rx='40' ry='16' fill='#1f6a6a' opacity='0.55'/>" +
       "<path d='M54 42 C70 28 146 28 162 42' fill='none' stroke='#4a3424' stroke-width='3'/>" +
-      "<path d='M168 38 l8 -16 m0 16 l8 -14 m0 14 l6 -12' stroke='#f3d9b4' stroke-width='2' fill='none'/>" +
-      "<path d='M196 70 h96' stroke='#7a2a37' stroke-width='2'/>" +
-      "<path d='M208 70 v-18 m24 18 v-22 m24 22 v-14 m24 14 v-20' stroke='#f3d9b4' stroke-width='2'/>" +
-      "<circle cx='52' cy='86' r='4' fill='#f3d9b4'/>" +
-      "<circle cx='268' cy='38' r='4' fill='#f3d9b4'/>" +
+      "<path d='M168 38 l8 -16 m0 16 l8 -14 m0 14 l6 -12' stroke='#f5e9d0' stroke-width='2' fill='none'/>" +
+      "<path d='M196 70 h96' stroke='#da6c81' stroke-width='2'/>" +
+      "<path d='M208 70 v-18 m24 18 v-22 m24 22 v-14 m24 14 v-20' stroke='#f5e9d0' stroke-width='2'/>" +
+      "<circle cx='52' cy='86' r='4' fill='#f5e9d0'/>" +
+      "<circle cx='268' cy='38' r='4' fill='#f5e9d0'/>" +
       "</svg>" +
       "<p class='nrb-feed-empty'>" + escapeHtml(demo.feedEmpty) + "</p></div></div>" +
       "<div class='nrb-operator'><p class='kicker'>" + escapeHtml(operator.eyebrow) + "</p>" +

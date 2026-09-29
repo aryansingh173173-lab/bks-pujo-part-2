@@ -6,7 +6,7 @@
 }
 
 .hero-media {
-  background: #1a0c08;
+  background: #9c2247;
   overflow: hidden;
 }
 
@@ -295,7 +295,7 @@
 .section--bio h2,
 .section--bio p,
 .section--bio .section-label {
-  color: #f3d9b4;
+  color: #f5e9d0;
 }
 
 .section--bio .section-label { color: var(--fest-marigold); }

@@ -1,11 +1,11 @@
 /* Puja stories, tap-through slideshow + "Watch" strip. Sunflare / Bloodwine. */
 .bks-memories,
 .story-rail-top {
-  --mem-ink: var(--color-text-primary, #1f0b0f);
-  --mem-muted: var(--color-text-muted, #6d5054);
-  --mem-sun: var(--sun, #f3d9b4);
-  --mem-wine: var(--wine, #52131e);
-  --mem-deep: var(--ink, #100406);
+  --mem-ink: var(--color-text-primary, #a8264b);
+  --mem-muted: var(--color-text-muted, #e59aa6);
+  --mem-sun: var(--sun, #f5e9d0);
+  --mem-wine: var(--wine, #bf2b54);
+  --mem-deep: var(--ink, #bf2b54);
   --mem-display: var(--font-display, "Outfit", "Baloo Da 2", sans-serif);
   --mem-text: var(--font-text, "DM Sans", "Hind Siliguri", sans-serif);
 }
@@ -103,7 +103,7 @@
   height: 4.6rem;
   padding: 3px;
   border-radius: 50%;
-  background: conic-gradient(from 200deg, var(--mem-sun), #f3d9b4, var(--mem-wine), var(--mem-sun));
+  background: conic-gradient(from 200deg, var(--mem-sun), #f5e9d0, var(--mem-wine), var(--mem-sun));
   transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 .story-bubble__ring img {
@@ -112,7 +112,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid var(--color-surface-default, #f3d9b4);
+  border: 3px solid var(--color-surface-default, #f5e9d0);
   background: var(--mem-deep);
 }
 .story-bubble__label {
@@ -162,8 +162,8 @@
   max-height: 82vh;
   border-radius: 4px;
   overflow: hidden;
-  background: #100406;
-  color: #f3d9b4;
+  background: #bf2b54;
+  color: #f5e9d0;
   box-shadow: 12px 12px 0 var(--mem-sun);
   border: 2px solid var(--mem-deep);
   user-select: none;
@@ -227,16 +227,16 @@
   flex: 1 1 0;
   height: 3px;
   border-radius: 3px;
-  background: rgba(243, 217, 180, 0.32);
+  background: rgba(245, 233, 208, 0.32);
   overflow: hidden;
 }
 .story-bar i {
   display: block;
   height: 100%;
   width: 0;
-  background: #1c0a0e;
+  background: #a8264b;
   border-radius: inherit;
-  box-shadow: 0 0 8px rgba(243, 217, 180, 0.9);
+  box-shadow: 0 0 8px rgba(245, 233, 208, 0.9);
 }
 .story-bar.is-done i { width: 100%; }
 .story-bar.is-active i { animation: story-fill var(--story-ms) linear forwards; }
@@ -263,7 +263,7 @@
   content: "";
   position: absolute;
   inset: -1.5rem -0.8rem -1.2rem;
-  background: linear-gradient(180deg, rgba(16, 4, 6, 0.6), transparent);
+  background: linear-gradient(180deg, rgba(122, 20, 50, 0.6), transparent);
   z-index: -1;
 }
 .story-viewer__who {
@@ -298,12 +298,12 @@
   width: 2.5rem;
   height: 2.5rem;
   padding: 0;
-  border: 1px solid rgba(243, 217, 180, 0.28);
+  border: 1px solid rgba(245, 233, 208, 0.28);
   border-radius: 50%;
-  background: rgba(16, 4, 6, 0.45);
+  background: rgba(122, 20, 50, 0.45);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  color: #f3d9b4;
+  color: #f5e9d0;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -346,7 +346,7 @@
   height: 4rem;
   margin: -2rem 0 0 -2rem;
   border-radius: 0;
-  background: rgba(16, 4, 6, 0.6);
+  background: rgba(122, 20, 50, 0.6);
   border: 2px solid var(--mem-sun);
   color: var(--mem-sun);
   font-size: 1.1rem;
@@ -376,7 +376,7 @@
 .story-arrow--next { right: 0.7rem; }
 .story-viewer:hover .story-arrow,
 .story-viewer:focus-within .story-arrow { opacity: 1; }
-.story-arrow:hover { box-shadow: 3px 3px 0 #f3d9b4; }
+.story-arrow:hover { box-shadow: 3px 3px 0 #f5e9d0; }
 @media (hover: none) {
   .story-arrow { display: none; }
 }
@@ -389,7 +389,7 @@
   z-index: 2;
   margin: 0;
   padding: 3.2rem 1.1rem 1.1rem;
-  background: linear-gradient(180deg, transparent, rgba(16, 4, 6, 0.9) 55%);
+  background: linear-gradient(180deg, transparent, rgba(122, 20, 50, 0.9) 55%);
   font-size: 0.96rem;
   line-height: 1.5;
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
@@ -405,7 +405,7 @@
   height: 2.2rem;
   margin: -1.1rem 0 0 -1.1rem;
   border-radius: 50%;
-  border: 3px solid rgba(243, 217, 180, 0.3);
+  border: 3px solid rgba(245, 233, 208, 0.3);
   border-top-color: var(--mem-sun);
   animation: story-spin 0.8s linear infinite;
 }
@@ -439,7 +439,7 @@
   padding: 0.65rem 0.85rem;
   border-left: 3px solid var(--mem-sun);
   border-radius: 0;
-  background: var(--sun-pale, #1c0a0e);
+  background: var(--sun-pale, #a8264b);
   font-size: 0.86rem;
   color: var(--mem-ink);
 }
@@ -477,7 +477,7 @@ body.story-full { overflow: hidden; }
   place-items: center;
   margin: 0;
   padding: 0;
-  background: rgba(16, 4, 6, 0.95);
+  background: rgba(122, 20, 50, 0.95);
 }
 .stories.is-full .stories__rail,
 .stories.is-full .stories__side { display: none; }
@@ -507,9 +507,9 @@ body.story-full { overflow: hidden; }
 .story-rail-top {
   position: relative;
   background:
-    radial-gradient(600px 160px at 10% 0%, rgba(243, 217, 180, 0.14), transparent 70%),
-    #100406;
-  color: #f3d9b4;
+    radial-gradient(600px 160px at 10% 0%, rgba(245, 233, 208, 0.14), transparent 70%),
+    #bf2b54;
+  color: #f5e9d0;
   padding: 1rem 0 0.2rem;
 }
 .story-rail-top__inner { display: flex; align-items: center; gap: 1.2rem; }
@@ -584,7 +584,7 @@ body.story-full { overflow: hidden; }
   padding: 0;
   border: 0;
   background: none;
-  color: #f3d9b4;
+  color: #f5e9d0;
   cursor: pointer;
   text-align: left;
   font: inherit;
@@ -602,7 +602,7 @@ body.story-full { overflow: hidden; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(16, 4, 6, 0.05) 30%, rgba(16, 4, 6, 0.88));
+  background: linear-gradient(180deg, rgba(122, 20, 50, 0.05) 30%, rgba(122, 20, 50, 0.88));
 }
 .watch-card__play {
   position: absolute;
@@ -633,8 +633,8 @@ body.story-full { overflow: hidden; }
   .watch-card__play { transition: transform 0.5s var(--ease-out, ease); }
 }
 @keyframes play-pulse {
-  0%, 100% { box-shadow: 0 0 0 6px rgba(243, 217, 180, 0.28), 0 0 24px rgba(243, 217, 180, 0.5); }
-  50% { box-shadow: 0 0 0 12px rgba(243, 217, 180, 0.1), 0 0 40px rgba(243, 217, 180, 0.75); }
+  0%, 100% { box-shadow: 0 0 0 6px rgba(245, 233, 208, 0.28), 0 0 24px rgba(245, 233, 208, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(245, 233, 208, 0.1), 0 0 40px rgba(245, 233, 208, 0.75); }
 }
 .watch-card__title {
   position: absolute;

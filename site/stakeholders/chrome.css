@@ -4,26 +4,26 @@
 
 :root {
   --bks-logo-green-text: #0e5306;
-  --color-brand-primary: #52131e;
-  --color-brand-primary-soft: #7a2a37;
-  --color-brand-primary-deep: #3a0d15;
-  --color-brand-secondary: #f3d9b4;
-  --color-brand-secondary-tint: #1c0a0e;
-  --color-brand-accent: #7a2a37;
-  --color-surface-default: #100406;
-  --color-surface-card: #1c0a0e;
-  --color-surface-raised: #1c0a0e;
-  --color-text-primary: #e6cba6;
-  --color-text-secondary: #e6cba6;
-  --color-text-muted: #c9ad8e;
-  --color-text-on-brand: #f3d9b4;
-  --color-border-default: rgba(243, 217, 180, 0.2);
-  --color-action-primary: #f3d9b4;
-  --color-action-primary-text: #100406;
-  --fest-sindoor: #52131e;
-  --fest-sindoor-deep: #3a0d15;
-  --fest-marigold: #f3d9b4;
-  --fest-turmeric: #f3d9b4;
+  --color-brand-primary: #bf2b54;
+  --color-brand-primary-soft: #da6c81;
+  --color-brand-primary-deep: #9c2247;
+  --color-brand-secondary: #f5e9d0;
+  --color-brand-secondary-tint: #a8264b;
+  --color-brand-accent: #da6c81;
+  --color-surface-default: #bf2b54;
+  --color-surface-card: #a8264b;
+  --color-surface-raised: #a8264b;
+  --color-text-primary: #f8e2d8;
+  --color-text-secondary: #f8e2d8;
+  --color-text-muted: #f8e2d8;
+  --color-text-on-brand: #f5e9d0;
+  --color-border-default: rgba(245, 233, 208, 0.2);
+  --color-action-primary: #f5e9d0;
+  --color-action-primary-text: #bf2b54;
+  --fest-sindoor: #bf2b54;
+  --fest-sindoor-deep: #9c2247;
+  --fest-marigold: #f5e9d0;
+  --fest-turmeric: #f5e9d0;
   --fest-pond: #143d4a;
   --font-display: "Baloo Da 2", "Nirmala UI", "Noto Sans Bengali", system-ui, sans-serif;
   --font-text: "Hind Siliguri", "Hind", "Nirmala UI", "Noto Sans", "Segoe UI", system-ui, sans-serif;
@@ -36,7 +36,7 @@
   --space-section: clamp(2.4rem, 5vw, 4.4rem);
   --radius-card: 14px;
   --radius-btn: 8px;
-  --shadow-quiet: 0 1px 0 rgba(32, 26, 16, 0.04), 0 12px 32px rgba(82, 19, 30, 0.06);
+  --shadow-quiet: 0 1px 0 rgba(32, 26, 16, 0.04), 0 12px 32px rgba(143, 29, 64, 0.06);
   --ease: cubic-bezier(0.32, 0.72, 0, 1);
   --z-skip: 60;
   --z-nav: 30;
@@ -127,7 +127,7 @@ a:hover { color: var(--fest-sindoor); }
   background: var(--color-brand-primary);
   color: var(--color-text-on-brand);
   padding: 0 0 0.7rem;
-  box-shadow: 0 8px 24px rgba(82, 19, 30, 0.18);
+  box-shadow: 0 8px 24px rgba(143, 29, 64, 0.18);
 }
 
 .header-inner {
@@ -314,7 +314,7 @@ a:hover { color: var(--fest-sindoor); }
 .nav-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(82, 19, 30, 0.46);
+  background: rgba(143, 29, 64, 0.46);
   z-index: 35;
 }
 
@@ -327,7 +327,7 @@ a:hover { color: var(--fest-sindoor); }
   height: 100dvh;
   background: var(--color-surface-card);
   color: var(--color-text-primary);
-  box-shadow: -16px 0 40px rgba(82, 19, 30, 0.18);
+  box-shadow: -16px 0 40px rgba(143, 29, 64, 0.18);
   display: flex;
   flex-direction: column;
   padding: 0 1rem 1.5rem;
@@ -394,7 +394,7 @@ a:hover { color: var(--fest-sindoor); }
   position: relative;
   isolation: isolate;
   min-height: min(38rem, 100dvh);
-  color: #f3d9b4;
+  color: #f5e9d0;
   overflow: hidden;
 }
 
@@ -434,9 +434,9 @@ a:hover { color: var(--fest-sindoor); }
 
 .hero[data-audience="government"] .hero-scrim {
   background: linear-gradient(90deg,
-    rgba(82, 19, 30, 0.88) 0%,
-    rgba(82, 19, 30, 0.62) 22%,
-    rgba(82, 19, 30, 0.18) 42%,
+    rgba(143, 29, 64, 0.88) 0%,
+    rgba(143, 29, 64, 0.62) 22%,
+    rgba(143, 29, 64, 0.18) 42%,
     transparent 68%);
 }
 
@@ -499,7 +499,7 @@ a:hover { color: var(--fest-sindoor); }
   text-transform: uppercase;
   color: var(--fest-marigold);
   background: rgba(18, 8, 6, 0.35);
-  border: 1px solid rgba(243, 217, 180, 0.28);
+  border: 1px solid rgba(245, 233, 208, 0.28);
   border-radius: 6px;
 }
 
@@ -519,7 +519,7 @@ a:hover { color: var(--fest-sindoor); }
   font-size: 1.02rem;
   line-height: 1.55;
   max-width: 36rem;
-  color: #f3d9b4;
+  color: #f5e9d0;
 }
 
 .hero-meta {
@@ -528,7 +528,7 @@ a:hover { color: var(--fest-sindoor); }
   gap: 0;
   margin: 1rem 0 0;
   max-width: 26rem;
-  border: 1px solid rgba(243, 217, 180, 0.22);
+  border: 1px solid rgba(245, 233, 208, 0.22);
   background: rgba(18, 8, 6, 0.42);
   border-radius: 12px;
   overflow: hidden;
@@ -539,10 +539,10 @@ a:hover { color: var(--fest-sindoor); }
   font-size: 0.68rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(243, 217, 180, 0.62);
+  color: rgba(245, 233, 208, 0.62);
   margin: 0 0 0.15rem;
 }
-.hero-meta dd { margin: 0; font-weight: 600; color: #f3d9b4; }
+.hero-meta dd { margin: 0; font-weight: 600; color: #f5e9d0; }
 
 .cta-row {
   display: flex;
@@ -554,7 +554,7 @@ a:hover { color: var(--fest-sindoor); }
 .hero-credit {
   margin: 0.95rem 0 0;
   font-size: 0.8rem;
-  color: rgba(243, 217, 180, 0.78);
+  color: rgba(245, 233, 208, 0.78);
   max-width: 40rem;
 }
 
@@ -579,19 +579,19 @@ a:hover { color: var(--fest-sindoor); }
 
 .btn-primary {
   background: var(--fest-sindoor);
-  color: #f3d9b4;
+  color: #f5e9d0;
   border-color: var(--fest-sindoor);
 }
 
-.btn-primary:hover { background: var(--fest-sindoor-deep); color: #f3d9b4; }
+.btn-primary:hover { background: var(--fest-sindoor-deep); color: #f5e9d0; }
 
 .btn-ghost {
   background: transparent;
-  color: #f3d9b4;
-  border-color: rgba(243, 217, 180, 0.55);
+  color: #f5e9d0;
+  border-color: rgba(245, 233, 208, 0.55);
 }
 
-.btn-ghost:hover { background: rgba(243, 217, 180, 0.12); color: #f3d9b4; }
+.btn-ghost:hover { background: rgba(245, 233, 208, 0.12); color: #f5e9d0; }
 
 .btn-on-paper.btn-ghost,
 body .section .btn-ghost {
@@ -608,7 +608,7 @@ body .section .btn-ghost:hover {
 .btn-on-paper.btn-primary,
 .section .btn-primary {
   background: var(--fest-sindoor);
-  color: #f3d9b4;
+  color: #f5e9d0;
 }
 
 /* Sections */
@@ -873,7 +873,7 @@ body .section .btn-ghost:hover {
 }
 
 .site-footer a { color: var(--fest-marigold); }
-.site-footer a:hover { color: #f3d9b4; }
+.site-footer a:hover { color: #f5e9d0; }
 .site-footer p { margin: 0 0 0.55rem; max-width: 62ch; }
 .site-footer .foot-brand {
   font-family: var(--font-display);

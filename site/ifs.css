@@ -1,13 +1,13 @@
 /* Shared Integrated Farming knowledge section, all BKS Pujo doors. */
 .bks-ifs {
-  --ifs-ink: var(--color-text-primary, #1f0b0f);
-  --ifs-muted: var(--color-text-muted, #6d5054);
-  --ifs-paper: var(--color-surface-card, #1c0a0e);
-  --ifs-wash: var(--color-surface-default, #1c0a0e);
-  --ifs-gold: var(--color-brand-secondary, #f3d9b4);
-  --ifs-forest: var(--color-brand-primary, #52131e);
-  --ifs-sindoor: var(--fest-sindoor, #52131e);
-  --ifs-line: var(--color-border-default, #ecd9cc);
+  --ifs-ink: var(--color-text-primary, #a8264b);
+  --ifs-muted: var(--color-text-muted, #e59aa6);
+  --ifs-paper: var(--color-surface-card, #a8264b);
+  --ifs-wash: var(--color-surface-default, #a8264b);
+  --ifs-gold: var(--color-brand-secondary, #f5e9d0);
+  --ifs-forest: var(--color-brand-primary, #bf2b54);
+  --ifs-sindoor: var(--fest-sindoor, #bf2b54);
+  --ifs-line: var(--color-border-default, #f8e2d8);
   --ifs-display: var(--font-display, "Baloo Da 2", "Nirmala UI", Georgia, serif);
   --ifs-text: var(--font-text, "Hind Siliguri", "Hind", "Nirmala UI", Georgia, serif);
   color: var(--ifs-ink);
