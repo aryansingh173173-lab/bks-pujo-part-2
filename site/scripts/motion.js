@@ -217,8 +217,7 @@
   else boot();
 })();
 
-/* Hero video: loads only after the page itself has finished loading, so the text
-   and photos come first. Phones and slow or data-saving connections get the 720p
+/* Hero video: the first thing on the page, so it loads and plays straight away. Phones and slow or data-saving connections get the 720p
    file; large screens get full 1080p. Paused while off-screen; skipped entirely
    when motion is reduced (the poster photo stays). */
 (function () {
@@ -257,7 +256,6 @@
       if (visible) tryPlay(); else v.pause();
     }, { threshold: 0.05 }).observe(v);
   }
-  var later = function () { setTimeout(start, 300); };
-  if (document.readyState === "complete") later();
-  else window.addEventListener("load", later, { once: true });
+  // The film is the first thing on the page, so it starts loading straight away.
+  start();
 })();

@@ -552,43 +552,32 @@ html.lb-open, html.lb-open body { overflow: hidden; }
   .invite__frame { box-shadow: 8px 8px 0 #da6c81; }
 }
 
-/* ===== Homepage hero: the Protyabortan film as the background, words on top ===== */
+/* ===== Homepage hero: the Protyabortan film first, whole and playing; the words below it ===== */
 .hero-band.hero-band--poster {
-  position: relative; display: flex; align-items: center;
-  min-height: calc(100svh - 64px);
-  padding: clamp(2rem, 5vw, 3.5rem) 0;
+  display: flex; flex-direction: column; align-items: stretch;
+  min-height: 0; padding: 0 0 clamp(1.8rem, 4vw, 2.8rem);
   background: #bf2b54;
 }
 .hero-band--poster::before, .hero-band--poster::after,
 .hero-band--poster .hero-aura, .hero-band--poster .hero-embers { display: none !important; }
-.hero-band--poster .hero-media { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: #bf2b54; }
+.hero-band--poster .hero-media { position: relative; width: 100%; line-height: 0; background: #bf2b54; }
 .hero-band--poster .hero-media .hero-video {
-  position: absolute; inset: 0; display: block;
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: 62% 50%;
+  position: relative; inset: auto; display: block;
+  width: 100%; height: auto; aspect-ratio: 16 / 9;
+  max-height: calc(100svh - 64px);
+  object-fit: cover; object-position: 50% 50%;
 }
-/* Dark on the left where the words sit, opening up to the goddess on the right. */
-.hero-band--poster .hero-media .hero-video-shade {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  background:
-    linear-gradient(90deg, rgba(122, 20, 50, 0.96) 0%, rgba(122, 20, 50, 0.93) 38%, rgba(122, 20, 50, 0.72) 52%, rgba(122, 20, 50, 0.22) 70%, rgba(122, 20, 50, 0.05) 100%),
-    linear-gradient(0deg, #bf2b54 0%, rgba(122, 20, 50, 0) 22%);
-}
-.hero-band--poster .hero-grid { position: relative; z-index: 1; flex: 0 1 auto; margin-left: auto; margin-right: auto; }
+.hero-band--poster .hero-media .hero-video-shade { display: none; }
+.hero-band--poster .hero-grid { position: relative; z-index: 1; padding-top: clamp(1.6rem, 4vw, 2.6rem); }
 .hero-band--poster .hero-credit { display: none; }
 .hero-band.hero-band--poster .hero-grid { grid-template-rows: none; min-height: 0; }
 .hero-band.hero-band--poster .hero-copy { grid-row: auto; }
 @media (max-width: 767px) {
-  .hero-band.hero-band--poster { min-height: 0; align-items: flex-start; padding-top: 2.2rem; }
-  .hero-band--poster .hero-media .hero-video { object-position: 70% 50%; }
-  .hero-band--poster .hero-media .hero-video-shade {
-    background: linear-gradient(180deg, rgba(122, 20, 50, 0.72) 0%, rgba(122, 20, 50, 0.84) 45%, rgba(122, 20, 50, 0.96) 100%);
-  }
+  .hero-band--poster .hero-media .hero-video { bottom: auto; height: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
-  /* No film: the poster frame stays behind the words. */
-  .hero-band--poster .hero-media .hero-video,
-  .hero-band--poster .hero-media .hero-video-shade { display: block; }
+  /* No film: the poster frame stays in its place. */
+  .hero-band--poster .hero-media .hero-video { display: block; }
   .hero-band.hero-band--poster.has-video { background: #bf2b54; }
 }
 
