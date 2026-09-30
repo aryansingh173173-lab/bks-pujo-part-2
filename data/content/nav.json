@@ -69,6 +69,16 @@
       "kind": "external"
     },
     {
+      "id": "pujo-2025",
+      "href": "https://museum-of-future-essay.vercel.app/",
+      "labelPath": [
+        "nav",
+        "pujo2025"
+      ],
+      "desktop": true,
+      "kind": "external"
+    },
+    {
       "id": "jai-kisan",
       "href": "https://krl-site.vercel.app/",
       "labelPath": [

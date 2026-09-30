@@ -50,7 +50,8 @@
      stories. These names replace the single-topic labels in the menu. */
   const MERGED_LABELS = {
     puja: { en: "Puja &amp; Farming", bn: "পুজো ও চাষ", hi: "पूजा और खेती" },
-    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
+    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" },
+    "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" }
   };
   const MERGED_H1 = {
     participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
@@ -309,7 +310,7 @@
               : "";
       const labelHtml = item.id === "jai-kisan"
         ? "<span class='nav-jai-kisan__label'>" + label + "</span><span class='nav-ext-mark' aria-hidden='true'>↗</span>"
-        : item.id === "krl-media" || item.id === "krl-teams"
+        : item.id === "krl-media" || item.id === "krl-teams" || item.id === "pujo-2025"
           ? label + "<span class='nav-ext-mark' aria-hidden='true'>↗</span>"
           : label;
       const attrs = external
@@ -341,7 +342,7 @@
     if (drawerList) {
       const used = { home: true };
       let html = itemLink(byId.home || { id: "home", href: "#home", labelPath: ["nav", "home"] }, false);
-      ["bks-bengal", "jai-kisan", "krl-media", "krl-teams"].forEach(function (id) {
+      ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"].forEach(function (id) {
         const item = byId[id];
         if (!item) return;
         used[id] = true;
