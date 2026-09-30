@@ -584,3 +584,32 @@ html.lb-open, html.lb-open body { overflow: hidden; }
 /* ===== Part 2 palette: Grapefruit #da6c81 · Vanilla #f5e9d0 · Raspberry #bf2b54 ===== */
 html { background: #bf2b54; }
 .nrb-step-num { color: #bf2b54 !important; }
+
+/* ===== Header top line: event name, joint organisers, language switch ===== */
+.header-strip { background: #8f1d40; border-bottom: 1px solid rgba(245, 233, 208, 0.16); }
+.header-strip__inner { display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; min-height: 38px; padding-top: 0.3rem; padding-bottom: 0.3rem; }
+.header-strip__title { margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.2rem 0.7rem; color: #f5e9d0; line-height: 1.25; min-width: 0; }
+.header-strip__title strong { font: 800 0.98rem/1.2 var(--font-display, inherit); letter-spacing: 0.01em; white-space: nowrap; }
+.header-strip__joint { font-size: 0.8rem; color: #f8e2d8; }
+.lang-switch { display: inline-flex; flex: 0 0 auto; padding: 3px; gap: 2px; border-radius: 999px; background: rgba(245, 233, 208, 0.12); border: 1px solid rgba(245, 233, 208, 0.28); }
+.lang-switch__btn {
+  min-height: 32px; min-width: 44px; padding: 0 0.75rem; border: 0; border-radius: 999px; cursor: pointer;
+  background: transparent; color: #f5e9d0; font: 700 0.8rem/1 var(--font-body, inherit);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.lang-switch__btn:hover { background: rgba(245, 233, 208, 0.18); }
+.lang-switch__btn.is-on { background: #f5e9d0; color: #bf2b54; }
+.lang-switch__btn:focus-visible { outline: 2px solid #f5e9d0; outline-offset: 2px; }
+.lang-switch__btn[lang="bn"], .lang-switch__btn[lang="hi"] { font-size: 0.86rem; }
+/* The hero film fills what is left of the first screen under both header rows. */
+.hero-band--poster .hero-media .hero-video { max-height: calc(100svh - 116px); }
+@media (max-width: 767px) {
+  .header-strip__inner { gap: 0.5rem; }
+  .header-strip__joint { font-size: 0.68rem; line-height: 1.3; }
+  .header-strip__title strong { font-size: 0.9rem; }
+  .lang-switch__btn { min-width: 40px; padding: 0 0.5rem; font-size: 0.74rem; }
+  .site-header.is-compact .header-strip__joint { display: none; }
+}
+@media (max-width: 400px) {
+  .lang-switch__btn { min-width: 36px; padding: 0 0.4rem; }
+}

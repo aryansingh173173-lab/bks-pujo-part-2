@@ -231,6 +231,20 @@
     const spec = state.navSpec;
     if (!ui || !spec) return;
     const groupLabel = ui.languageGroup || "Language";
+    // Header: all three languages as buttons, always in view.
+    const sw = document.getElementById("lang-switch");
+    if (sw) {
+      sw.setAttribute("aria-label", groupLabel);
+      sw.innerHTML = spec.languages.map((item) => {
+        const name = LANG_NATIVE[item.id] || getByPath(ui, item.namePath) || item.id;
+        const on = item.id === state.lang;
+        return "<button type='button' class='lang-switch__btn" + (on ? " is-on" : "") + "' data-set-lang='" + item.id +
+          "' lang='" + item.id + "' aria-pressed='" + on + "'>" + name + "</button>";
+      }).join("");
+      sw.querySelectorAll("[data-set-lang]").forEach((b) => b.addEventListener("click", () => {
+        if (b.getAttribute("data-set-lang") !== state.lang) setLang(b.getAttribute("data-set-lang"));
+      }));
+    }
     const bar = document.getElementById("lang-header");
     if (!bar) return;
     const options = spec.languages.map((item) => {
@@ -1054,7 +1068,7 @@
       "<hr class='rule'>" +
       "<p class='legend'>" + page.privacy + "</p>" +
       "<section class='doors-inline' aria-labelledby='participate-doors'>" +
-      "<h2 id='participate-doors'>Specialised doors in this ecosystem</h2>" +
+      "<h2 id='participate-doors'>Choose how you want to take part</h2>" +
       "<p class='muted'>If you already know who you are, use the matching door. The form below remains a general interest note. It downloads a file to your device and does not take money.</p>" +
       "<div class='explore-grid doors-grid'>" +
                     "<a class='explore-card' href='https://bks-pujo-sponsor.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='9' r='6'/><path d='M8.5 14 7 22l5-3 5 3-1.5-8'/></svg></span><p class='kicker'>Organisations</p><h3>Sponsors</h3><p>Express sponsor interest. No payment.</p><span class='door-arrow'>Open this door</span></a>" +
@@ -1304,9 +1318,8 @@
       sustainability: "Sustainability",
       locator: "Find a gathering"
     };
-    const baseTitle = ui && ui.metaTags ? ui.metaTags.title : document.title;
     const pageLabel = pageTitles[page];
-    const title = pageLabel ? pageLabel + " | Bharatiya Krishak Samaj Pujo" : baseTitle;
+    const title = pageLabel ? pageLabel + " | Durga Puja 2026" : "Durga Puja 2026 | KarmYog for the 21st Century and Bharatiya Krishak Samaj";
     const descText = ui && ui.metaTags ? ui.metaTags.description : "";
     document.title = title;
     const desc = document.querySelector('meta[name="description"]');

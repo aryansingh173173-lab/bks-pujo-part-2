@@ -34,7 +34,7 @@
   },
   "who": {
     "eyebrow": "Who is an NRB?",
-    "title": "Non-Resident Bengali: beyond geography.",
+    "title": "For Bengalis living away from home.",
     "lede": "Whether you live in New York, London, Bengaluru, or even a high-rise in Kolkata, your roots lie in a native village where your parents or grandparents grew up. That deep emotional bond and longing to see your ancestral soil prosper is what unites us. This Durga Puja, transform nostalgia into tangible impact."
   },
   "opportunity": {
@@ -82,7 +82,7 @@
   },
   "faq": {
     "eyebrow": "FAQ",
-    "title": "Farms, funds, and how patronage works.",
+    "title": "How support works.",
     "items": [
       {
         "q": "What is an FPO here?",
@@ -136,7 +136,7 @@
   },
   "fund": {
     "eyebrow": "Support a farm",
-    "title": "Express interest in a village farm.",
+    "title": "Help start a village farm.",
     "lede": "₹1 lakh is the proposed seed for one integrated model farm, in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
     "whoLabel": "Who this is for",
     "whoBody": "Non-Resident Bengalis, anyone with a native village in Bengal, whether you live abroad or in a high-rise in Kolkata, who want a named farm they can follow.",
@@ -165,7 +165,7 @@
   },
   "bulk": {
     "eyebrow": "Puja patronage",
-    "title": "Tiered sponsorship: farms and the festival together.",
+    "title": "Sponsor a farm and the festival.",
     "lede": "Organisations may register interest in supporting farms and the festival together. Allocation, if any, is by Bharatiya Krishak Samaj. This is not an online booking and not a payment.",
     "tiers": [
       {

@@ -19,7 +19,7 @@
   },
   "who": {
     "eyebrow": "एनआरबी कौन?",
-    "title": "नॉन-रेजिडेंट बंगाली: भूगोल से परे।",
+    "title": "घर से दूर रहने वाले बंगालियों के लिए।",
     "lede": "न्यूयॉर्क, लंदन, बेंगलुरु, या कोलकाता की ऊँची इमारत में रहें, आपकी जड़ें उस गाँव में हैं जहाँ माता-पिता या दादा-दादी पले। वही गहरा नाता और पैतृक मिट्टी को समृद्ध देखने की चाह हमें जोड़ती है। इस दुर्गा पूजा में नॉस्टैल्जिया को ठोस प्रभाव बनाइए।"
   },
   "opportunity": {
@@ -67,7 +67,7 @@
   },
   "faq": {
     "eyebrow": "प्रश्न",
-    "title": "फार्म, धन और संरक्षण कैसे काम करता है।",
+    "title": "सहायता कैसे काम करती है।",
     "items": [
       {
         "q": "What is an FPO here?",
@@ -121,7 +121,7 @@
   },
   "fund": {
     "eyebrow": "फार्म का बीज",
-    "title": "Express interest in a village farm.",
+    "title": "एक गाँव का खेत शुरू करने में मदद करें।",
     "lede": "₹1 lakh is the proposed seed for one integrated model farm, in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
     "whoLabel": "किसके लिए",
     "whoBody": "नॉन-रेजिडेंट बंगाली, बंगाल के गाँव से जुड़े कोई भी, विदेश में हों या कोलकाता की ऊँची इमारत में, जो एक नामित फार्म देखना चाहते हैं।",
@@ -150,7 +150,7 @@
   },
   "bulk": {
     "eyebrow": "पूजा संरक्षण",
-    "title": "स्तरीय प्रायोजन: फार्म और उत्सव साथ।",
+    "title": "एक खेत और उत्सव को प्रायोजित करें।",
     "lede": "Organisations may register interest in supporting farms and the festival together. Allocation, if any, is by Bharatiya Krishak Samaj. This is not an online booking and not a payment.",
     "tiers": [
       {

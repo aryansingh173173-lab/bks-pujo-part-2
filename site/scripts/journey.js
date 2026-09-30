@@ -34,29 +34,29 @@
   var COPY = {
     en: {
       mapKicker: "Your path",
-      mapTitle: "Three stops. One Puja.",
-      mapLede: "Start anywhere. Every stop ends by pointing you to the next, so you never hit a dead end.",
+      mapTitle: "Explore the Puja in three steps.",
+      mapLede: "Each page leads you to the next.",
       stop: "Stop",
       of: "of",
       nextKicker: "Next stop",
       jump: "Or jump to",
       barLabel: "Your path through the Puja",
       stops: {
-        league: { short: "Krishi Ratna League", title: "Krishi Ratna League", line: "Seven awards for the farmers Bengal does not photograph. Nominate a farmer, or yourself.", cta: "Explore the League" },
-        puja: { short: "Puja & Farming", title: "The Puja & Integrated Farming", line: "Worship, craft, dhak and homecoming, and the farm behind the pandal: crop, animals, water and market on one holding.", cta: "Explore the Puja & Farming" },
-        participate: { short: "Participate & Stories", title: "Participate & Stories", line: "Seed a village farm, sponsor or volunteer, and see the Puja in photographs from 2025 and the 2026 ground.", cta: "Find your door" }
+        league: { short: "Krishi Ratna League", title: "Krishi Ratna League", line: "Seven awards for farmers. Nominate a farmer, or yourself.", cta: "Explore the League" },
+        puja: { short: "Puja & Farming", title: "The Puja & Integrated Farming", line: "The Puja, and a working farm with crops, animals, fish and trees.", cta: "Explore the Puja & Farming" },
+        participate: { short: "Participate & Stories", title: "Participate & Stories", line: "Help start a village farm, sponsor, or volunteer. See photos from 2025 and 2026.", cta: "Find your door" }
       },
       next: {
-        home: { title: "Start with the farmers it honours.", body: "The Krishi Ratna League puts unnamed farmers on the Puja stage." },
-        league: { title: "See the gathering where they are honoured.", body: "Worship, craft and homecoming. The Puja is the stage." },
-        puja: { title: "One farm needs one patron.", body: "Seed a village farm, sponsor, volunteer or nominate, and watch the stories from the ground. Choose your door." },
+        home: { title: "Start with the farmers we honour.", body: "The Krishi Ratna League brings farmers onto the Puja stage." },
+        league: { title: "See the Puja where they are honoured.", body: "Worship, music, food, and a working farm." },
+        puja: { title: "One farm needs one supporter.", body: "Help start a village farm, sponsor, volunteer or nominate a farmer. Choose how you want to help." },
         mission: { title: "A big goal starts with one door.", body: "Seed a village farm, sponsor, volunteer or nominate a farmer." },
-        participate: { title: "You have seen the whole story. Now come.", body: "The pandal is open to everyone, free, on all days of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
+        participate: { title: "Now come and visit.", body: "The pandal is open to everyone, free, on every day of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
       },
       league: {
         kicker: "Stop 01 · Recognition",
         h1: "Krishi Ratna League",
-        lede: "Bharatiya Krishak Samaj Awards 2026. Seven categories, decided from nominations sent by farmers, families and communities across West Bengal. Winners are honoured on stage at the pandal during the Puja."
+        lede: "Awards for farmers in West Bengal, from Bharatiya Krishak Samaj. Anyone can nominate. Winners are honoured on stage at the Puja."
       },
       hints: {
         "league-site": { label: "Full league", text: "The Krishi Ratna League Bengal also has its own website.", link: "Open the League site" },
@@ -69,8 +69,8 @@
     },
     bn: {
       mapKicker: "আপনার পথ",
-      mapTitle: "তিনটি ধাপ। একটি পুজো।",
-      mapLede: "যেকোনো জায়গা থেকে শুরু করুন। প্রতিটি ধাপের শেষে পরের ধাপের পথ দেখানো আছে।",
+      mapTitle: "তিন ধাপে পুজো দেখুন।",
+      mapLede: "প্রতিটি পাতা আপনাকে পরের পাতায় নিয়ে যায়।",
       stop: "ধাপ",
       of: "/",
       nextKicker: "পরের ধাপ",
@@ -82,11 +82,11 @@
         participate: { short: "অংশ নিন ও গল্প", title: "অংশ নিন ও গল্প", line: "একটি গ্রামের খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, আর ২০২৫ ও ২০২৬-এর মাঠের ছবিতে পুজো দেখুন।", cta: "আপনার দরজা খুঁজুন" }
       },
       next: {
-        home: { title: "যে কৃষকদের সম্মান জানানো হয়, তাঁদের দিয়ে শুরু করুন।", body: "কৃষিরত্ন লিগ অচেনা কৃষকদের পুজোর মঞ্চে তোলে।" },
+        home: { title: "যে কৃষকদের আমরা সম্মান জানাই, তাঁদের দিয়ে শুরু করুন।", body: "কৃষিরত্ন লিগ অচেনা কৃষকদের পুজোর মঞ্চে তোলে।" },
         league: { title: "দেখুন যে জমায়েতে তাঁরা সম্মানিত হন।", body: "আরাধনা, কারুকাজ, ঘরে ফেরা। পুজোই সেই মঞ্চ।" },
         puja: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, মনোনয়ন দিন, আর মাঠের গল্পগুলো দেখুন। আপনার দরজা বেছে নিন।" },
         mission: { title: "বড় লক্ষ্যের শুরু একটি দরজা দিয়ে।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা একজন কৃষককে মনোনীত করুন।" },
-        participate: { title: "পুরো গল্পটা দেখলেন। এবার আসুন।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
+        participate: { title: "এবার ঘুরে যান।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
       },
       league: {
         kicker: "ধাপ ০১ · স্বীকৃতি",
@@ -104,8 +104,8 @@
     },
     hi: {
       mapKicker: "आपका रास्ता",
-      mapTitle: "तीन पड़ाव। एक पूजा।",
-      mapLede: "कहीं से भी शुरू करें। हर पड़ाव के अंत में अगले पड़ाव का रास्ता है।",
+      mapTitle: "तीन कदमों में पूजा देखें।",
+      mapLede: "हर पेज आपको अगले पेज पर ले जाता है।",
       stop: "पड़ाव",
       of: "/",
       nextKicker: "अगला पड़ाव",
@@ -117,11 +117,11 @@
         participate: { short: "भाग लें और कहानियाँ", title: "भाग लें और कहानियाँ", line: "किसी गाँव के खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, और 2025 व 2026 की ज़मीन की तस्वीरों में पूजा देखें।", cta: "अपना द्वार चुनें" }
       },
       next: {
-        home: { title: "उन किसानों से शुरू करें जिनका सम्मान होता है।", body: "कृषि रत्न लीग अनजान किसानों को पूजा के मंच पर लाती है।" },
+        home: { title: "उन किसानों से शुरू करें जिनका हम सम्मान करते हैं।", body: "कृषि रत्न लीग अनजान किसानों को पूजा के मंच पर लाती है।" },
         league: { title: "वह जमावड़ा देखें जहाँ उनका सम्मान होता है।", body: "आराधना, शिल्प, घर वापसी। पूजा ही मंच है।" },
         puja: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, नामांकन करें, और ज़मीन की कहानियाँ देखें। अपना द्वार चुनें।" },
         mission: { title: "बड़ा लक्ष्य एक द्वार से शुरू होता है।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या किसी किसान को नामित करें।" },
-        participate: { title: "पूरी कहानी देख ली। अब आइए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
+        participate: { title: "अब आइए, देखिए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
       },
       league: {
         kicker: "पड़ाव 01 · सम्मान",

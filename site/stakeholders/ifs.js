@@ -5,7 +5,7 @@ var COPY = {
     en: {
       nav: "Integrated Farming",
       kicker: "Integrated Farming",
-      title: "A living farm, where one part can feed another.",
+      title: "Integrated farming: each part of the farm helps another.",
       lede: "Integrated Farming is not simply many things on one plot. It is a way of arranging crop, animals, water, trees and the household so leftovers can become the next input.",
       photoAlt: "Illustrative Integrated Farming landscape: pond, crops, animals, trees and people. Conceptual picture, not a photograph of the 2026 pandal or of a built BKS farm.",
       photoCap: "Illustrative Integrated Farming landscape. A conceptual picture of how crop, water, livestock and people can sit together. Not a photograph of the 2026 pandal, and not a documentary image of a BKS farm already built.",
@@ -87,7 +87,7 @@ var COPY = {
     bn: {
       nav: "সমন্বিত চাষ",
       kicker: "সমন্বিত চাষ",
-      title: "জীবন্ত খামার, যেখানে এক অংশ অন্য অংশকে খাওয়াতে পারে।",
+      title: "সমন্বিত চাষ: খামারের প্রতিটি অংশ অন্যটিকে সাহায্য করে।",
       lede: "সমন্বিত চাষ মানে এক জমিতে শুধু অনেক কাজ জড়ানো নয়। ফসল, পশু, জল, গাছ ও ঘর এমন করে সাজানো, যাতে বাঁচতি পরের কাজে লাগে।",
       photoAlt: "সমন্বিত চাষের দৃষ্টান্তমূলক চিত্র: পুকুর, ফসল, পশু, গাছ ও মানুষ। ধারণার ছবি, ২০২৬-এর প্যান্ডেল বা নির্মিত বি কে এস খামারের ছবি নয়।",
       photoCap: "সমন্বিত চাষের দৃষ্টান্তমূলক ভূদৃশ্য। ধারণার ছবি। ২০২৬-এর প্যান্ডেল নয়, আর ইতিমধ্যে গড়া বি কে এস খামারের আলোকচিত্রও নয়।",
@@ -169,7 +169,7 @@ var COPY = {
     hi: {
       nav: "समेकित कृषि",
       kicker: "समेकित कृषि",
-      title: "एक जीवंत खेत, जहाँ एक भाग दूसरे को पाल सके।",
+      title: "समेकित खेती: खेत का हर हिस्सा दूसरे की मदद करता है।",
       lede: "समेकित कृषि केवल एक खेत पर कई काम नहीं। फसल, पशु, जल, पेड़ और घर ऐसे सजे कि बचा हुआ अगले काम में लगे।",
       photoAlt: "समेकित कृषि का दृष्टांत चित्र: तालाब, फसल, पशु, पेड़ और लोग। अवधारणा की तस्वीर, 2026 के पंडाल या बने हुए बीकेएस खेत की तस्वीर नहीं।",
       photoCap: "समेकित कृषि का दृष्टांत परिदृश्य। अवधारणा की तस्वीर। 2026 का पंडाल नहीं, और पहले से बने बीकेएस खेत का फोटो भी नहीं।",

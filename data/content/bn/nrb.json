@@ -19,7 +19,7 @@
   },
   "who": {
     "eyebrow": "এনআরবি কে?",
-    "title": "নন-রেসিডেন্ট বাঙালি: ভূগোলের বাইরে।",
+    "title": "যে বাঙালিরা বাড়ি থেকে দূরে থাকেন, তাঁদের জন্য।",
     "lede": "নিউ ইয়র্ক, লন্ডন, বেঙ্গালুরু, এমনকি কলকাতার উঁচু বাড়িতে থাকুন, আপনার শিকড় সেই গ্রামে যেখানে বাবা-মা বা ঠাকুরদা-ঠাকুমা বড় হয়েছেন। সেই গভীর টান, পৈতৃক মাটিকে সমৃদ্ধ দেখার আকাঙ্ক্ষা, এটাই আমাদের এক করে। এই দুর্গাপূজায় নস্টালজিয়াকে করুন স্পর্শযোগ্য প্রভাব।"
   },
   "opportunity": {
@@ -67,7 +67,7 @@
   },
   "faq": {
     "eyebrow": "প্রশ্ন",
-    "title": "খামার, তহবিল, পৃষ্ঠপোষকতা কীভাবে কাজ করে।",
+    "title": "সহায়তা কীভাবে কাজ করে।",
     "items": [
       {
         "q": "What is an FPO here?",
@@ -121,7 +121,7 @@
   },
   "fund": {
     "eyebrow": "খামারে বীজ",
-    "title": "Express interest in a village farm.",
+    "title": "একটি গ্রামের খামার শুরু করতে সাহায্য করুন।",
     "lede": "₹1 lakh is the proposed seed for one integrated model farm, in full, or ₹20,000 every two months. Name your native village. This page does not take payment. Bharatiya Krishak Samaj may later pair interested patrons with a local farmer team.",
     "whoLabel": "কার জন্য",
     "whoBody": "নন-রেসিডেন্ট বাঙালি, বাংলার গ্রামের সঙ্গে যুক্ত যে কেউ, বিদেশে থাকুন বা কলকাতার উঁচু বাড়িতে, যাঁরা একটি নামসহ খামার অনুসরণ করতে চান।",
@@ -150,7 +150,7 @@
   },
   "bulk": {
     "eyebrow": "পূজার পৃষ্ঠপোষকতা",
-    "title": "স্তরভিত্তিক স্পনসরশিপ: খামার ও উৎসব একসঙ্গে।",
+    "title": "একটি খামার আর উৎসবের স্পনসর হন।",
     "lede": "Organisations may register interest in supporting farms and the festival together. Allocation, if any, is by Bharatiya Krishak Samaj. This is not an online booking and not a payment.",
     "tiers": [
       {
