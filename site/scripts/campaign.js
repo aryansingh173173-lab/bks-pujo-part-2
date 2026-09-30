@@ -63,10 +63,11 @@
     const cats = puja.categories || [];
 
     if (strip) {
-      strip.innerHTML =
-        "<article><h3>" + escapeHtml(d.diff1) + "</h3><p>" + escapeHtml(d.diff1Sub) + "</p></article>" +
-        "<article><h3>" + escapeHtml(d.diff2) + "</h3><p>" + escapeHtml(d.diff2Sub) + "</p></article>" +
-        "<article><h3>" + escapeHtml(d.diff3) + "</h3><p>" + escapeHtml(d.diff3Sub) + "</p></article>";
+      let tiles = "";
+      for (let i = 1; d["diff" + i]; i++) {
+        tiles += "<article><h3>" + escapeHtml(d["diff" + i]) + "</h3><p>" + escapeHtml(d["diff" + i + "Sub"] || "") + "</p></article>";
+      }
+      strip.innerHTML = tiles;
     }
 
     const awardCards = cats.map((id, i) => {

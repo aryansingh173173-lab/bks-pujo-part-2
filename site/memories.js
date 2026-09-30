@@ -371,8 +371,6 @@
     { id: "1Wm7Pqe0jjk", kind: "short", t: "puja25" },
     { id: "gCLHEW3xaT8", kind: "short", t: "puja25viral" },
     { id: "-Y7J7GpywGg", kind: "talk", t: "vision" },
-    { id: "uOHaEteRXYk", kind: "talk", t: "minister" },
-    { id: "VpjJB6-6hDc", kind: "talk", t: "rinku" },
     { id: "LMWeL35RiTo", kind: "talk", t: "mahotsav" }
   ];
 

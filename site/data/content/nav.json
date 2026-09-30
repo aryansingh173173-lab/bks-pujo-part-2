@@ -12,7 +12,6 @@
         "ifs",
         "programme",
         "theme",
-        "awards",
         "record",
         "demo",
         "mission"
@@ -28,7 +27,6 @@
         "participate",
         "memories",
         "fund",
-        "nominate",
         "sponsor",
         "nrb",
         "faq"
@@ -172,17 +170,6 @@
       "kind": "section"
     },
     {
-      "id": "nominate",
-      "href": "#nominate",
-      "labelPath": [
-        "nav",
-        "nominate"
-      ],
-      "desktop": false,
-      "homeSection": true,
-      "kind": "section"
-    },
-    {
       "id": "nrb",
       "href": "#nrb",
       "labelPath": [
@@ -210,17 +197,6 @@
       "labelPath": [
         "nav",
         "theme"
-      ],
-      "desktop": false,
-      "homeSection": true,
-      "kind": "section"
-    },
-    {
-      "id": "awards",
-      "href": "#awards",
-      "labelPath": [
-        "nav",
-        "awards"
       ],
       "desktop": false,
       "homeSection": true,

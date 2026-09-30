@@ -24,8 +24,6 @@
     ["#memories", "participate-stories"],
     ["#visit", "home-visit"],
     [".quote-band", "home-quote"],
-    ["#awards", "league-a"],
-    ["#nominate", "league-b"],
     ["#theme", "puja-a"],
     ["#prep", "puja-a"],
     ["#record", "puja-b"],

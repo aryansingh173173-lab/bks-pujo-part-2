@@ -613,3 +613,38 @@ html { background: #bf2b54; }
 @media (max-width: 400px) {
   .lang-switch__btn { min-width: 36px; padding: 0 0.4rem; }
 }
+
+/* ===== What makes this Puja different: eight facts about the ground itself ===== */
+.differ .diff-strip {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem; border-top: 0; counter-reset: none;
+}
+@media (min-width: 900px) { .differ .diff-strip { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.differ .diff-strip article,
+.differ .diff-strip article + article {
+  padding: 1.3rem 1.2rem 1.4rem; border: 0; border-radius: 10px;
+  background: #f5e9d0; box-shadow: 6px 6px 0 #8f1d40;
+  transition: transform 0.3s cubic-bezier(.2,.7,.2,1), box-shadow 0.3s ease;
+}
+.differ .diff-strip article:hover { transform: translate(-3px, -3px); box-shadow: 9px 9px 0 #8f1d40; }
+.differ .diff-strip article::before { display: none; }
+.differ .diff-strip h3 {
+  margin: 0 0 0.5rem; color: #bf2b54;
+  font: 800 clamp(1.55rem, 2.6vw, 2.2rem)/1.02 var(--font-display, inherit); letter-spacing: -0.01em;
+}
+html[data-sec="night"] .differ .diff-strip p { margin: 0; color: #8f1d40; font-size: 0.95rem; line-height: 1.4; }
+@media (max-width: 420px) {
+  .differ .diff-strip { gap: 0.7rem; }
+  .differ .diff-strip article, .differ .diff-strip article + article { padding: 1rem 0.9rem 1.1rem; }
+}
+
+/* ===== Krishi Ratna League: one line and a link out ===== */
+.krl-note { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
+.krl-note__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 1.2rem 2rem; flex-wrap: wrap;
+  padding: clamp(1.2rem, 3vw, 1.8rem) clamp(1.2rem, 3vw, 2rem);
+  border: 1.5px solid rgba(245, 233, 208, 0.4); border-radius: 12px; background: #8f1d40;
+}
+.krl-note h2 { margin: 0 0 0.35rem; color: #f5e9d0; font-size: clamp(1.25rem, 2.4vw, 1.7rem); }
+.krl-note p { margin: 0; color: #f8e2d8; max-width: 44rem; }
+.krl-note__cta { flex: 0 0 auto; }

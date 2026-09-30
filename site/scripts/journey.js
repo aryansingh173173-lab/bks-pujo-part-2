@@ -4,19 +4,17 @@
   /* The three-stop journey: the homepage map, the stop bar at the top of each
      chapter page, mid-page hints, and the "next stop" push at the end of every
      page. The route is fixed so nobody reaches a dead end:
-     home → Krishi Ratna League → Puja & Integrated Farming → Participate & Stories → visit. */
+     home → Puja & Integrated Farming → Participate & Stories → visit. */
 
-  var ORDER = ["league", "puja", "participate"];
+  var ORDER = ["puja", "participate"];
 
   var STOPS = {
-    league: { href: "#league", img: "assets/stories/2026/protyabortan-banner.jpg", shape: "notch" },
     puja: { href: "#puja", img: "assets/puja-2025/aarti-procession-2025.jpg", shape: "circle" },
     participate: { href: "#participate", img: "assets/stories/2026/khuti-puja-4.jpg", shape: "block" }
   };
 
   var NEXT = {
-    home: "league",
-    league: "puja",
+    home: "puja",
     puja: "participate",
     mission: "participate",
     participate: "visit"
@@ -28,13 +26,13 @@
     "puja-ifs": { href: "#ifs", icon: "leaf" },
     "ifs-demo": { href: "#demo", icon: "pin" },
     "ifs-seed": { href: "#fund", icon: "seed" },
-    "participate-nominate": { href: "#nominate", icon: "star" }
+    "participate-nominate": { href: "https://krl-site.vercel.app/", icon: "out", external: true }
   };
 
   var COPY = {
     en: {
       mapKicker: "Your path",
-      mapTitle: "Explore the Puja in three steps.",
+      mapTitle: "Explore the Puja in two steps.",
       mapLede: "Each page leads you to the next.",
       stop: "Stop",
       of: "of",
@@ -47,10 +45,10 @@
         participate: { short: "Participate & Stories", title: "Participate & Stories", line: "Help start a village farm, sponsor, or volunteer. See photos from 2025 and 2026.", cta: "Find your door" }
       },
       next: {
-        home: { title: "Start with the farmers we honour.", body: "The Krishi Ratna League brings farmers onto the Puja stage." },
+        home: { title: "Start with the Puja.", body: "Worship, music, food, and a working farm on the Puja ground." },
         league: { title: "See the Puja where they are honoured.", body: "Worship, music, food, and a working farm." },
-        puja: { title: "One farm needs one supporter.", body: "Help start a village farm, sponsor, volunteer or nominate a farmer. Choose how you want to help." },
-        mission: { title: "A big goal starts with one door.", body: "Seed a village farm, sponsor, volunteer or nominate a farmer." },
+        puja: { title: "One farm needs one supporter.", body: "Help start a village farm, sponsor, or volunteer. Choose how you want to help." },
+        mission: { title: "A big goal starts with one step.", body: "Help start a village farm, sponsor, or volunteer." },
         participate: { title: "Now come and visit.", body: "The pandal is open to everyone, free, on every day of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
       },
       league: {
@@ -64,12 +62,12 @@
         "puja-ifs": { label: "Keep going", text: "The theme is sustainable agriculture. Scroll on to see how one farm loops crop, animals, water and market.", link: "Integrated Farming" },
         "ifs-demo": { label: "On the ground", text: "This model is being built as a working farm at the Puja venue in the East Kolkata Wetlands.", link: "See the live demo" },
         "ifs-seed": { label: "The seed", text: "₹1 lakh is the proposed seed for one village farm. Nothing is collected on this website.", link: "How support works" },
-        "participate-nominate": { label: "Know a farmer?", text: "Know a farmer who deserves the stage? Nominations have no entry fee.", link: "Nominate in the League" }
+        "participate-nominate": { label: "Krishi Ratna League", text: "The Krishi Ratna League is being launched through this Puja. Awards and nominations are on the League website.", link: "Visit the KRL website" }
       }
     },
     bn: {
       mapKicker: "আপনার পথ",
-      mapTitle: "তিন ধাপে পুজো দেখুন।",
+      mapTitle: "দুই ধাপে পুজো দেখুন।",
       mapLede: "প্রতিটি পাতা আপনাকে পরের পাতায় নিয়ে যায়।",
       stop: "ধাপ",
       of: "/",
@@ -82,7 +80,7 @@
         participate: { short: "অংশ নিন ও গল্প", title: "অংশ নিন ও গল্প", line: "একটি গ্রামের খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, আর ২০২৫ ও ২০২৬-এর মাঠের ছবিতে পুজো দেখুন।", cta: "আপনার দরজা খুঁজুন" }
       },
       next: {
-        home: { title: "যে কৃষকদের আমরা সম্মান জানাই, তাঁদের দিয়ে শুরু করুন।", body: "কৃষিরত্ন লিগ অচেনা কৃষকদের পুজোর মঞ্চে তোলে।" },
+        home: { title: "পুজো দিয়ে শুরু করুন।", body: "আরাধনা, গান, খাবার, আর পুজোর মাঠে একটি চালু খামার।" },
         league: { title: "দেখুন যে জমায়েতে তাঁরা সম্মানিত হন।", body: "আরাধনা, কারুকাজ, ঘরে ফেরা। পুজোই সেই মঞ্চ।" },
         puja: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, মনোনয়ন দিন, আর মাঠের গল্পগুলো দেখুন। আপনার দরজা বেছে নিন।" },
         mission: { title: "বড় লক্ষ্যের শুরু একটি দরজা দিয়ে।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা একজন কৃষককে মনোনীত করুন।" },
@@ -99,12 +97,12 @@
         "puja-ifs": { label: "এগিয়ে চলুন", text: "থিম টেকসই কৃষি। দেখুন কীভাবে একটি খামারে ফসল, পশু, জল আর বাজার এক চক্রে বাঁধা।", link: "সমন্বিত চাষ" },
         "ifs-demo": { label: "মাঠে", text: "এই মডেল পুজোর স্থানে, পূর্ব কলকাতা জলাভূমিতে, একটি চালু খামার হিসেবে গড়ে উঠছে।", link: "লাইভ ডেমো দেখুন" },
         "ifs-seed": { label: "বীজ", text: "একটি গ্রামের খামারের প্রস্তাবিত বীজ ₹১ লক্ষ। এই ওয়েবসাইটে কোনো টাকা নেওয়া হয় না।", link: "সহায়তা কীভাবে কাজ করে" },
-        "participate-nominate": { label: "কোনো কৃষককে চেনেন?", text: "মঞ্চের যোগ্য কোনো কৃষককে চেনেন? মনোনয়নে কোনো ফি নেই।", link: "লিগে মনোনয়ন দিন" }
+        "participate-nominate": { label: "কৃষিরত্ন লিগ", text: "এই পুজোর মধ্য দিয়েই কৃষিরত্ন লিগের সূচনা হচ্ছে। পুরস্কার আর মনোনয়নের কথা লিগের ওয়েবসাইটে।", link: "KRL ওয়েবসাইটে যান" }
       }
     },
     hi: {
       mapKicker: "आपका रास्ता",
-      mapTitle: "तीन कदमों में पूजा देखें।",
+      mapTitle: "दो कदमों में पूजा देखें।",
       mapLede: "हर पेज आपको अगले पेज पर ले जाता है।",
       stop: "पड़ाव",
       of: "/",
@@ -117,7 +115,7 @@
         participate: { short: "भाग लें और कहानियाँ", title: "भाग लें और कहानियाँ", line: "किसी गाँव के खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, और 2025 व 2026 की ज़मीन की तस्वीरों में पूजा देखें।", cta: "अपना द्वार चुनें" }
       },
       next: {
-        home: { title: "उन किसानों से शुरू करें जिनका हम सम्मान करते हैं।", body: "कृषि रत्न लीग अनजान किसानों को पूजा के मंच पर लाती है।" },
+        home: { title: "पूजा से शुरू करें।", body: "आराधना, संगीत, भोजन, और पूजा स्थल पर एक चालू खेत।" },
         league: { title: "वह जमावड़ा देखें जहाँ उनका सम्मान होता है।", body: "आराधना, शिल्प, घर वापसी। पूजा ही मंच है।" },
         puja: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, नामांकन करें, और ज़मीन की कहानियाँ देखें। अपना द्वार चुनें।" },
         mission: { title: "बड़ा लक्ष्य एक द्वार से शुरू होता है।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या किसी किसान को नामित करें।" },
@@ -134,7 +132,7 @@
         "puja-ifs": { label: "आगे बढ़ें", text: "विषय टिकाऊ कृषि है। देखें कैसे एक खेत में फसल, पशु, जल और बाज़ार एक चक्र में जुड़ते हैं।", link: "समेकित कृषि" },
         "ifs-demo": { label: "ज़मीन पर", text: "यह मॉडल पूजा स्थल, पूर्वी कोलकाता आर्द्रभूमि में, एक चालू खेत के रूप में बन रहा है।", link: "लाइव डेमो देखें" },
         "ifs-seed": { label: "बीज", text: "एक गाँव के खेत के लिए प्रस्तावित बीज ₹1 लाख है। इस वेबसाइट पर कुछ भी एकत्र नहीं होता।", link: "सहायता कैसे काम करती है" },
-        "participate-nominate": { label: "किसी किसान को जानते हैं?", text: "मंच के योग्य किसी किसान को जानते हैं? नामांकन का कोई शुल्क नहीं।", link: "लीग में नामांकन करें" }
+        "participate-nominate": { label: "कृषि रत्न लीग", text: "कृषि रत्न लीग की शुरुआत इसी पूजा से हो रही है। पुरस्कार और नामांकन लीग की वेबसाइट पर हैं।", link: "KRL वेबसाइट देखें" }
       }
     }
   };
