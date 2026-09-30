@@ -727,7 +727,30 @@
       sync();
     }
 
+    // Full screen can be asked for from the bubbles under the hero while the
+    // stories section itself sits on a page that is hidden. So while full, the
+    // viewer is lifted onto <body> and put back in its place afterwards.
+    var fullHost = null;
+    var fullMark = null;
+    function liftViewer(on) {
+      if (on && !fullMark) {
+        fullMark = document.createComment("stories");
+        root.parentNode.insertBefore(fullMark, root);
+        fullHost = document.createElement("div");
+        fullHost.className = "bks-memories story-full-host";
+        fullHost.style.display = "contents";
+        fullHost.appendChild(root);
+        document.body.appendChild(fullHost);
+      } else if (!on && fullMark) {
+        if (fullMark.parentNode) fullMark.parentNode.replaceChild(root, fullMark);
+        if (fullHost && fullHost.parentNode) fullHost.parentNode.removeChild(fullHost);
+        fullMark = null;
+        fullHost = null;
+      }
+    }
+
     function setFull(on) {
+      liftViewer(on);
       root.classList.toggle("is-full", on);
       document.body.classList.toggle("story-full", on);
       fullBtn.setAttribute("aria-label", on ? pack.exitFull : pack.full);
@@ -843,6 +866,7 @@
         setPaused(true);
       },
       destroy: function () {
+        liftViewer(false);
         if (io) io.disconnect();
         clearTimeout(state.holdTimer);
         document.removeEventListener("keydown", onDocKey);
@@ -883,8 +907,8 @@
       rail.addEventListener("click", function (e) {
         var b = e.target.closest("[data-story-top]");
         if (!b || !player) return;
-        var narrow = window.matchMedia && window.matchMedia("(max-width: 767px)").matches;
-        player.open(Number(b.getAttribute("data-story-top")), narrow);
+        // The stories section lives on another page, so these always open full screen.
+        player.open(Number(b.getAttribute("data-story-top")), true);
       });
     }
     rail.setAttribute("aria-label", pack.railTitle);
