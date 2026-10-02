@@ -260,7 +260,7 @@
     data.stored = false;
     data.production = false;
     data.createdAt = new Date().toISOString();
-    data.note = "Downloaded locally from BKS Durga Puja 2026. Not submitted to a server.";
+    data.note = "Downloaded locally from Durga Puja 2026. Not submitted to a server.";
     return data;
   }
 

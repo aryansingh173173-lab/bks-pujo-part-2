@@ -51,7 +51,7 @@
         puja: { title: "One farm needs one supporter.", body: "Help start a village farm, sponsor, or volunteer. Choose how you want to help." },
         mission: { title: "A big goal starts with one step.", body: "Help start a village farm, sponsor, or volunteer." },
         visit: { title: "While you are here, take part.", body: "Help start a village farm, sponsor, or volunteer." },
-        participate: { title: "Now come and visit.", body: "The pandal is open to everyone, free, on every day of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
+        participate: { title: "You are invited. Come and visit.", body: "The pandal is open to everyone, free, on every day of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
       },
       league: {
         kicker: "Stop 01 · Recognition",
@@ -87,7 +87,7 @@
         puja: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, মনোনয়ন দিন, আর মাঠের গল্পগুলো দেখুন। আপনার দরজা বেছে নিন।" },
         mission: { title: "বড় লক্ষ্যের শুরু একটি দরজা দিয়ে।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা একজন কৃষককে মনোনীত করুন।" },
         visit: { title: "এখানে এসে যুক্ত হন।", body: "একটি গ্রামের খামার শুরু করতে সাহায্য করুন, স্পনসর হন, বা স্বেচ্ছাসেবক হন।" },
-        participate: { title: "এবার ঘুরে যান।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
+        participate: { title: "আপনি আমন্ত্রিত। চলে আসুন।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
       },
       league: {
         kicker: "ধাপ ০১ · স্বীকৃতি",
@@ -123,7 +123,7 @@
         puja: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, नामांकन करें, और ज़मीन की कहानियाँ देखें। अपना द्वार चुनें।" },
         mission: { title: "बड़ा लक्ष्य एक द्वार से शुरू होता है।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या किसी किसान को नामित करें।" },
         visit: { title: "यहाँ आकर जुड़िए।", body: "एक गाँव का खेत शुरू करने में मदद करें, प्रायोजक बनें, या स्वयंसेवक बनें।" },
-        participate: { title: "अब आइए, देखिए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
+        participate: { title: "आप आमंत्रित हैं। आइए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
       },
       league: {
         kicker: "पड़ाव 01 · सम्मान",

@@ -465,7 +465,7 @@
     data.amount_raised = 0;
     data.farms_pledged = 0;
     data.createdAt = new Date().toISOString();
-    data.note = "Downloaded locally from BKS Durga Puja 2026. Not submitted to a server. No payment taken.";
+    data.note = "Downloaded locally from Durga Puja 2026. Not submitted to a server. No payment taken.";
     return data;
   }
 
@@ -1325,8 +1325,15 @@
       locator: "Find a gathering"
     };
     const pageLabel = pageTitles[page];
-    const title = pageLabel ? pageLabel + " | Durga Puja 2026" : "Durga Puja 2026 | KarmYog for the 21st Century and Bharatiya Krishak Samaj";
-    const descText = ui && ui.metaTags ? ui.metaTags.description : "";
+    const INVITED = { en: "You are invited: Durga Puja 2026", bn: "আপনি আমন্ত্রিত: দুর্গাপূজা ২০২৬", hi: "आप आमंत्रित हैं: दुर्गा पूजा 2026" };
+    const DESC = {
+      en: "Ma Durga invites you to Durga Puja 2026, 16 to 20 October, at Munshir Bheri, Salt Lake Sector V, Kolkata. Jointly organised by KarmYog for the 21st Century and Bharatiya Krishak Samaj. Entry is free.",
+      bn: "মা দুর্গা আপনাকে দুর্গাপূজা ২০২৬-এ আমন্ত্রণ জানাচ্ছেন, ১৬ থেকে ২০ অক্টোবর, মুনশির ভেড়ি, সল্টলেক সেক্টর ফাইভ, কলকাতা। কর্মযোগ ফর দ্য টোয়েন্টি-ফার্স্ট সেঞ্চুরি ও ভারতীয় কৃষক সমাজের যৌথ আয়োজন। প্রবেশ বিনামূল্যে।",
+      hi: "माँ दुर्गा आपको दुर्गा पूजा 2026 में आमंत्रित करती हैं, 16 से 20 अक्टूबर, मुंशीर भेड़ी, साल्ट लेक सेक्टर V, कोलकाता। कर्मयोग फ़ॉर द 21st सेंचुरी और भारतीय कृषक समाज का संयुक्त आयोजन। प्रवेश निःशुल्क है।"
+    };
+    const invited = INVITED[state.lang] || INVITED.en;
+    const title = pageLabel ? pageLabel + " | " + invited : invited;
+    const descText = DESC[state.lang] || DESC.en;
     document.title = title;
     const desc = document.querySelector('meta[name="description"]');
     if (desc) desc.setAttribute("content", descText);

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bks.local/schemas/durga-puja-event.v1.json",
-  "title": "BKS Durga Puja 2026 event",
+  "title": "Durga Puja 2026 event",
   "type": "object",
   "additionalProperties": false,
   "required": [

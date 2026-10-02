@@ -12,8 +12,8 @@
   var PUJA_END = new Date("2026-10-21T00:00:00+05:30").getTime();
 
   var COUNT_COPY = {
-    en: { label: "Countdown to Sharadiya 2026 · 16 October", d: "Days", h: "Hrs", m: "Min", s: "Sec", live: "The Puja is on: 16 to 20 October", done: "Thank you for Sharadiya 2026" },
-    bn: { label: "শারদীয়া ২০২৬-এর অপেক্ষা · ১৬ অক্টোবর", d: "দিন", h: "ঘণ্টা", m: "মিনিট", s: "সেকেন্ড", live: "পুজো চলছে: ১৬ থেকে ২০ অক্টোবর", done: "শারদীয়া ২০২৬-এর জন্য ধন্যবাদ" },
+    en: { label: "Countdown to Durga Puja 2026 · 16 October", d: "Days", h: "Hrs", m: "Min", s: "Sec", live: "The Puja is on: 16 to 20 October", done: "Thank you for Durga Puja 2026" },
+    bn: { label: "দুর্গাপূজা ২০২৬-এর অপেক্ষা · ১৬ অক্টোবর", d: "দিন", h: "ঘণ্টা", m: "মিনিট", s: "সেকেন্ড", live: "পুজো চলছে: ১৬ থেকে ২০ অক্টোবর", done: "দুর্গাপূজা ২০২৬-এর জন্য ধন্যবাদ" },
     hi: { label: "शारदीया 2026 की उलटी गिनती · 16 अक्टूबर", d: "दिन", h: "घंटे", m: "मिनट", s: "सेकंड", live: "पूजा जारी है: 16 से 20 अक्टूबर", done: "शारदीया 2026 के लिए धन्यवाद" }
   };
 
@@ -258,4 +258,53 @@
   }
   // The film is the first thing on the page, so it starts loading straight away.
   start();
+})();
+
+/* The film plays once and comes to rest on the invitation; "Watch again" replays it. */
+(function () {
+  var v = document.querySelector(".hero-video");
+  var media = v && v.closest(".hero-media");
+  if (!media) return;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var showCard = function () { media.classList.add("is-ended"); };
+  if (reduce) { showCard(); return; }
+  v.addEventListener("ended", showCard);
+  v.addEventListener("error", showCard);
+  var replay = media.querySelector("[data-hero-replay]");
+  if (replay) replay.addEventListener("click", function () {
+    media.classList.remove("is-ended");
+    try { v.currentTime = 0; } catch (e) { /* not loaded yet */ }
+    var p = v.play(); if (p && p.catch) p.catch(showCard);
+  });
+})();
+
+/* Sharing the invitation: WhatsApp link in the visitor's language, and the phone's own share sheet. */
+(function () {
+  var URL_LIVE = "https://bks-pujoo.vercel.app/";
+  var MSG = {
+    en: "You are invited: Durga Puja 2026, 16 to 20 October, at Munshir Bheri, Salt Lake Sector V, Kolkata. Ma Durga invites you and your family.",
+    bn: "আপনি আমন্ত্রিত: দুর্গাপূজা ২০২৬, ১৬ থেকে ২০ অক্টোবর, মুনশির ভেড়ি, সল্টলেক সেক্টর ফাইভ, কলকাতা। মা দুর্গা আপনাকে আর আপনার পরিবারকে আমন্ত্রণ জানাচ্ছেন।",
+    hi: "आप आमंत्रित हैं: दुर्गा पूजा 2026, 16 से 20 अक्टूबर, मुंशीर भेड़ी, साल्ट लेक सेक्टर V, कोलकाता। माँ दुर्गा आपको और आपके परिवार को आमंत्रित करती हैं।"
+  };
+  var DONE = { en: "Link copied", bn: "লিংক কপি হয়েছে", hi: "लिंक कॉपी हो गया" };
+  function lang() { var l = (document.documentElement.lang || "en").slice(0, 2); return MSG[l] ? l : "en"; }
+  function update() {
+    document.querySelectorAll("[data-share='whatsapp']").forEach(function (a) {
+      a.href = "https://wa.me/?text=" + encodeURIComponent(MSG[lang()] + " " + URL_LIVE);
+    });
+  }
+  update();
+  new MutationObserver(update).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-share='native']");
+    if (!b) return;
+    var data = { title: "Durga Puja 2026", text: MSG[lang()], url: URL_LIVE };
+    if (navigator.share) { navigator.share(data).catch(function () {}); return; }
+    var text = data.text + " " + data.url;
+    var done = function () {
+      var old = b.textContent; b.textContent = DONE[lang()];
+      setTimeout(function () { b.textContent = old; }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
+  });
 })();

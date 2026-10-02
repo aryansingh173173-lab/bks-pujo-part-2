@@ -704,3 +704,30 @@ html[data-sec="night"] .footer-col a:hover { text-decoration: underline; text-un
 html[data-sec="night"] .cal-day .cal-day__name { color: #8f1d40; }
 html[data-sec="night"] .cal-day .cal-day__date { color: #bf2b54; }
 html[data-sec="night"] .visit-band h2 { color: #bf2b54; }
+
+/* ===== The film ends on the invitation ===== */
+.hero-band--poster .hero-invite {
+  position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 1rem;
+  background: radial-gradient(ellipse at center, rgba(122, 20, 50, 0.9) 0%, rgba(122, 20, 50, 0.82) 55%, rgba(122, 20, 50, 0.7) 100%);
+  opacity: 0; visibility: hidden; transition: opacity 0.9s ease, visibility 0s linear 0.9s;
+  line-height: 1.2;
+}
+.hero-media.is-ended .hero-invite { opacity: 1; visibility: visible; transition: opacity 0.9s ease; }
+.hero-invite__inner { text-align: center; max-width: 46rem; transform: translateY(12px); transition: transform 0.9s cubic-bezier(.2,.7,.2,1); }
+.hero-media.is-ended .hero-invite__inner { transform: none; }
+.hero-invite__kicker { margin: 0 0 0.6rem; font-size: clamp(0.8rem, 1.6vw, 1.05rem); font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #f8e2d8; }
+.hero-invite__title { margin: 0 0 0.8rem; font: 800 clamp(2.2rem, 7vw, 5.4rem)/1 var(--font-display, inherit); color: #f5e9d0; letter-spacing: -0.01em; }
+.hero-invite__line { margin: 0 0 1.3rem; font-size: clamp(0.85rem, 1.7vw, 1.15rem); color: #f5e9d0; }
+.hero-invite__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin: 0; }
+.hero-invite__replay {
+  min-height: 44px; padding: 0 1.1rem; border-radius: 999px; cursor: pointer;
+  background: transparent; color: #f5e9d0; border: 1.5px solid rgba(245, 233, 208, 0.7);
+  font: 700 0.9rem/1 var(--font-display, inherit);
+}
+.hero-invite__replay:hover { background: #f5e9d0; color: #bf2b54; }
+@media (max-width: 600px) {
+  .hero-invite__line { display: none; }
+  .hero-invite__title { margin-bottom: 0.6rem; }
+  .hero-invite__actions .btn, .hero-invite__replay { min-height: 38px; padding: 0 0.9rem; font-size: 0.82rem; }
+}
+.invite__wa { white-space: nowrap; }

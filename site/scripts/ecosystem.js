@@ -53,7 +53,7 @@
     data.production = false;
     data.experience = kind;
     data.createdAt = new Date().toISOString();
-    data.note = "Downloaded locally from Bharatiya Krishak Samaj Pujo. Not submitted to a server.";
+    data.note = "Downloaded locally from Durga Puja 2026. Not submitted to a server.";
     return data;
   }
 
@@ -124,7 +124,7 @@
       "<header class='site-header'>" +
       "<div class='header-inner'>" +
       "<div class='brand-row'>" +
-      "<a class='brand-lockup brand-lockup--bks' href='" + base + "/index.html' aria-label='Bharatiya Krishak Samaj Pujo'>" +
+      "<a class='brand-lockup brand-lockup--bks' href='" + base + "/index.html' aria-label='Durga Puja 2026'>" +
       "<span class='seal'><img src='" + base + "/assets/bks-seal-96.png' width='52' height='52' alt=''></span>" +
       "<span class='wordmark'>" + escapeHtml(s.event) + "</span></a>" +
       "<span class='brand-divider' aria-hidden='true'></span>" +
@@ -141,7 +141,7 @@
       "<nav class='nav nav-desktop' id='eco-desktop-nav' aria-label='Primary'>" + primary + "</nav>" +
       "</div></header>" +
       "<p class='audience-strip'>" + audience + "</p>" +
-      "<p class='eco-back'><a href='https://bks-durga-puja-2026.vercel.app/'>" + escapeHtml(s.backToMain || "Back to Bharatiya Krishak Samaj Pujo") + "</a></p>" +
+      "<p class='eco-back'><a href='https://bks-durga-puja-2026.vercel.app/'>" + escapeHtml(s.backToMain || "Back to Durga Puja 2026") + "</a></p>" +
       (pageNav
         ? "<nav class='eco-page-nav' id='eco-nav' aria-label='On this page'>" + pageNav + "</nav>"
         : "") +
@@ -394,7 +394,7 @@
       "<div><p>" + escapeHtml(note) + "</p>" +
       "<address class='footer-address'>" + escapeHtml(shared.address) + "</address></div>" +
       "<nav class='footer-nav' aria-label='Utility'>" +
-      "<a href='https://bks-durga-puja-2026.vercel.app/'>" + escapeHtml(shared.backToMain || "Back to Bharatiya Krishak Samaj Pujo") + "</a>" +
+      "<a href='https://bks-durga-puja-2026.vercel.app/'>" + escapeHtml(shared.backToMain || "Back to Durga Puja 2026") + "</a>" +
       "<a href='https://bks-durga-puja-2026.vercel.app/#doors'>How would you like to participate?</a>" +
       "<a href='https://bks-durga-puja-2026.vercel.app/#programme'>Programme</a>" +
       "<a href='https://bks-durga-puja-2026.vercel.app/#contact'>Contact</a>" +

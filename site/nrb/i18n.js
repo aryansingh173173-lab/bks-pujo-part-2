@@ -1,7 +1,7 @@
 window.BKS_I18N = {
   "en": {
     "meta": {
-      "title": "Supporters / NRB | Bharatiya Krishak Samaj Pujo",
+      "title": "Supporters / NRB | Durga Puja 2026",
       "description": "From wherever you are, take part in Bengal’s farming story. Express interest in proposed seed-support for a village integrated farm. About 5,000 farms is a vision. No payment taken here.",
       "ogTitle": "Distance does not have to mean disconnection.",
       "ogDescription": "From wherever you are, this Pujo is a way to take part in Bengal’s farming story."
@@ -13,7 +13,7 @@ window.BKS_I18N = {
     "ui": {
       "menu": "Menu",
       "close": "Close menu",
-      "back": "Back to Bharatiya Krishak Samaj Pujo",
+      "back": "Back to Durga Puja 2026",
       "maps": "View on Google Maps",
       "videoCaption": "Historical reference footage from Durga Puja Mahotsav 2025.",
       "formName": "Name",
@@ -40,7 +40,7 @@ window.BKS_I18N = {
         "Express Supporter Interest",
         "Puja Memories",
         "FAQ",
-        "Back to Bharatiya Krishak Samaj Pujo"
+        "Back to Durga Puja 2026"
       ]
     },
     "hero": {
@@ -58,7 +58,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo is a Durga Puja in Kolkata: 16–20 October 2026, at Munshir Bheri in the East Kolkata Wetlands. Worship remains at the centre. Then the gathering names the annadata, the person who grows the food, and a live integrated farm is being built on the same ground."
+          "text": "Durga Puja 2026 is a Puja in Kolkata: 16–20 October 2026, at Munshir Bheri in the East Kolkata Wetlands. Worship remains at the centre. Then the gathering names the annadata, the person who grows the food, and a live integrated farm is being built on the same ground."
         },
         {
           "type": "p",
@@ -120,7 +120,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo is a seasonal Durga Puja in Kolkata: neighbourhood, clay, dhak, food, lamps, homecoming. Worship remains first."
+          "text": "Durga Puja 2026 is a seasonal Durga Puja in Kolkata: neighbourhood, clay, dhak, food, lamps, homecoming. Worship remains first."
         },
         {
           "type": "p",
@@ -419,7 +419,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "KarmYog for the 21st Century is the organiser of Bharatiya Krishak Samaj Pujo. KarmYog for the 21st Century Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park. That is a record on craft and gathering. It is not a picture of the 2026 pandal."
+          "text": "KarmYog for the 21st Century is the organiser of Durga Puja 2026. KarmYog for the 21st Century Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park. That is a record on craft and gathering. It is not a picture of the 2026 pandal."
         },
         {
           "type": "p",
@@ -486,14 +486,14 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Expressing interest means you would like to understand Bharatiya Krishak Samaj Pujo and explore proposed seed-support for a village integrated farm. It does not take money. It does not adopt a farm. It does not confirm a pairing. It does not process a payment."
+          "text": "Expressing interest means you would like to understand Durga Puja 2026 and explore proposed seed-support for a village integrated farm. It does not take money. It does not adopt a farm. It does not confirm a pairing. It does not process a payment."
         }
       ]
     },
     "faq": {
       "items": [
         {
-          "q": "What is Bharatiya Krishak Samaj Pujo?",
+          "q": "What is Durga Puja 2026?",
           "a": "A Durga Puja in Kolkata that keeps worship at the centre, names the annadata, shows Integrated Farming as a livelihood people can walk, and invites supporters everywhere to take part in the farming story that follows."
         },
         {
@@ -562,7 +562,7 @@ window.BKS_I18N = {
         },
         {
           "q": "Who is KarmYog for the 21st Century Foundation?",
-          "a": "The organising family of this Pujo. KarmYog for the 21st Century organises Bharatiya Krishak Samaj Pujo. The Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park, a record on craft and gathering, not the 2026 pandal."
+          "a": "The organising family of this Pujo. KarmYog for the 21st Century organises Durga Puja 2026. The Foundation organised Durga Puja Mahotsav 2025 at the IIT Kharagpur Research Park, a record on craft and gathering, not the 2026 pandal."
         },
         {
           "q": "What is Bharatiya Krishak Samaj’s role?",
@@ -610,19 +610,19 @@ window.BKS_I18N = {
     },
     "footer": {
       "lines": [
-        "Bharatiya Krishak Samaj Pujo 2026",
+        "Durga Puja 2026",
         "Organised by KarmYog for the 21st Century",
         "Organising partner: Bharatiya Krishak Samaj",
         "Munshir Bheri, Kolkata, 16–20 October 2026",
         "contact@bkswbengal.org",
-        "Back to Bharatiya Krishak Samaj Pujo",
+        "Back to Durga Puja 2026",
         "---"
       ]
     }
   },
   "bn": {
     "meta": {
-      "title": "সমর্থক / NRB | Bharatiya Krishak Samaj Pujo",
+      "title": "সমর্থক / NRB | Durga Puja 2026",
       "description": "আপনি যেখানেই থাকুন, বাংলার চাষের গল্পে যোগ দিন। একটি গ্রামীণ সমন্বিত খামারের প্রস্তাবিত বীজ-সমর্থনে আগ্রহ জানান। এখানে অর্থ নেওয়া হয় না।",
       "ogTitle": "দূরত্ব মানে বিচ্ছিন্নতা নয়।",
       "ogDescription": "আপনি যেখানেই থাকুন, এই পূজো বাংলার চাষের গল্পে যোগ দেওয়ার একটি পথ।"
@@ -634,7 +634,7 @@ window.BKS_I18N = {
     "ui": {
       "menu": "মেনু",
       "close": "বন্ধ",
-      "back": "Bharatiya Krishak Samaj Pujo-তে ফিরুন",
+      "back": "Durga Puja 2026-তে ফিরুন",
       "maps": "Google Maps-এ দেখুন",
       "videoCaption": "Historical reference footage from Durga Puja Mahotsav 2025.",
       "formName": "নাম",
@@ -661,7 +661,7 @@ window.BKS_I18N = {
         "সমর্থক আগ্রহ জানান",
         "পুজোর স্মৃতি",
         "প্রশ্নোত্তর",
-        "Bharatiya Krishak Samaj Pujo-তে ফিরুন"
+        "Durga Puja 2026-তে ফিরুন"
       ]
     },
     "hero": {
@@ -679,7 +679,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo, ভারতীয় কৃষক সমাজ পূজা, কলকাতার দুর্গাপূজা: ১৬–২০ অক্টোবর ২০২৬, পূর্ব কলকাতার জলাভূমিতে Munshir Bheri। পূজা কেন্দ্রে থাকে। তারপর জমায়েত অন্নদাতার নাম করে, যিনি খাবার ফলান, আর একই মাটিতে একটি লাইভ সমন্বিত খামার গড়ে উঠছে।"
+          "text": "Durga Puja 2026, দুর্গাপূজা ২০২৬, কলকাতার দুর্গাপূজা: ১৬–২০ অক্টোবর ২০২৬, পূর্ব কলকাতার জলাভূমিতে Munshir Bheri। পূজা কেন্দ্রে থাকে। তারপর জমায়েত অন্নদাতার নাম করে, যিনি খাবার ফলান, আর একই মাটিতে একটি লাইভ সমন্বিত খামার গড়ে উঠছে।"
         },
         {
           "type": "p",
@@ -741,7 +741,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo কলকাতার শারদীয় দুর্গাপূজা: পাড়া, মাটি, ঢাক, খাবার, প্রদীপ, ঘরে ফেরা। পূজা আগে থাকে।"
+          "text": "Durga Puja 2026 কলকাতার শারদীয় দুর্গাপূজা: পাড়া, মাটি, ঢাক, খাবার, প্রদীপ, ঘরে ফেরা। পূজা আগে থাকে।"
         },
         {
           "type": "p",
@@ -1040,7 +1040,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo-র আয়োজক। KarmYog for the 21st Century Foundation IIT Kharagpur Research Park-এ Durga Puja Mahotsav 2025 আয়োজন করেছিল। কারুকাজ ও জমায়েতের রেকর্ড। ২০২৬-এর প্যান্ডেল নয়।"
+          "text": "KarmYog for the 21st Century Durga Puja 2026-র আয়োজক। KarmYog for the 21st Century Foundation IIT Kharagpur Research Park-এ Durga Puja Mahotsav 2025 আয়োজন করেছিল। কারুকাজ ও জমায়েতের রেকর্ড। ২০২৬-এর প্যান্ডেল নয়।"
         },
         {
           "type": "p",
@@ -1107,14 +1107,14 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "আগ্রহ মানে আপনি Bharatiya Krishak Samaj Pujo বুঝতে চান, আর একটি গ্রামীণ সমন্বিত খামারের প্রস্তাবিত বীজ-সমর্থন ঘুরে দেখতে চান। অর্থ নেয় না। খামার দত্তক হয় না। জুড়ি নিশ্চিত হয় না। অর্থপ্রদান হয় না।"
+          "text": "আগ্রহ মানে আপনি Durga Puja 2026 বুঝতে চান, আর একটি গ্রামীণ সমন্বিত খামারের প্রস্তাবিত বীজ-সমর্থন ঘুরে দেখতে চান। অর্থ নেয় না। খামার দত্তক হয় না। জুড়ি নিশ্চিত হয় না। অর্থপ্রদান হয় না।"
         }
       ]
     },
     "faq": {
       "items": [
         {
-          "q": "Bharatiya Krishak Samaj Pujo কী?",
+          "q": "Durga Puja 2026 কী?",
           "a": "কলকাতার দুর্গাপূজা, পূজা কেন্দ্রে, অন্নদাতার নাম, সমন্বিত চাষ হেঁটে দেখার জীবিকা, আর সর্বত্র থেকে চাষের গল্পে অংশ নেওয়ার আমন্ত্রণ।"
         },
         {
@@ -1183,7 +1183,7 @@ window.BKS_I18N = {
         },
         {
           "q": "KarmYog for the 21st Century Foundation কারা?",
-          "a": "এই পূজোর আয়োজক পরিবার। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo আয়োজন করে। ফাউন্ডেশন IIT Kharagpur Research Park-এ ২০২৫-এর Mahotsav আয়োজন করেছিল, কারুকাজ ও জমায়েতের রেকর্ড, ২০২৬-এর প্যান্ডেল নয়।"
+          "a": "এই পূজোর আয়োজক পরিবার। KarmYog for the 21st Century Durga Puja 2026 আয়োজন করে। ফাউন্ডেশন IIT Kharagpur Research Park-এ ২০২৫-এর Mahotsav আয়োজন করেছিল, কারুকাজ ও জমায়েতের রেকর্ড, ২০২৬-এর প্যান্ডেল নয়।"
         },
         {
           "q": "Bharatiya Krishak Samaj-এর ভূমিকা?",
@@ -1231,19 +1231,19 @@ window.BKS_I18N = {
     },
     "footer": {
       "lines": [
-        "Bharatiya Krishak Samaj Pujo 2026",
+        "Durga Puja 2026",
         "আয়োজনে KarmYog for the 21st Century",
         "আয়োজক অংশীদার: Bharatiya Krishak Samaj",
         "Munshir Bheri, কলকাতা, ১৬–২০ অক্টোবর ২০২৬",
         "contact@bkswbengal.org",
-        "Bharatiya Krishak Samaj Pujo-তে ফিরুন",
+        "Durga Puja 2026-তে ফিরুন",
         "---"
       ]
     }
   },
   "hi": {
     "meta": {
-      "title": "समर्थक / NRB | Bharatiya Krishak Samaj Pujo",
+      "title": "समर्थक / NRB | Durga Puja 2026",
       "description": "आप जहाँ भी हों, बंगाल की खेती की कहानी में हिस्सा लें। एक ग्राम समेकित फार्म के प्रस्तावित बीज-सहयोग में रुचि व्यक्त करें। यहाँ भुगतान नहीं लिया जाता।",
       "ogTitle": "दूरी का अर्थ विच्छेद नहीं होना चाहिए।",
       "ogDescription": "आप जहाँ भी हों, यह पूजो बंगाल की खेती की कहानी में हिस्सा लेने का एक मार्ग है।"
@@ -1255,7 +1255,7 @@ window.BKS_I18N = {
     "ui": {
       "menu": "मेनू",
       "close": "बंद करें",
-      "back": "Bharatiya Krishak Samaj Pujo पर लौटें",
+      "back": "Durga Puja 2026 पर लौटें",
       "maps": "Google Maps पर देखें",
       "videoCaption": "Historical reference footage from Durga Puja Mahotsav 2025.",
       "formName": "नाम",
@@ -1282,7 +1282,7 @@ window.BKS_I18N = {
         "समर्थक रुचि व्यक्त करें",
         "पूजा स्मृतियाँ",
         "प्रश्नोत्तर",
-        "Bharatiya Krishak Samaj Pujo पर लौटें"
+        "Durga Puja 2026 पर लौटें"
       ]
     },
     "hero": {
@@ -1300,7 +1300,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo, भारतीय कृषक समाज पूजा, कोलकाता की दुर्गा पूजा है: 16–20 अक्टूबर 2026, पूर्व कोलकाता आर्द्रभूमि में Munshir Bheri। पूजा केंद्र में रहती है। फिर जमावड़ा अन्नदाता का नाम लेता है, जो भोजन उगाता है, और उसी ज़मीन पर एक लाइव समेकित फार्म बन रहा है।"
+          "text": "Durga Puja 2026, दुर्गा पूजा 2026, कोलकाता की दुर्गा पूजा है: 16–20 अक्टूबर 2026, पूर्व कोलकाता आर्द्रभूमि में Munshir Bheri। पूजा केंद्र में रहती है। फिर जमावड़ा अन्नदाता का नाम लेता है, जो भोजन उगाता है, और उसी ज़मीन पर एक लाइव समेकित फार्म बन रहा है।"
         },
         {
           "type": "p",
@@ -1362,7 +1362,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "Bharatiya Krishak Samaj Pujo कोलकाता की शारदीय दुर्गा पूजा है: मोहल्ला, मिट्टी, ढाक, भोजन, दीये, घर-वापसी। पूजा पहले रहती है।"
+          "text": "Durga Puja 2026 कोलकाता की शारदीय दुर्गा पूजा है: मोहल्ला, मिट्टी, ढाक, भोजन, दीये, घर-वापसी। पूजा पहले रहती है।"
         },
         {
           "type": "p",
@@ -1661,7 +1661,7 @@ window.BKS_I18N = {
       "blocks": [
         {
           "type": "p",
-          "text": "KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo का आयोजक है। KarmYog for the 21st Century Foundation ने IIT Kharagpur Research Park पर Durga Puja Mahotsav 2025 का आयोजन किया। कारीगरी और जमावड़े का रिकॉर्ड। 2026 का पंडाल नहीं।"
+          "text": "KarmYog for the 21st Century Durga Puja 2026 का आयोजक है। KarmYog for the 21st Century Foundation ने IIT Kharagpur Research Park पर Durga Puja Mahotsav 2025 का आयोजन किया। कारीगरी और जमावड़े का रिकॉर्ड। 2026 का पंडाल नहीं।"
         },
         {
           "type": "p",
@@ -1728,14 +1728,14 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "रुचि का अर्थ है कि आप Bharatiya Krishak Samaj Pujo समझना चाहते हैं, और एक ग्राम समेकित फार्म के प्रस्तावित बीज-सहयोग को देखना चाहते हैं। धन नहीं लेता। फार्म गोद नहीं होता। जोड़ी निश्चित नहीं होती। भुगतान नहीं होता।"
+          "text": "रुचि का अर्थ है कि आप Durga Puja 2026 समझना चाहते हैं, और एक ग्राम समेकित फार्म के प्रस्तावित बीज-सहयोग को देखना चाहते हैं। धन नहीं लेता। फार्म गोद नहीं होता। जोड़ी निश्चित नहीं होती। भुगतान नहीं होता।"
         }
       ]
     },
     "faq": {
       "items": [
         {
-          "q": "Bharatiya Krishak Samaj Pujo क्या है?",
+          "q": "Durga Puja 2026 क्या है?",
           "a": "कोलकाता की दुर्गा पूजा, पूजा केंद्र में, अन्नदाता का नाम, समेकित कृषि चलकर देखने योग्य आजीविका, और हर जगह से खेती की कहानी में भाग लेने का निमंत्रण।"
         },
         {
@@ -1804,7 +1804,7 @@ window.BKS_I18N = {
         },
         {
           "q": "KarmYog for the 21st Century Foundation कौन है?",
-          "a": "इस पूजो का आयोजक परिवार। KarmYog for the 21st Century Bharatiya Krishak Samaj Pujo का आयोजन करता है। फाउंडेशन ने IIT Kharagpur Research Park पर 2025 का Mahotsav आयोजित किया, कारीगरी और जमावड़े का रिकॉर्ड, 2026 का पंडाल नहीं।"
+          "a": "इस पूजो का आयोजक परिवार। KarmYog for the 21st Century Durga Puja 2026 का आयोजन करता है। फाउंडेशन ने IIT Kharagpur Research Park पर 2025 का Mahotsav आयोजित किया, कारीगरी और जमावड़े का रिकॉर्ड, 2026 का पंडाल नहीं।"
         },
         {
           "q": "Bharatiya Krishak Samaj की भूमिका?",
@@ -1852,12 +1852,12 @@ window.BKS_I18N = {
     },
     "footer": {
       "lines": [
-        "Bharatiya Krishak Samaj Pujo 2026",
+        "Durga Puja 2026",
         "आयोजन: KarmYog for the 21st Century",
         "आयोजक साझेदार: Bharatiya Krishak Samaj",
         "Munshir Bheri, कोलकाता, 16–20 अक्टूबर 2026",
         "contact@bkswbengal.org",
-        "Bharatiya Krishak Samaj Pujo पर लौटें"
+        "Durga Puja 2026 पर लौटें"
       ]
     }
   }

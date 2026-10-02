@@ -25,21 +25,21 @@
         en: {
           name: "BKS Bengal",
           title: "BKS Bengal · Puja 2026 partner briefing",
-          desc: "The founding partnership briefing for Bharatiya Krishak Samaj Pujo 2026: a Durga Puja about the hands that grow the food.",
+          desc: "The founding partnership briefing for Durga Puja 2026: a Puja about the hands that grow the food.",
           short: "Puja 2026 partner briefing: the pandal, the farm, the partnership.",
           facts: ["A pandal built around the farming year, in the East Kolkata Wetlands", "A working integrated farm on the same ground", "What sponsors and partners put their name on"]
         },
         bn: {
           name: "BKS বাংলা",
           title: "BKS বাংলা · পুজো ২০২৬ অংশীদার ব্রিফিং",
-          desc: "ভারতীয় কৃষক সমাজ পুজো ২০২৬-এর প্রতিষ্ঠাতা অংশীদারি ব্রিফিং: যে হাত খাবার ফলায়, তাদের নিয়ে একটি দুর্গাপুজো।",
+          desc: "দুর্গাপূজা ২০২৬-এর প্রতিষ্ঠাতা অংশীদারি ব্রিফিং: যে হাত খাবার ফলায়, তাদের নিয়ে একটি দুর্গাপুজো।",
           short: "পুজো ২০২৬ অংশীদার ব্রিফিং: প্যান্ডেল, খামার, অংশীদারি।",
           facts: ["চাষের বছর ঘিরে গড়া প্যান্ডেল, পূর্ব কলকাতা জলাভূমিতে", "একই মাঠে একটি চালু সমন্বিত খামার", "পৃষ্ঠপোষক ও অংশীদাররা কীসে নাম দেন"]
         },
         hi: {
           name: "BKS बंगाल",
           title: "BKS बंगाल · पूजा 2026 साझेदार ब्रीफ़िंग",
-          desc: "भारतीय कृषक समाज पूजा 2026 की संस्थापक साझेदारी ब्रीफ़िंग: उन हाथों की दुर्गा पूजा जो अन्न उगाते हैं।",
+          desc: "दुर्गा पूजा 2026 की संस्थापक साझेदारी ब्रीफ़िंग: उन हाथों की दुर्गा पूजा जो अन्न उगाते हैं।",
           short: "पूजा 2026 साझेदार ब्रीफ़िंग: पंडाल, खेत, साझेदारी।",
           facts: ["खेती के वर्ष के इर्द-गिर्द बना पंडाल, पूर्वी कोलकाता आर्द्रभूमि में", "उसी मैदान पर एक चालू समेकित खेत", "प्रायोजक और साझेदार किस पर अपना नाम देते हैं"]
         }
