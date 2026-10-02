@@ -31,15 +31,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/fonts-sunflare.css?v=t3">
-  <link rel="stylesheet" href="styles/tokens.css?v=t3">
-  <link rel="stylesheet" href="styles/app.css?v=t3">
-  <link rel="stylesheet" href="styles/art.css?v=t3">
-  <link rel="stylesheet" href="memories.css?v=t3">
-  <link rel="stylesheet" href="ifs.css?v=t3">
-  <link rel="stylesheet" href="styles/sunflare.css?v=t3">
-  <link rel="stylesheet" href="styles/palette.css?v=t3">
-  <link rel="stylesheet" href="styles/secondary.css?v=t3">
+  <link rel="stylesheet" href="styles/fonts-sunflare.css?v=u1">
+  <link rel="stylesheet" href="styles/tokens.css?v=u1">
+  <link rel="stylesheet" href="styles/app.css?v=u1">
+  <link rel="stylesheet" href="styles/art.css?v=u1">
+  <link rel="stylesheet" href="memories.css?v=u1">
+  <link rel="stylesheet" href="ifs.css?v=u1">
+  <link rel="stylesheet" href="styles/sunflare.css?v=u1">
+  <link rel="stylesheet" href="styles/palette.css?v=u1">
+  <link rel="stylesheet" href="styles/secondary.css?v=u3">
 </head>
 <body>
   <a class="skip" href="#main" data-ui="skip">Skip to content</a>
@@ -58,8 +58,8 @@
       <div class="brand-row">
         <a class="brand-logo" href="#home" aria-label="KarmYog for the 21st Century and Bharatiya Krishak Samaj: home">
           <picture>
-            <source srcset="assets/logo/logo-header.webp?v=t3" type="image/webp">
-            <img src="assets/logo/logo-header.png?v=t3" width="529" height="112" alt="KarmYog for the 21st Century | Bharatiya Krishak Samaj">
+            <source srcset="assets/logo/logo-header.webp?v=u1" type="image/webp">
+            <img src="assets/logo/logo-header.png?v=u1" width="529" height="112" alt="KarmYog for the 21st Century | Bharatiya Krishak Samaj">
           </picture>
         </a>
         <div class="header-tools">
@@ -173,7 +173,22 @@
           <a class="btn btn-primary krl-note__cta" href="https://krl-site.vercel.app/" rel="noopener noreferrer"><span data-en="Visit the KRL website" data-bn="KRL ওয়েবসাইটে যান" data-hi="KRL वेबसाइट देखें">Visit the KRL website</span> <span aria-hidden="true">↗</span></a>
         </div>
       </section>
-      <div class="wrap-wide" data-slot="home-visit"></div>
+      <section class="visit-band" aria-labelledby="visit-band-h">
+        <div class="wrap-wide visit-band__inner">
+          <div class="visit-band__copy">
+            <h2 id="visit-band-h" data-en="Plan your visit" data-bn="আসার পরিকল্পনা করুন" data-hi="आने की योजना बनाएँ">Plan your visit</h2>
+            <dl class="visit-band__facts">
+              <div><dt data-en="When" data-bn="কখন" data-hi="कब">When</dt><dd data-en="16 to 20 October 2026" data-bn="১৬ থেকে ২০ অক্টোবর ২০২৬" data-hi="16 से 20 अक्टूबर 2026">16 to 20 October 2026</dd></div>
+              <div><dt data-en="Where" data-bn="কোথায়" data-hi="कहाँ">Where</dt><dd data-en="Munshir Bheri, near Sukantanagar, Salt Lake Sector V, Kolkata 700091" data-bn="মুনশির ভেড়ি, সুকান্তনগরের কাছে, সল্টলেক সেক্টর ফাইভ, কলকাতা ৭০০০৯১" data-hi="मुंशीर भेड़ी, सुकांतनगर के पास, साल्ट लेक सेक्टर V, कोलकाता 700091">Munshir Bheri, near Sukantanagar, Salt Lake Sector V, Kolkata 700091</dd></div>
+              <div><dt data-en="Entry" data-bn="প্রবেশ" data-hi="प्रवेश">Entry</dt><dd data-en="Free, open to everyone" data-bn="বিনামূল্যে, সবার জন্য" data-hi="निःशुल्क, सबके लिए">Free, open to everyone</dd></div>
+            </dl>
+          </div>
+          <p class="visit-band__actions">
+            <a class="btn btn-primary" href="#visit" data-en="Dates, map and directions" data-bn="তারিখ, ম্যাপ ও পথনির্দেশ" data-hi="तारीखें, नक्शा और रास्ता">Dates, map and directions</a>
+            <a class="btn btn-ghost" href="#contact" data-en="Contact us" data-bn="যোগাযোগ করুন" data-hi="संपर्क करें">Contact us</a>
+          </p>
+        </div>
+      </section>
       <div class="wrap-wide" data-slot="home-quote"></div>
       <section class="next-stop" data-next-stop="home"></section>
     </article>
@@ -218,9 +233,7 @@
           <div><dt data-en="What next" data-bn="এরপর" data-hi="आगे">What next</dt><dd data-hero="next">Take part, or tell us you are interested. Nothing here takes money.</dd></div>
         </dl>
       </section>
-      <div data-slot="puja-b"></div>
       <aside class="hint" data-hint="puja-ifs"></aside>
-      <div data-slot="puja-c"></div>
       <section class="chapter-part" id="ifs" aria-label="Integrated Farming">
         <div id="ifs-body" data-json-root data-ifs-audience="main"></div>
         <aside class="hint" data-hint="ifs-demo"></aside>
@@ -245,6 +258,54 @@
       <div data-slot="participate-b"></div>
       <div data-slot="participate-c"></div>
       <section class="next-stop" data-next-stop="participate"></section>
+    </article>
+
+    <article class="view wrap-wide chapter visit-page" data-view="visit" hidden>
+      <header class="page-head">
+        <h1 data-en="Plan your visit" data-bn="আসার পরিকল্পনা করুন" data-hi="आने की योजना बनाएँ">Plan your visit</h1>
+        <p class="lede" data-en="Dates, place, how to get there, and what is on." data-bn="তারিখ, জায়গা, কীভাবে পৌঁছবেন, আর কী কী হবে।" data-hi="तारीखें, जगह, कैसे पहुँचें, और क्या होगा।">Dates, place, how to get there, and what is on.</p>
+      </header>
+
+      <section class="visit-block" aria-labelledby="cal-h">
+        <h2 id="cal-h" data-en="Puja calendar" data-bn="পুজোর ক্যালেন্ডার" data-hi="पूजा कैलेंडर">Puja calendar</h2>
+        <ol class="cal-list"><li class="cal-day"><p class="cal-day__date"><span data-en="Fri 16 Oct" data-bn="শুক্র ১৬ অক্টোবর" data-hi="शुक्र 16 अक्टूबर">Fri 16 Oct</span></p><h3 class="cal-day__name"><span data-en="Shashthi" data-bn="ষষ্ঠী" data-hi="षष्ठी">Shashthi</span></h3><p class="cal-day__what"><span data-en="Bilva Nimantran" data-bn="বিল্ব নিমন্ত্রণ" data-hi="बिल्व निमंत्रण">Bilva Nimantran</span></p></li><li class="cal-day"><p class="cal-day__date"><span data-en="Sat 17 Oct" data-bn="শনি ১৭ অক্টোবর" data-hi="शनि 17 अक्टूबर">Sat 17 Oct</span></p><h3 class="cal-day__name"><span data-en="Shashthi" data-bn="ষষ্ঠী" data-hi="षष्ठी">Shashthi</span></h3><p class="cal-day__what"><span data-en="Bodhon: the Goddess is welcomed" data-bn="বোধন: দেবীর আবাহন" data-hi="बोधन: देवी का आवाहन">Bodhon: the Goddess is welcomed</span></p></li><li class="cal-day"><p class="cal-day__date"><span data-en="Sun 18 Oct" data-bn="রবি ১৮ অক্টোবর" data-hi="रवि 18 अक्टूबर">Sun 18 Oct</span></p><h3 class="cal-day__name"><span data-en="Saptami" data-bn="সপ্তমী" data-hi="सप्तमी">Saptami</span></h3><p class="cal-day__what"><span data-en="Nabapatrika (Kolabou) Puja" data-bn="নবপত্রিকা (কলাবউ) পুজো" data-hi="नवपत्रिका (कलाबउ) पूजा">Nabapatrika (Kolabou) Puja</span></p></li><li class="cal-day"><p class="cal-day__date"><span data-en="Mon 19 Oct" data-bn="সোম ১৯ অক্টোবর" data-hi="सोम 19 अक्टूबर">Mon 19 Oct</span></p><h3 class="cal-day__name"><span data-en="Ashtami" data-bn="অষ্টমী" data-hi="अष्टमी">Ashtami</span></h3><p class="cal-day__what"><span data-en="Pushpanjali, Kumari Puja, Sandhi Puja" data-bn="পুষ্পাঞ্জলি, কুমারী পুজো, সন্ধি পুজো" data-hi="पुष्पांजलि, कुमारी पूजा, संधि पूजा">Pushpanjali, Kumari Puja, Sandhi Puja</span></p></li><li class="cal-day"><p class="cal-day__date"><span data-en="Tue 20 Oct" data-bn="মঙ্গল ২০ অক্টোবর" data-hi="मंगल 20 अक्टूबर">Tue 20 Oct</span></p><h3 class="cal-day__name"><span data-en="Navami" data-bn="নবমী" data-hi="नवमी">Navami</span></h3><p class="cal-day__what"><span data-en="Maha Navami" data-bn="মহানবমী" data-hi="महानवमी">Maha Navami</span></p></li><li class="cal-day"><p class="cal-day__date"><span data-en="Wed 21 Oct" data-bn="বুধ ২১ অক্টোবর" data-hi="बुध 21 अक्टूबर">Wed 21 Oct</span></p><h3 class="cal-day__name"><span data-en="Dashami" data-bn="দশমী" data-hi="दशमी">Dashami</span></h3><p class="cal-day__what"><span data-en="Sindoor Khela, Bijoya, immersion" data-bn="সিঁদুর খেলা, বিজয়া, বিসর্জন" data-hi="सिंदूर खेला, विजया, विसर्जन">Sindoor Khela, Bijoya, immersion</span></p></li></ol>
+        <p class="muted" data-en="Puja days are 16 to 20 October. Dashami and immersion fall on 21 October. Dates follow the Kolkata panjika; exact puja timings will be shared closer to the day." data-bn="পুজোর দিন ১৬ থেকে ২০ অক্টোবর। দশমী ও বিসর্জন ২১ অক্টোবর। তারিখ কলকাতার পঞ্জিকা অনুযায়ী; পুজোর সঠিক সময় দিনের কাছাকাছি জানানো হবে।" data-hi="पूजा के दिन 16 से 20 अक्टूबर हैं। दशमी और विसर्जन 21 अक्टूबर को। तारीखें कोलकाता पंचांग के अनुसार हैं; पूजा का सही समय दिन के पास बताया जाएगा।">Puja days are 16 to 20 October. Dashami and immersion fall on 21 October. Dates follow the Kolkata panjika; exact puja timings will be shared closer to the day.</p>
+      </section>
+
+      <div data-slot="visit-a"></div>
+
+      <section class="visit-block visit-grid" aria-label="Getting there and visitor information">
+        <div class="visit-card">
+          <h2 data-en="How to reach" data-bn="কীভাবে পৌঁছবেন" data-hi="कैसे पहुँचें">How to reach</h2>
+          <ul class="visit-list">
+            <li><strong data-en="Address" data-bn="ঠিকানা" data-hi="पता">Address</strong> <span>Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar, Salt Lake Sector V (East Kolkata Wetlands), Kolkata 700091, West Bengal</span></li>
+            <li><span data-en="About 500 metres from Salt Lake Sector V." data-bn="সল্টলেক সেক্টর ফাইভ থেকে প্রায় ৫০০ মিটার।" data-hi="साल्ट लेक सेक्टर V से लगभग 500 मीटर।">About 500 metres from Salt Lake Sector V.</span></li>
+            <li><span data-en="Nearest metro: Sector V station (Green Line)." data-bn="নিকটতম মেট্রো: সেক্টর ফাইভ স্টেশন (গ্রিন লাইন)।" data-hi="नज़दीकी मेट्रो: सेक्टर V स्टेशन (ग्रीन लाइन)।">Nearest metro: Sector V station (Green Line).</span></li>
+            <li><span data-en="By cab or car: search “Munshir Bheri, Sukantanagar” in your maps app." data-bn="ক্যাব বা গাড়িতে: ম্যাপ অ্যাপে “Munshir Bheri, Sukantanagar” খুঁজুন।" data-hi="कैब या कार से: मैप ऐप में “Munshir Bheri, Sukantanagar” खोजें।">By cab or car: search “Munshir Bheri, Sukantanagar” in your maps app.</span></li>
+          </ul>
+          <p><a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091" rel="noopener noreferrer"><span data-en="Open in Google Maps" data-bn="গুগল ম্যাপে খুলুন" data-hi="गूगल मैप में खोलें">Open in Google Maps</span> <span aria-hidden="true">↗</span></a></p>
+        </div>
+        <div class="visit-card">
+          <h2 data-en="Good to know" data-bn="জেনে রাখুন" data-hi="जानने योग्य">Good to know</h2>
+          <ul class="visit-list">
+            <li><span data-en="Entry is free and open to everyone, on every day of the Puja." data-bn="পুজোর প্রতিদিন প্রবেশ বিনামূল্যে, সবার জন্য খোলা।" data-hi="पूजा के हर दिन प्रवेश निःशुल्क है, सबके लिए खुला।">Entry is free and open to everyone, on every day of the Puja.</span></li>
+            <li><span data-en="The Puja ground is surrounded by water, inside the East Kolkata Wetlands." data-bn="পুজোর মাঠ পূর্ব কলকাতা জলাভূমির ভেতরে, চারদিকে জলে ঘেরা।" data-hi="पूजा स्थल पूर्वी कोलकाता आर्द्रभूमि के भीतर है, चारों ओर पानी से घिरा।">The Puja ground is surrounded by water, inside the East Kolkata Wetlands.</span></li>
+            <li><span data-en="There is room for about 5,000 people at once." data-bn="একসঙ্গে প্রায় ৫,০০০ মানুষের জায়গা আছে।" data-hi="एक साथ लगभग 5,000 लोगों की जगह है।">There is room for about 5,000 people at once.</span></li>
+            <li><span data-en="About 400 people can offer Pushpanjali together." data-bn="একসঙ্গে প্রায় ৪০০ জন পুষ্পাঞ্জলি দিতে পারবেন।" data-hi="लगभग 400 लोग एक साथ पुष्पांजलि दे सकेंगे।">About 400 people can offer Pushpanjali together.</span></li>
+          </ul>
+          <p><a class="btn btn-ghost" href="#contact" data-en="Questions? Contact us" data-bn="প্রশ্ন আছে? যোগাযোগ করুন" data-hi="कोई सवाल? संपर्क करें">Questions? Contact us</a></p>
+        </div>
+      </section>
+      <section class="next-stop" data-next-stop="visit"></section>
+    </article>
+
+    <article class="view wrap-wide chapter" data-view="history" hidden>
+      <header class="page-head">
+        <h1 data-en="About us" data-bn="আমাদের কথা" data-hi="हमारे बारे में">About us</h1>
+        <p class="lede" data-en="Who organises this Puja, and the Puja we held in 2025." data-bn="কারা এই পুজোর আয়োজক, আর ২০২৫-এ আমাদের পুজো।" data-hi="इस पूजा के आयोजक कौन हैं, और 2025 में हमारी पूजा।">Who organises this Puja, and the Puja we held in 2025.</p>
+      </header>
+      <div data-slot="history-a"></div>
+      <p class="cta-row"><a class="btn btn-primary" href="https://museum-of-future-essay.vercel.app/" rel="noopener noreferrer"><span data-en="Read the 2025 photo essay" data-bn="২০২৫-এর ছবির প্রবন্ধ পড়ুন" data-hi="2025 का फ़ोटो निबंध पढ़ें">Read the 2025 photo essay</span> <span aria-hidden="true">↗</span></a></p>
     </article>
 
     <article class="view wrap" data-view="locator" hidden>
@@ -311,7 +372,7 @@
     <article class="view wrap" data-view="contact" hidden>
       <header class="page-head">
         <h1 data-en="Contact" data-bn="যোগাযোগ" data-hi="संपर्क">Contact</h1>
-        <p class="lede" data-en="West Bengal state office. Puja committee and pandal are still to be announced." data-bn="পশ্চিমবঙ্গ রাজ্য কার্যালয়। পূজার কমিটি ও মণ্ডপ এখনও ঘোষিত হয়নি।" data-hi="पश्चिम बंगाल राज्य कार्यालय। पूजा समिति और पंडाल अभी घोषित नहीं।">West Bengal state office. Puja committee and pandal are still to be announced.</p>
+        <p class="lede" data-en="Write, call or visit. We are happy to help." data-bn="লিখুন, ফোন করুন বা চলে আসুন। আমরা সাহায্য করতে পেরে খুশি।" data-hi="लिखिए, फ़ोन कीजिए या आइए। हमें मदद करके खुशी होगी।">Write, call or visit. We are happy to help.</p>
       </header>
       <hr class="rule">
       <address class="footer-address">
@@ -321,10 +382,9 @@
       </address>
       <p><a href="mailto:contact@bkswbengal.org">contact@bkswbengal.org</a></p>
       <p><a href="tel:+918655246764">+91 86552 46764</a></p>
-      <div class="empty-well">
-        <p><span class="badge badge-empty">TO BE ANNOUNCED</span> <span data-en="Committee" data-bn="কমিটি" data-hi="समिति">Committee</span></p>
-        <p><span class="badge badge-empty">TO BE ANNOUNCED</span> <span data-en="Puja place" data-bn="পূজার স্থান" data-hi="पूजा स्थल">Puja place</span></p>
-      </div>
+      <h2 data-en="Puja venue" data-bn="পুজোর স্থান" data-hi="पूजा स्थल">Puja venue</h2>
+      <p>Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar, Salt Lake Sector V (East Kolkata Wetlands), Kolkata 700091, West Bengal</p>
+      <p><a href="#visit" data-en="Dates, map and directions →" data-bn="তারিখ, ম্যাপ ও পথনির্দেশ →" data-hi="तारीखें, नक्शा और रास्ता →">Dates, map and directions →</a></p>
     </article>
     <div id="staging" hidden>
       <div id="nrb-root"></div>
@@ -333,37 +393,58 @@
   </main>
 
   <footer class="site-footer">
-    <div class="wrap-wide footer-grid">
-      <div>
-        <p data-ui="footer-hierarchy">Bharatiya Krishak Samaj, West Bengal · Bharatiya Krishak Samaj Pujo · organised with KarmYog for the 21st Century. Not a second organisation.</p>
+    <div class="wrap-wide footer-grid footer-grid--cols">
+      <div class="footer-about">
+        <p class="footer-title" data-en="Durga Puja 2026" data-bn="দুর্গাপূজা ২০২৬" data-hi="दुर्गा पूजा 2026">Durga Puja 2026</p>
+        <p data-en="Jointly organised by KarmYog for the 21st Century and Bharatiya Krishak Samaj." data-bn="কর্মযোগ ফর দ্য টোয়েন্টি-ফার্স্ট সেঞ্চুরি ও ভারতীয় কৃষক সমাজের যৌথ আয়োজন।" data-hi="कर्मयोग फ़ॉर द 21st सेंचुरी और भारतीय कृषक समाज का संयुक्त आयोजन।">Jointly organised by KarmYog for the 21st Century and Bharatiya Krishak Samaj.</p>
         <address class="footer-address">
           <span data-en="Bharatiya Krishak Samaj, West Bengal" data-bn="ভারতীয় কৃষক সমাজ, পশ্চিমবঙ্গ" data-hi="भारतीय कृषक समाज, पश्चिम बंगाल">Bharatiya Krishak Samaj, West Bengal</span><br>
           F 127, Downtown Mall, Uniworld City<br>
-          New Town, Kolkata 700 156
+          New Town, Kolkata 700 156<br>
+          <a href="mailto:contact@bkswbengal.org">contact@bkswbengal.org</a> · <a href="tel:+918655246764">+91 86552 46764</a>
         </address>
         <div class="footer-lang">
           <span class="footer-lang__label" data-ui="languageGroup">Language</span>
           <div class="lang-bar lang-bar--footer" id="lang-header"></div>
         </div>
       </div>
-      <nav class="footer-nav" aria-label="Utility">
-        <a href="#doors">How to participate</a>
+      <nav class="footer-col" aria-labelledby="fc-visit">
+        <p class="footer-col__h" id="fc-visit" data-en="Visit" data-bn="আসুন" data-hi="आइए">Visit</p>
+        <a href="#visit" data-en="Plan your visit" data-bn="আসার পরিকল্পনা" data-hi="आने की योजना">Plan your visit</a>
+        <a href="#visit" data-en="Puja calendar" data-bn="পুজোর ক্যালেন্ডার" data-hi="पूजा कैलेंडर">Puja calendar</a>
         <a href="#programme" data-ui="util-programme">Programme</a>
+        <a href="#contact" data-en="Contact us" data-bn="যোগাযোগ করুন" data-hi="संपर्क करें">Contact us</a>
+      </nav>
+      <nav class="footer-col" aria-labelledby="fc-about">
+        <p class="footer-col__h" id="fc-about" data-en="About us" data-bn="আমাদের কথা" data-hi="हमारे बारे में">About us</p>
+        <a href="#history" data-en="Organisers and team" data-bn="আয়োজক ও দল" data-hi="आयोजक और टीम">Organisers and team</a>
+        <a href="#record" data-en="Our 2025 Puja" data-bn="২০২৫-এ আমাদের পুজো" data-hi="2025 में हमारी पूजा">Our 2025 Puja</a>
+        <a href="https://museum-of-future-essay.vercel.app/" rel="noopener noreferrer"><span data-en="2025 photo essay" data-bn="২০২৫-এর ছবির প্রবন্ধ" data-hi="2025 का फ़ोटो निबंध">2025 photo essay</span> ↗</a>
         <a href="#community" data-ui="util-stories">Stories</a>
+      </nav>
+      <nav class="footer-col" aria-labelledby="fc-related">
+        <p class="footer-col__h" id="fc-related" data-en="Related sites" data-bn="সম্পর্কিত সাইট" data-hi="संबंधित साइटें">Related sites</p>
+        <a href="https://bks-pujo-demo.vercel.app/" rel="noopener noreferrer">BKS Bengal ↗</a>
+        <a href="https://krl-site.vercel.app/" rel="noopener noreferrer">Krishi Ratna League ↗</a>
+        <a href="https://krl-media-connect-bengal-2026.vercel.app/" rel="noopener noreferrer">KRL Media Connect ↗</a>
+        <a href="https://krl-teams-redesign.vercel.app/" rel="noopener noreferrer">KRL Teams ↗</a>
+      </nav>
+      <nav class="footer-col" aria-labelledby="fc-more">
+        <p class="footer-col__h" id="fc-more" data-en="More" data-bn="আরও" data-hi="और">More</p>
+        <a href="#doors" data-en="How to take part" data-bn="কীভাবে যুক্ত হবেন" data-hi="कैसे जुड़ें">How to take part</a>
         <a href="#sources" data-en="Sources" data-bn="উৎস" data-hi="स्रोत">Sources</a>
         <a href="#accessibility" data-ui="util-access">Accessibility</a>
         <a href="#sustainability" data-ui="util-care">Sustainability</a>
-        <a href="#contact" data-ui="util-contact">Contact</a>
       </nav>
     </div>
   </footer>
-  <script src="scripts/offline-data.js?v=t3"></script>
-  <script src="scripts/campaign.js?v=t3" defer></script>
-  <script src="scripts/app.js?v=t3" defer></script>
-  <script src="memories.js?v=t3" defer></script>
-  <script src="ifs.js?v=t3" defer></script>
-  <script src="scripts/journey.js?v=t3" defer></script>
-  <script src="scripts/motion.js?v=t3" defer></script>
-  <script src="scripts/bks-network.js?v=t3" data-inject="false" defer></script>
+  <script src="scripts/offline-data.js?v=u1"></script>
+  <script src="scripts/campaign.js?v=u1" defer></script>
+  <script src="scripts/app.js?v=u1" defer></script>
+  <script src="memories.js?v=u1" defer></script>
+  <script src="ifs.js?v=u1" defer></script>
+  <script src="scripts/journey.js?v=u2" defer></script>
+  <script src="scripts/motion.js?v=u1" defer></script>
+  <script src="scripts/bks-network.js?v=u1" data-inject="false" defer></script>
 </body>
 </html>

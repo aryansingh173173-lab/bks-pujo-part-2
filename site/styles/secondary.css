@@ -648,3 +648,59 @@ html[data-sec="night"] .differ .diff-strip p { margin: 0; color: #8f1d40; font-s
 .krl-note h2 { margin: 0 0 0.35rem; color: #f5e9d0; font-size: clamp(1.25rem, 2.4vw, 1.7rem); }
 .krl-note p { margin: 0; color: #f8e2d8; max-width: 44rem; }
 .krl-note__cta { flex: 0 0 auto; }
+
+/* ===== Header: Contact us right after Participate & Stories ===== */
+.site-header .nav-desktop a.nav-cta {
+  margin-left: 0.4rem; padding: 0 1rem; min-height: 38px; border-radius: 999px;
+  background: #f5e9d0; color: #bf2b54; font-weight: 800;
+}
+.site-header .nav-desktop a.nav-cta::after { display: none; }
+.site-header .nav-desktop a.nav-cta:hover { background: #fff3dd; color: #8f1d40; }
+.site-header .nav-desktop a.nav-cta[aria-current] { box-shadow: inset 0 0 0 2px #8f1d40; }
+.nav-group--related a { opacity: 0.9; }
+
+/* ===== Homepage: essential visit facts in one band ===== */
+.visit-band { padding: clamp(1.8rem, 4vw, 2.8rem) 0; }
+.visit-band__inner {
+  display: grid; gap: 1.2rem 2rem; align-items: center;
+  padding: clamp(1.3rem, 3vw, 2rem); border-radius: 12px;
+  background: #f5e9d0; color: #8f1d40; box-shadow: 10px 10px 0 #8f1d40;
+}
+@media (min-width: 900px) { .visit-band__inner { grid-template-columns: minmax(0, 1fr) auto; } }
+.visit-band h2 { margin: 0 0 0.9rem; color: #bf2b54; font-size: clamp(1.5rem, 3vw, 2.1rem); }
+.visit-band__facts { display: grid; gap: 0.7rem 1.6rem; margin: 0; }
+@media (min-width: 700px) { .visit-band__facts { grid-template-columns: auto minmax(0, 1.6fr) auto; } }
+.visit-band__facts dt { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #bf2b54; }
+.visit-band__facts dd { margin: 0.15rem 0 0; font-weight: 700; color: #8f1d40; }
+.visit-band__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; }
+html[data-sec="night"] .visit-band .btn-primary { background: #bf2b54; color: #f5e9d0; border-color: #bf2b54; }
+html[data-sec="night"] .visit-band .btn-ghost { background: transparent; color: #bf2b54; border: 1.5px solid #bf2b54; }
+
+/* ===== Plan your visit page ===== */
+.visit-block { margin: clamp(1.8rem, 4vw, 2.8rem) 0; }
+.visit-block h2 { margin: 0 0 1rem; }
+.cal-list { list-style: none; margin: 0 0 0.9rem; padding: 0; display: grid; gap: 0.8rem; grid-template-columns: repeat(auto-fill, minmax(10.5rem, 1fr)); }
+.cal-day { padding: 1rem 1rem 1.1rem; border-radius: 10px; background: #f5e9d0; box-shadow: 6px 6px 0 #8f1d40; }
+.cal-day__date { margin: 0 0 0.3rem; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: #bf2b54; }
+.cal-day__name { margin: 0 0 0.3rem; font-size: 1.35rem; color: #8f1d40; }
+html[data-sec="night"] .cal-day__what { margin: 0; color: #8f1d40; font-size: 0.92rem; line-height: 1.35; }
+.visit-grid { display: grid; gap: 1.2rem; }
+@media (min-width: 900px) { .visit-grid { grid-template-columns: 1fr 1fr; } }
+.visit-card { padding: clamp(1.2rem, 3vw, 1.7rem); border-radius: 12px; background: #8f1d40; border: 1.5px solid rgba(245, 233, 208, 0.3); }
+.visit-card h2 { color: #f5e9d0; font-size: clamp(1.3rem, 2.4vw, 1.7rem); }
+.visit-list { margin: 0 0 1.2rem; padding-left: 1.1rem; display: grid; gap: 0.55rem; color: #f8e2d8; }
+.visit-list strong { display: block; color: #f5e9d0; }
+.visit-page #visit { margin-top: 0; }
+
+/* ===== Footer: secondary links live here ===== */
+.footer-grid.footer-grid--cols { display: grid; gap: 1.6rem 2rem; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .footer-grid.footer-grid--cols { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .footer-grid.footer-grid--cols { grid-template-columns: 1.6fr repeat(4, minmax(0, 1fr)); } }
+.footer-title { margin: 0 0 0.3rem; font: 800 1.2rem/1.2 var(--font-display, inherit); color: #f5e9d0; }
+.footer-col { display: flex; flex-direction: column; gap: 0.15rem; }
+.footer-col__h { margin: 0 0 0.35rem; font-size: 0.74rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #f8e2d8; border-bottom: 2px solid #da6c81; padding-bottom: 0.3rem; align-self: flex-start; }
+html[data-sec="night"] .footer-col a { min-height: 34px; display: inline-flex; align-items: center; color: #f5e9d0; text-decoration: none; }
+html[data-sec="night"] .footer-col a:hover { text-decoration: underline; text-underline-offset: 3px; }
+html[data-sec="night"] .cal-day .cal-day__name { color: #8f1d40; }
+html[data-sec="night"] .cal-day .cal-day__date { color: #bf2b54; }
+html[data-sec="night"] .visit-band h2 { color: #bf2b54; }

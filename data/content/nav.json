@@ -39,9 +39,9 @@
         "about"
       ],
       "items": [
-        "community",
         "visit",
-        "contact"
+        "contact",
+        "community"
       ]
     }
   ],
@@ -63,7 +63,7 @@
         "nav",
         "bksBengal"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "external"
     },
     {
@@ -73,7 +73,7 @@
         "nav",
         "pujo2025"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "external"
     },
     {
@@ -83,7 +83,7 @@
         "nav",
         "jaiKisan"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "external"
     },
     {
@@ -93,7 +93,7 @@
         "nav",
         "krlMedia"
       ],
-      "desktop": true,
+      "desktop": false,
       "kind": "external"
     },
     {
@@ -112,6 +112,16 @@
       "labelPath": [
         "nav",
         "thePuja"
+      ],
+      "desktop": true,
+      "kind": "page"
+    },
+    {
+      "id": "visit",
+      "href": "#visit",
+      "labelPath": [
+        "nav",
+        "visit"
       ],
       "desktop": true,
       "kind": "page"
@@ -208,17 +218,6 @@
       "labelPath": [
         "nav",
         "record"
-      ],
-      "desktop": false,
-      "homeSection": true,
-      "kind": "section"
-    },
-    {
-      "id": "visit",
-      "href": "#visit",
-      "labelPath": [
-        "nav",
-        "visit"
       ],
       "desktop": false,
       "homeSection": true,

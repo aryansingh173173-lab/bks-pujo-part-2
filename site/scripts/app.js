@@ -22,12 +22,13 @@
      this list. */
   const RELOCATE = [
     ["#memories", "participate-stories"],
-    ["#visit", "home-visit"],
+    ["#visit", "visit-a"],
     [".quote-band", "home-quote"],
     ["#theme", "puja-a"],
     ["#prep", "puja-a"],
-    ["#record", "puja-b"],
-    ["#press", "puja-c"],
+    ["#banner-bks", "history-a"],
+    ["#record", "history-a"],
+    ["#press", "history-a"],
     ["#demo", "puja-farm"],
     ["#model", "puja-farm"],
     ["#nrb", "participate-a"],
@@ -42,15 +43,19 @@
     if (sel.charAt(0) === "#") SECTION_VIEW[sel.slice(1)] = slot.split("-")[0];
   });
   const PAGE_LABELS = {
-    league: { en: "Krishi Ratna League", bn: "কৃষিরত্ন লিগ", hi: "कृषि रत्न लीग" }
+    league: { en: "Krishi Ratna League", bn: "কৃষিরত্ন লিগ", hi: "कृषि रत्न लीग" },
+    history: { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" }
   };
   /* The Puja and Integrated Farming share one page, as do Participate and the
      stories. These names replace the single-topic labels in the menu. */
   const MERGED_LABELS = {
     puja: { en: "Puja &amp; Farming", bn: "পুজো ও চাষ", hi: "पूजा और खेती" },
     participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" },
-    "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" }
+    "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" },
+    visit: { en: "Plan your visit", bn: "আসার পরিকল্পনা", hi: "आने की योजना" }
   };
+  const CONTACT_CTA = { en: "Contact us", bn: "যোগাযোগ করুন", hi: "संपर्क करें" };
+  const RELATED_LABEL = { en: "Related sites", bn: "সম্পর্কিত সাইট", hi: "संबंधित साइटें" };
   const MERGED_H1 = {
     participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
   };
@@ -348,18 +353,15 @@
         if (placed) return "";
         placed = true;
         return dropHtml;
-      }).join("");
+      }).join("") +
+        "<a class='nav-cta' href='#contact' data-nav-kind='page'>" + (CONTACT_CTA[state.lang] || CONTACT_CTA.en) + "</a>";
       bindNavDrop(desktop);
     }
     if (drawerList) {
       const used = { home: true };
       let html = itemLink(byId.home || { id: "home", href: "#home", labelPath: ["nav", "home"] }, false);
-      ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"].forEach(function (id) {
-        const item = byId[id];
-        if (!item) return;
-        used[id] = true;
-        html += itemLink(item, false);
-      });
+      const RELATED = ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"];
+      RELATED.forEach(function (id) { used[id] = true; });
       const audienceLabel = (ui.navGroups && ui.navGroups.participate) || "Participate";
       html += "<p class='nav-group-label' id='nav-g-audience'>" + audienceLabel + "</p>";
       html += "<div class='nav-group' role='group' aria-labelledby='nav-g-audience'>";
@@ -395,6 +397,10 @@
       spec.items.forEach((item) => {
         if (!used[item.id]) html += itemLink(item, true);
       });
+      html += "<p class='nav-group-label' id='nav-g-related'>" + (RELATED_LABEL[state.lang] || RELATED_LABEL.en) + "</p>";
+      html += "<div class='nav-group nav-group--related' role='group' aria-labelledby='nav-g-related'>";
+      RELATED.forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
+      html += "</div>";
       drawerList.innerHTML = html;
       drawerList.querySelectorAll("a").forEach((a) => a.addEventListener("click", closeMenu));
     }
@@ -1307,6 +1313,8 @@
       ifs: "The Puja & Integrated Farming",
       participate: "Participate & Stories",
       memories: "Participate & Stories",
+      visit: "Plan your visit",
+      history: "About us",
       mission: "The Mission",
       programme: "Programme",
       contact: "Contact",
