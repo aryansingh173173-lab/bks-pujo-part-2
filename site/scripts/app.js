@@ -21,7 +21,7 @@
      short and each chapter page carries its own depth. Order inside a slot follows
      this list. */
   const RELOCATE = [
-    ["#memories", "participate-stories"],
+    ["#memories", "puja-stories"],
     ["#visit", "visit-a"],
     [".quote-band", "home-quote"],
     ["#theme", "puja-a"],
@@ -44,20 +44,21 @@
   });
   const PAGE_LABELS = {
     league: { en: "Krishi Ratna League", bn: "কৃষিরত্ন লিগ", hi: "कृषि रत्न लीग" },
-    history: { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" }
+    history: { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" },
+    contact: { en: "Contact us", bn: "যোগাযোগ করুন", hi: "संपर्क करें" }
   };
   /* The Puja and Integrated Farming share one page, as do Participate and the
      stories. These names replace the single-topic labels in the menu. */
   const MERGED_LABELS = {
     puja: { en: "Puja &amp; Farming", bn: "পুজো ও চাষ", hi: "पूजा और खेती" },
-    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" },
+    participate: { en: "How to Participate", bn: "কীভাবে অংশ নেবেন", hi: "कैसे भाग लें" },
     "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" },
     visit: { en: "Plan your visit", bn: "আসার পরিকল্পনা", hi: "आने की योजना" }
   };
   const CONTACT_CTA = { en: "Contact us", bn: "যোগাযোগ করুন", hi: "संपर्क करें" };
   const RELATED_LABEL = { en: "Related sites", bn: "সম্পর্কিত সাইট", hi: "संबंधित साइटें" };
   const MERGED_H1 = {
-    participate: { en: "Participate &amp; Stories", bn: "অংশ নিন ও গল্প", hi: "भाग लें और कहानियाँ" }
+    participate: { en: "How to Participate", bn: "কীভাবে অংশ নেবেন", hi: "कैसे भाग लें" }
   };
   function mergedLabel(map, id) {
     const entry = map[id];
@@ -358,45 +359,12 @@
       bindNavDrop(desktop);
     }
     if (drawerList) {
-      const used = { home: true };
-      let html = itemLink(byId.home || { id: "home", href: "#home", labelPath: ["nav", "home"] }, false);
       const RELATED = ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"];
-      RELATED.forEach(function (id) { used[id] = true; });
-      const audienceLabel = (ui.navGroups && ui.navGroups.participate) || "Participate";
-      html += "<p class='nav-group-label' id='nav-g-audience'>" + audienceLabel + "</p>";
-      html += "<div class='nav-group' role='group' aria-labelledby='nav-g-audience'>";
-      const doorLabels = {
-        en: ["Sponsors", "Government &amp; Institutions", "Farmers / FarmTech and AgriTech", "Public / Puja", "NRB / Supporters"],
-        bn: ["পৃষ্ঠপোষকতা", "Government &amp; Institutions", "কৃষক / FarmTech and AgriTech", "পূজা", "সমর্থক / NRB"],
-        hi: ["प्रायोजन", "Government &amp; Institutions", "किसान / FarmTech and AgriTech", "पूजा", "समर्थक / NRB"]
-      };
-      const doorHrefs = [
-        "https://bks-pujo-sponsor.vercel.app/",
-        "https://bks-pujo-government.vercel.app/",
-        "https://bks-pujo-farmtech-agritech.vercel.app/",
-        "https://bks-pujo-public.vercel.app/",
-        "https://bks-pujo-nrb.vercel.app/"
-      ];
-      const labels = doorLabels[state.lang] || doorLabels.en;
-      doorHrefs.forEach(function (href, i) {
-        html += "<a href='" + href + "'>" + (labels[i] || doorLabels.en[i]) + "</a>";
-      });
-      html += "</div>";
-      (spec.groups || []).forEach((group) => {
-        const label = mergedLabel(MERGED_LABELS, group.id) || getByPath(ui, group.labelPath) || group.id;
-        html += "<p class='nav-group-label' id='nav-g-" + group.id + "'>" + label + "</p>";
-        html += "<div class='nav-group' role='group' aria-labelledby='nav-g-" + group.id + "'>";
-        (group.items || []).forEach((id) => {
-          const item = byId[id];
-          if (!item) return;
-          used[id] = true;
-          html += itemLink(item, true);
-        });
-        html += "</div>";
-      });
-      spec.items.forEach((item) => {
-        if (!used[item.id]) html += itemLink(item, true);
-      });
+      const ABOUT = { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" };
+      let html = "";
+      ["home", "puja", "visit", "participate"].forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
+      html += "<a href='#contact' data-nav-kind='page'>" + (CONTACT_CTA[state.lang] || CONTACT_CTA.en) + "</a>";
+      html += "<a href='#history' data-nav-kind='page'>" + (ABOUT[state.lang] || ABOUT.en) + "</a>";
       html += "<p class='nav-group-label' id='nav-g-related'>" + (RELATED_LABEL[state.lang] || RELATED_LABEL.en) + "</p>";
       html += "<div class='nav-group nav-group--related' role='group' aria-labelledby='nav-g-related'>";
       RELATED.forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
@@ -426,20 +394,8 @@
     const homeLabel = (ui.nav && ui.nav.home) || "Home";
     const sep = " <span class='crumb-sep' aria-hidden='true'>/</span> ";
     const parts = ["<a href='#home'>" + homeLabel + "</a>"];
-    const group = (spec.groups || []).find((g) => (g.items || []).indexOf(page) !== -1);
-    if (group) {
-      const gLabel = mergedLabel(MERGED_LABELS, group.id) || getByPath(ui, group.labelPath) || group.id;
-      const firstPage = (group.items || []).map((id) => byId[id]).find((i) => i && !i.homeSection);
-      if (firstPage && firstPage.id !== page) {
-        parts.push("<a href='" + firstPage.href + "'>" + gLabel + "</a>");
-      } else {
-        parts.push("<span>" + gLabel + "</span>");
-      }
-    }
     const local = PAGE_LABELS[page];
-    const label = item ? (mergedLabel(MERGED_LABELS, page) || getByPath(ui, item.labelPath) || page) : local ? (local[state.lang] || local.en) : page;
-    // A page that heads its own group (Puja & Farming) needs no second crumb.
-    if (parts.length > 1 && parts[parts.length - 1] === "<span>" + label + "</span>") parts.pop();
+    const label = local ? (local[state.lang] || local.en) : item ? (mergedLabel(MERGED_LABELS, page) || getByPath(ui, item.labelPath) || page) : page;
     parts.push("<span aria-current='page'>" + label + "</span>");
     el.hidden = false;
     el.innerHTML = parts.join(sep);
@@ -1311,8 +1267,8 @@
       puja: "The Puja & Integrated Farming",
       league: "Krishi Ratna League",
       ifs: "The Puja & Integrated Farming",
-      participate: "Participate & Stories",
-      memories: "Participate & Stories",
+      participate: "How to Participate",
+      memories: "Puja & Farming",
       visit: "Plan your visit",
       history: "About us",
       mission: "The Mission",

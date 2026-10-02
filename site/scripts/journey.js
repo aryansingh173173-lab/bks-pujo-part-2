@@ -1,32 +1,60 @@
 (function () {
   "use strict";
 
-  /* The three-stop journey: the homepage map, the stop bar at the top of each
-     chapter page, mid-page hints, and the "next stop" push at the end of every
-     page. The route is fixed so nobody reaches a dead end:
-     home → Puja & Integrated Farming → Participate & Stories → visit. */
+  /* Plain page links. Every page has one name, used the same way in the
+     header, the homepage cards and the "Next" box at the end of each page. */
 
-  var ORDER = ["puja", "participate"];
-
-  var STOPS = {
-    puja: { href: "#puja", img: "assets/puja-2025/aarti-procession-2025.jpg", shape: "circle" },
-    participate: { href: "#participate", img: "assets/stories/2026/khuti-puja-4.jpg", shape: "block" }
+  var PAGES = {
+    puja: { href: "#puja", img: "assets/renders/spiral.jpg" },
+    visit: { href: "#visit", img: "assets/renders/water.jpg" },
+    participate: { href: "#participate", img: "assets/stories/2026/khuti-puja-4.jpg" },
+    contact: { href: "#contact", img: "assets/stories/2026/khuti-puja-1.jpg" }
   };
+  var CARDS = ["puja", "visit", "participate"];
 
+  // What the "Next" box at the end of each page points to.
   var NEXT = {
     home: "puja",
-    puja: "participate",
-    mission: "participate",
+    puja: "visit",
     visit: "participate",
-    participate: "visit"
+    participate: "contact",
+    mission: "participate"
+  };
+
+  var NAMES = {
+    en: { puja: "Puja & Farming", visit: "Plan your visit", participate: "How to Participate", contact: "Contact us" },
+    bn: { puja: "পুজো ও চাষ", visit: "আসার পরিকল্পনা", participate: "কীভাবে অংশ নেবেন", contact: "যোগাযোগ করুন" },
+    hi: { puja: "पूजा और खेती", visit: "आने की योजना", participate: "कैसे भाग लें", contact: "संपर्क करें" }
+  };
+  var LINES = {
+    en: {
+      puja: "The worship, the music, and the farm growing on the Puja ground.",
+      visit: "Dates, the exact place, how to get there, and what is on.",
+      participate: "Help start a village farm, sponsor, or volunteer.",
+      contact: "Write or call us. We are happy to help.",
+      head: "What would you like to do?", next: "Next"
+    },
+    bn: {
+      puja: "আরাধনা, গান, আর পুজোর মাঠে গড়ে ওঠা খামার।",
+      visit: "তারিখ, সঠিক ঠিকানা, কীভাবে পৌঁছবেন, আর কী কী হবে।",
+      participate: "একটি গ্রামের খামার শুরু করতে সাহায্য করুন, স্পনসর হন, বা স্বেচ্ছাসেবক হন।",
+      contact: "লিখুন বা ফোন করুন। আমরা সাহায্য করতে পেরে খুশি।",
+      head: "আপনি কী করতে চান?", next: "এরপর"
+    },
+    hi: {
+      puja: "आराधना, संगीत, और पूजा स्थल पर बढ़ता खेत।",
+      visit: "तारीखें, सही पता, कैसे पहुँचें, और क्या होगा।",
+      participate: "एक गाँव का खेत शुरू करने में मदद करें, प्रायोजक बनें, या स्वयंसेवक बनें।",
+      contact: "लिखिए या फ़ोन कीजिए। हमें मदद करके खुशी होगी।",
+      head: "आप क्या करना चाहेंगे?", next: "आगे"
+    }
   };
 
   var HINTS = {
     "league-site": { href: "https://krl-site.vercel.app/", icon: "out", external: true },
-    "puja-stories": { href: "#memories", icon: "play" },
-    "puja-ifs": { href: "#ifs", icon: "leaf" },
+        "puja-ifs": { href: "#ifs", icon: "leaf" },
     "ifs-demo": { href: "#demo", icon: "pin" },
-    "ifs-seed": { href: "#fund", icon: "seed" },
+    "ifs-seed": { href: "#participate", icon: "seed" },
     "participate-nominate": { href: "https://krl-site.vercel.app/", icon: "out", external: true }
   };
 
@@ -40,19 +68,6 @@
       nextKicker: "Next stop",
       jump: "Or jump to",
       barLabel: "Your path through the Puja",
-      stops: {
-        league: { short: "Krishi Ratna League", title: "Krishi Ratna League", line: "Seven awards for farmers. Nominate a farmer, or yourself.", cta: "Explore the League" },
-        puja: { short: "Puja & Farming", title: "The Puja & Integrated Farming", line: "The Puja, and a working farm with crops, animals, fish and trees.", cta: "Explore the Puja & Farming" },
-        participate: { short: "Participate & Stories", title: "Participate & Stories", line: "Help start a village farm, sponsor, or volunteer. See photos from 2025 and 2026.", cta: "Find your door" }
-      },
-      next: {
-        home: { title: "Start with the Puja.", body: "Worship, music, food, and a working farm on the Puja ground." },
-        league: { title: "See the Puja where they are honoured.", body: "Worship, music, food, and a working farm." },
-        puja: { title: "One farm needs one supporter.", body: "Help start a village farm, sponsor, or volunteer. Choose how you want to help." },
-        mission: { title: "A big goal starts with one step.", body: "Help start a village farm, sponsor, or volunteer." },
-        visit: { title: "While you are here, take part.", body: "Help start a village farm, sponsor, or volunteer." },
-        participate: { title: "You are invited. Come and visit.", body: "The pandal is open to everyone, free, on every day of the Puja.", cta: "Plan your visit", alt: "Watch the stories" }
-      },
       league: {
         kicker: "Stop 01 · Recognition",
         h1: "Krishi Ratna League",
@@ -63,7 +78,7 @@
         "puja-stories": { label: "In photographs", text: "Photographs from the 2026 ground and the 2025 Mahotsav play as stories.", link: "Open the stories" },
         "puja-ifs": { label: "Keep going", text: "The theme is sustainable agriculture. Scroll on to see how one farm loops crop, animals, water and market.", link: "Integrated Farming" },
         "ifs-demo": { label: "On the ground", text: "This model is being built as a working farm at the Puja venue in the East Kolkata Wetlands.", link: "See the live demo" },
-        "ifs-seed": { label: "The seed", text: "₹1 lakh is the proposed seed for one village farm. Nothing is collected on this website.", link: "How support works" },
+        "ifs-seed": { label: "The seed", text: "₹1 lakh is the proposed seed for one village farm. Nothing is collected on this website.", link: "How to Participate" },
         "participate-nominate": { label: "Krishi Ratna League", text: "The Krishi Ratna League is being launched through this Puja. Awards and nominations are on the League website.", link: "Visit the KRL website" }
       }
     },
@@ -76,19 +91,6 @@
       nextKicker: "পরের ধাপ",
       jump: "অথবা সরাসরি যান",
       barLabel: "পুজোর মধ্যে দিয়ে আপনার পথ",
-      stops: {
-        league: { short: "কৃষিরত্ন লিগ", title: "কৃষিরত্ন লিগ", line: "বাংলা যে কৃষকদের ছবি তোলে না, তাঁদের জন্য সাতটি পুরস্কার। একজন কৃষককে মনোনীত করুন, বা নিজেকে।", cta: "লিগ দেখুন" },
-        puja: { short: "পুজো ও চাষ", title: "পুজো ও সমন্বিত চাষ", line: "আরাধনা, কারুকাজ, ঢাক আর ঘরে ফেরা, আর প্যান্ডেলের পেছনের খামার: এক জমিতে ফসল, পশু, জল আর বাজার।", cta: "পুজো ও চাষ দেখুন" },
-        participate: { short: "অংশ নিন ও গল্প", title: "অংশ নিন ও গল্প", line: "একটি গ্রামের খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, আর ২০২৫ ও ২০২৬-এর মাঠের ছবিতে পুজো দেখুন।", cta: "আপনার দরজা খুঁজুন" }
-      },
-      next: {
-        home: { title: "পুজো দিয়ে শুরু করুন।", body: "আরাধনা, গান, খাবার, আর পুজোর মাঠে একটি চালু খামার।" },
-        league: { title: "দেখুন যে জমায়েতে তাঁরা সম্মানিত হন।", body: "আরাধনা, কারুকাজ, ঘরে ফেরা। পুজোই সেই মঞ্চ।" },
-        puja: { title: "একটি খামারের জন্য একজন পৃষ্ঠপোষক।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক বা স্বেচ্ছাসেবক হন, মনোনয়ন দিন, আর মাঠের গল্পগুলো দেখুন। আপনার দরজা বেছে নিন।" },
-        mission: { title: "বড় লক্ষ্যের শুরু একটি দরজা দিয়ে।", body: "খামারের বীজ দিন, পৃষ্ঠপোষক হন, স্বেচ্ছাসেবক হন বা একজন কৃষককে মনোনীত করুন।" },
-        visit: { title: "এখানে এসে যুক্ত হন।", body: "একটি গ্রামের খামার শুরু করতে সাহায্য করুন, স্পনসর হন, বা স্বেচ্ছাসেবক হন।" },
-        participate: { title: "আপনি আমন্ত্রিত। চলে আসুন।", body: "পুজোর সব দিন প্যান্ডেল সবার জন্য খোলা, বিনামূল্যে।", cta: "আসার পরিকল্পনা করুন", alt: "গল্পগুলো দেখুন" }
-      },
       league: {
         kicker: "ধাপ ০১ · স্বীকৃতি",
         h1: "কৃষিরত্ন লিগ",
@@ -99,7 +101,7 @@
         "puja-stories": { label: "ছবিতে", text: "২০২৬-এর মাঠ আর ২০২৫ মহোৎসবের ছবি গল্পের মতো চলে।", link: "গল্পগুলো খুলুন" },
         "puja-ifs": { label: "এগিয়ে চলুন", text: "থিম টেকসই কৃষি। দেখুন কীভাবে একটি খামারে ফসল, পশু, জল আর বাজার এক চক্রে বাঁধা।", link: "সমন্বিত চাষ" },
         "ifs-demo": { label: "মাঠে", text: "এই মডেল পুজোর স্থানে, পূর্ব কলকাতা জলাভূমিতে, একটি চালু খামার হিসেবে গড়ে উঠছে।", link: "লাইভ ডেমো দেখুন" },
-        "ifs-seed": { label: "বীজ", text: "একটি গ্রামের খামারের প্রস্তাবিত বীজ ₹১ লক্ষ। এই ওয়েবসাইটে কোনো টাকা নেওয়া হয় না।", link: "সহায়তা কীভাবে কাজ করে" },
+        "ifs-seed": { label: "বীজ", text: "একটি গ্রামের খামারের প্রস্তাবিত বীজ ₹১ লক্ষ। এই ওয়েবসাইটে কোনো টাকা নেওয়া হয় না।", link: "কীভাবে অংশ নেবেন" },
         "participate-nominate": { label: "কৃষিরত্ন লিগ", text: "এই পুজোর মধ্য দিয়েই কৃষিরত্ন লিগের সূচনা হচ্ছে। পুরস্কার আর মনোনয়নের কথা লিগের ওয়েবসাইটে।", link: "KRL ওয়েবসাইটে যান" }
       }
     },
@@ -112,19 +114,6 @@
       nextKicker: "अगला पड़ाव",
       jump: "या सीधे जाएँ",
       barLabel: "पूजा में आपका रास्ता",
-      stops: {
-        league: { short: "कृषि रत्न लीग", title: "कृषि रत्न लीग", line: "उन किसानों के लिए सात पुरस्कार जिनकी तस्वीर बंगाल नहीं खींचता। किसी किसान को नामित करें, या स्वयं को।", cta: "लीग देखें" },
-        puja: { short: "पूजा और खेती", title: "पूजा और समेकित कृषि", line: "आराधना, शिल्प, ढाक और घर वापसी, और पंडाल के पीछे का खेत: एक ज़मीन पर फसल, पशु, जल और बाज़ार।", cta: "पूजा और खेती देखें" },
-        participate: { short: "भाग लें और कहानियाँ", title: "भाग लें और कहानियाँ", line: "किसी गाँव के खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, और 2025 व 2026 की ज़मीन की तस्वीरों में पूजा देखें।", cta: "अपना द्वार चुनें" }
-      },
-      next: {
-        home: { title: "पूजा से शुरू करें।", body: "आराधना, संगीत, भोजन, और पूजा स्थल पर एक चालू खेत।" },
-        league: { title: "वह जमावड़ा देखें जहाँ उनका सम्मान होता है।", body: "आराधना, शिल्प, घर वापसी। पूजा ही मंच है।" },
-        puja: { title: "एक खेत को एक संरक्षक चाहिए।", body: "खेत को बीज दें, प्रायोजक या स्वयंसेवक बनें, नामांकन करें, और ज़मीन की कहानियाँ देखें। अपना द्वार चुनें।" },
-        mission: { title: "बड़ा लक्ष्य एक द्वार से शुरू होता है।", body: "खेत को बीज दें, प्रायोजक बनें, स्वयंसेवक बनें या किसी किसान को नामित करें।" },
-        visit: { title: "यहाँ आकर जुड़िए।", body: "एक गाँव का खेत शुरू करने में मदद करें, प्रायोजक बनें, या स्वयंसेवक बनें।" },
-        participate: { title: "आप आमंत्रित हैं। आइए।", body: "पूजा के सभी दिनों में पंडाल सबके लिए खुला है, निःशुल्क।", cta: "आने की योजना बनाएँ", alt: "कहानियाँ देखें" }
-      },
       league: {
         kicker: "पड़ाव 01 · सम्मान",
         h1: "कृषि रत्न लीग",
@@ -135,7 +124,7 @@
         "puja-stories": { label: "तस्वीरों में", text: "2026 की ज़मीन और 2025 महोत्सव की तस्वीरें कहानियों की तरह चलती हैं।", link: "कहानियाँ खोलें" },
         "puja-ifs": { label: "आगे बढ़ें", text: "विषय टिकाऊ कृषि है। देखें कैसे एक खेत में फसल, पशु, जल और बाज़ार एक चक्र में जुड़ते हैं।", link: "समेकित कृषि" },
         "ifs-demo": { label: "ज़मीन पर", text: "यह मॉडल पूजा स्थल, पूर्वी कोलकाता आर्द्रभूमि में, एक चालू खेत के रूप में बन रहा है।", link: "लाइव डेमो देखें" },
-        "ifs-seed": { label: "बीज", text: "एक गाँव के खेत के लिए प्रस्तावित बीज ₹1 लाख है। इस वेबसाइट पर कुछ भी एकत्र नहीं होता।", link: "सहायता कैसे काम करती है" },
+        "ifs-seed": { label: "बीज", text: "एक गाँव के खेत के लिए प्रस्तावित बीज ₹1 लाख है। इस वेबसाइट पर कुछ भी एकत्र नहीं होता।", link: "कैसे भाग लें" },
         "participate-nominate": { label: "कृषि रत्न लीग", text: "कृषि रत्न लीग की शुरुआत इसी पूजा से हो रही है। पुरस्कार और नामांकन लीग की वेबसाइट पर हैं।", link: "KRL वेबसाइट देखें" }
       }
     }
@@ -172,87 +161,36 @@
     return "<svg viewBox='0 0 24 24' aria-hidden='true' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'>" + (ICONS[name] || "") + "</svg>";
   }
 
-  function renderMap(c) {
+  function renderMap() {
     var host = document.querySelector("[data-journey-map]");
     if (!host) return;
-    var html =
-      "<header class='journey__head'>" +
-      "<p class='kicker'>" + esc(c.mapKicker) + "</p>" +
-      "<h2 id='journey-h'>" + esc(c.mapTitle) + "</h2>" +
-      "<p class='lede'>" + esc(c.mapLede) + "</p></header><ol class='journey__list'>";
-    ORDER.forEach(function (id, i) {
-      var s = STOPS[id];
-      var t = c.stops[id];
+    var n = NAMES[lang()], t = LINES[lang()];
+    var html = "<header class='journey__head'><h2 id='journey-h'>" + esc(t.head) + "</h2></header><ul class='page-cards'>";
+    CARDS.forEach(function (id) {
       html +=
-        "<li class='journey-stop journey-stop--" + s.shape + "'>" +
-        "<a class='journey-stop__link journey-card' href='" + s.href + "' aria-label='" + esc(c.stop + " " + num(i) + ": " + t.title) + "'>" +
-        "<span class='journey-card__pin' aria-hidden='true'></span>" +
-        "<span class='journey-stop__frame'><img src='" + s.img + "' alt='' loading='lazy' decoding='async'></span>" +
-        "<span class='journey-stop__body'>" +
-        "<span class='journey-stop__num' aria-hidden='true'>" + num(i) + "</span>" +
-        "<span class='journey-stop__title'>" + esc(t.title) + "</span>" +
-        "<span class='journey-stop__line'>" + esc(t.line) + "</span>" +
-        "<span class='journey-stop__cta'>" + esc(t.cta) + "</span>" +
-        "</span></a></li>";
+        "<li><a class='page-card' href='" + PAGES[id].href + "'>" +
+        "<span class='page-card__img'><img src='" + PAGES[id].img + "' alt='' loading='lazy' decoding='async'></span>" +
+        "<span class='page-card__body'><span class='page-card__title'>" + esc(n[id]) + "</span>" +
+        "<span class='page-card__line'>" + esc(t[id]) + "</span>" +
+        "<span class='page-card__go' aria-hidden='true'>→</span></span></a></li>";
     });
-    html += "</ol>";
-    host.innerHTML = html;
+    host.innerHTML = html + "</ul>";
   }
 
-  function renderBars(c) {
-    document.querySelectorAll("[data-journey-bar]").forEach(function (bar) {
-      var current = bar.getAttribute("data-journey-bar");
-      var idx = ORDER.indexOf(current);
-      bar.setAttribute("aria-label", c.barLabel);
-      var html = "<span class='journey-bar__count'>" + esc(c.stop) + " <b>" + num(idx) + "</b> " + esc(c.of) + " " + num(ORDER.length - 1) + "</span><ol class='journey-bar__list'>";
-      ORDER.forEach(function (id, i) {
-        var state = i < idx ? " is-done" : i === idx ? " is-current" : "";
-        html +=
-          "<li class='journey-bar__item" + state + "'><a href='" + STOPS[id].href + "'" + (i === idx ? " aria-current='step'" : "") + ">" +
-          "<span class='journey-bar__num'>" + num(i) + "</span><span class='journey-bar__label'>" + esc(c.stops[id].short) + "</span></a></li>";
-      });
-      bar.innerHTML = html + "</ol>";
-    });
+  function renderBars() {
+    document.querySelectorAll("[data-journey-bar]").forEach(function (bar) { bar.remove(); });
   }
 
-  function renderNext(c) {
+  function renderNext() {
+    var n = NAMES[lang()], t = LINES[lang()];
     document.querySelectorAll("[data-next-stop]").forEach(function (box) {
-      var from = box.getAttribute("data-next-stop");
-      var to = NEXT[from];
-      var copy = c.next[from] || {};
-      var isVisit = to === "visit";
-      var idx = ORDER.indexOf(to);
-      var stop = STOPS[to];
-      var href = isVisit ? "#visit" : stop.href;
-      var cta = isVisit ? copy.cta : c.stops[to].cta;
-      var kicker = isVisit ? c.nextKicker : c.nextKicker + " · " + num(idx) + " " + c.of + " " + num(ORDER.length - 1);
-      var img = isVisit ? "assets/stories/2026/khuti-puja-1.jpg" : stop.img;
-
-      var track = "<ol class='next-stop__track' aria-label='" + esc(c.barLabel) + "'>";
-      ORDER.forEach(function (id, i) {
-        var cls = isVisit || i < idx ? " is-done" : i === idx ? " is-next" : "";
-        track += "<li class='" + cls.trim() + "'><a href='" + STOPS[id].href + "' title='" + esc(c.stops[id].short) + "'" +
-          (i === idx ? " aria-current='step'" : "") + "><span>" + num(i) + "</span>" +
-          "<span class='sr-only'> " + esc(c.stops[id].short) + "</span></a></li>";
-      });
-      track += "</ol>";
-
-      var jump = ORDER.filter(function (id) { return id !== to && id !== from; }).map(function (id) {
-        return "<a href='" + STOPS[id].href + "'>" + esc(c.stops[id].short) + "</a>";
-      });
-      if (isVisit) jump.unshift("<a href='#memories'>" + esc(copy.alt) + "</a>");
-
+      var to = NEXT[box.getAttribute("data-next-stop")];
+      if (!to) { box.innerHTML = ""; return; }
       box.innerHTML =
-        "<div class='next-stop__inner'>" +
-        "<div class='next-stop__copy'>" + track +
-        "<p class='next-stop__kicker'>" + esc(kicker) + "</p>" +
-        "<h2 class='next-stop__title'>" + esc(copy.title) + "</h2>" +
-        "<p class='next-stop__body'>" + esc(copy.body) + "</p>" +
-        "<a class='next-stop__cta' href='" + href + "'><span>" + esc(cta) + "</span><span class='next-stop__arrow' aria-hidden='true'>→</span></a>" +
-        "<p class='next-stop__jump'><span>" + esc(c.jump) + "</span>" + jump.join("") + "</p>" +
-        "</div>" +
-        "<a class='next-stop__visual' href='" + href + "' tabindex='-1' aria-hidden='true'><img src='" + img + "' alt='' loading='lazy' decoding='async'></a>" +
-        "</div>";
+        "<a class='next-link' href='" + PAGES[to].href + "'>" +
+        "<span class='next-link__label'>" + esc(t.next) + "</span>" +
+        "<span class='next-link__title'>" + esc(n[to]) + " <span aria-hidden='true'>→</span></span>" +
+        "<span class='next-link__line'>" + esc(t[to]) + "</span></a>";
     });
   }
 
@@ -287,7 +225,7 @@
   var MEDIA = [
     { key: "invitation", kind: "static", imgs: ["assets/invitation/protyabortan-2026.jpg?v=1"] },
     { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
-      imgs: [M + "pavilion-exterior.jpg", "assets/puja-2025/aarti-procession-2025.jpg", "assets/puja-2025/conch-aarti-2025.jpg"] },
+      imgs: ["assets/renders/agri.jpg", "assets/renders/nelumbo.jpg", "assets/renders/spiral.jpg"] },
     { key: "puja-strip", kind: "strip", before: "[data-view='puja'] > .glance",
       imgs: [M + "grand-courtyard.jpg", MEM + "mem-09.jpg", M + "bamboo-gateway.jpg", MEM + "mem-10.jpg", M + "red-lit-interior.jpg", MEM + "mem-11.jpg", M + "carved-bamboo-face.jpg", MEM + "mem-26.jpg", M + "museum-sign.jpg"] },
     { key: "ifs-gallery", kind: "gallery", after: "#ifs-body .bks-ifs__wrap > header",
@@ -554,9 +492,9 @@
     if (l === lastLang) return;
     lastLang = l;
     var c = COPY[l];
-    renderMap(c);
-    renderBars(c);
-    renderNext(c);
+    renderMap();
+    renderBars();
+    renderNext();
     renderHints(c);
     renderLeagueHead(c);
   }
