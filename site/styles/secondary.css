@@ -659,6 +659,10 @@ html[data-sec="night"] .differ .diff-strip p { margin: 0; color: #8f1d40; font-s
 .site-header .nav-desktop a.nav-cta[aria-current] { box-shadow: inset 0 0 0 2px #8f1d40; }
 .nav-group--related a { opacity: 0.9; }
 
+/* Main buttons: vanilla on the raspberry ground so the button itself is visible. */
+html[data-sec="night"] .btn-primary { background: #f5e9d0; color: #bf2b54; border-color: #f5e9d0; }
+html[data-sec="night"] .btn-primary:hover { background: #fff3dd; color: #8f1d40; border-color: #fff3dd; }
+
 /* ===== Homepage: essential visit facts in one band ===== */
 .visit-band { padding: clamp(1.8rem, 4vw, 2.8rem) 0; }
 .visit-band__inner {
