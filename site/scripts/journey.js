@@ -5,8 +5,8 @@
      header, the homepage cards and the "Next" box at the end of each page. */
 
   var PAGES = {
-    puja: { href: "#puja", img: "assets/renders/spiral.jpg" },
-    visit: { href: "#visit", img: "assets/renders/water.jpg" },
+    puja: { href: "#puja", img: "assets/renders/pandal-inside.jpg?v=2" },
+    visit: { href: "#visit", img: "assets/renders/pandal-aerial.jpg?v=2" },
     participate: { href: "#participate", img: "assets/stories/2026/khuti-puja-4.jpg" },
     contact: { href: "#contact", img: "assets/stories/2026/khuti-puja-1.jpg" }
   };
@@ -224,8 +224,9 @@
   var MEM = "assets/memories-2025/";
   var MEDIA = [
     { key: "invitation", kind: "static", imgs: ["assets/invitation/protyabortan-2026.jpg?v=1"] },
+    { key: "siteplan", kind: "static", imgs: ["assets/renders/site-plan.jpg?v=2"] },
     { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
-      imgs: ["assets/renders/agri.jpg", "assets/renders/nelumbo.jpg", "assets/renders/spiral.jpg"] },
+      imgs: ["assets/renders/pandal-aerial.jpg?v=2", "assets/renders/lamp-path.jpg?v=2", "assets/renders/pandal-entrance.jpg?v=2"] },
     { key: "puja-strip", kind: "strip", before: "[data-view='puja'] > .glance",
       imgs: [M + "grand-courtyard.jpg", MEM + "mem-09.jpg", M + "bamboo-gateway.jpg", MEM + "mem-10.jpg", M + "red-lit-interior.jpg", MEM + "mem-11.jpg", M + "carved-bamboo-face.jpg", MEM + "mem-26.jpg", M + "museum-sign.jpg"] },
     { key: "ifs-gallery", kind: "gallery", after: "#ifs-body .bks-ifs__wrap > header",
