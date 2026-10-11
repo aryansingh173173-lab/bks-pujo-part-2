@@ -53,7 +53,8 @@
     puja: { en: "Puja &amp; Farming", bn: "পুজো ও চাষ", hi: "पूजा और खेती" },
     participate: { en: "How to Participate", bn: "কীভাবে অংশ নেবেন", hi: "कैसे भाग लें" },
     "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" },
-    visit: { en: "Plan your visit", bn: "আসার পরিকল্পনা", hi: "आने की योजना" }
+    visit: { en: "Plan your visit", bn: "আসার পরিকল্পনা", hi: "आने की योजना" },
+    progress: { en: "Puja Progress", bn: "পুজোর প্রস্তুতি", hi: "पूजा की तैयारी" }
   };
   const CONTACT_CTA = { en: "Contact us", bn: "যোগাযোগ করুন", hi: "संपर्क करें" };
   const RELATED_LABEL = { en: "Related sites", bn: "সম্পর্কিত সাইট", hi: "संबंधित साइटें" };
@@ -136,7 +137,7 @@
     try {
       const url = new URL(location.href);
       url.searchParams.set("lang", lang);
-      history.replaceState(null, "", url.pathname + url.search + url.hash);
+      history.replaceState(history.state, "", url.pathname + url.search + url.hash);
     } catch (e) { /* ignore */ }
   }
 
@@ -290,6 +291,14 @@
     });
   }
 
+  /* The Puja Progress page joins the menu right after How to Participate. */
+  function withProgressPage(spec) {
+    if (!spec || !spec.items || spec.items.some((item) => item.id === "progress")) return spec;
+    const at = spec.items.findIndex((item) => item.id === "participate");
+    spec.items.splice(at + 1, 0, { id: "progress", href: "#progress", labelPath: ["nav", "progress"], desktop: true, kind: "page" });
+    return spec;
+  }
+
   function renderNav() {
     const ui = state.ui[state.lang];
     const spec = state.navSpec;
@@ -362,7 +371,7 @@
       const RELATED = ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"];
       const ABOUT = { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" };
       let html = "";
-      ["home", "puja", "visit", "participate"].forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
+      ["home", "puja", "visit", "participate", "progress"].forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
       html += "<a href='#contact' data-nav-kind='page'>" + (CONTACT_CTA[state.lang] || CONTACT_CTA.en) + "</a>";
       html += "<a href='#history' data-nav-kind='page'>" + (ABOUT[state.lang] || ABOUT.en) + "</a>";
       html += "<p class='nav-group-label' id='nav-g-related'>" + (RELATED_LABEL[state.lang] || RELATED_LABEL.en) + "</p>";
@@ -1343,8 +1352,32 @@
     });
   }
 
-  window.addEventListener("hashchange", () => {
+  /* Back always lands on the homepage. History holds at most the homepage plus
+     the one page being read: home to a page pushes an entry, page to page
+     replaces it, and a page linking home steps back onto the homepage entry. */
+  const baseUrl = () => location.pathname + location.search;
+  let lastView = null;
+  let pendingHome = null;
+  let routedHref = null;
+
+  function isRoute(id) {
+    if (document.querySelector("[data-view='" + id + "']") || SECTION_VIEW[id]) return true;
+    const el = document.getElementById(id);
+    return !!(el && el.closest("[data-view]"));
+  }
+
+  function onRoute() {
+    if (pendingHome !== null && viewFor(pageFromHash()) === "home") {
+      history.replaceState(history.state, "", baseUrl() + (pendingHome ? "#" + pendingHome : ""));
+      pendingHome = null;
+    }
     const page = pageFromHash();
+    const view = viewFor(page);
+    if (view !== "home" && lastView === "home" && !(history.state && history.state.bksPage)) {
+      history.replaceState({ bksPage: true }, "", location.href);
+    }
+    lastView = view;
+    routedHref = location.href;
     show(page);
     if (viewFor(page) !== page) {
       const heading = document.querySelector("#" + page + " h2");
@@ -1360,6 +1393,34 @@
       heading.setAttribute("tabindex", "-1");
       heading.focus({ preventScroll: true });
     }
+  }
+  /* Entries made with pushState fire popstate but not hashchange, so listen to
+     both and route once per address. */
+  const routeIfMoved = () => { if (location.href !== routedHref) onRoute(); };
+  window.addEventListener("hashchange", routeIfMoved);
+  window.addEventListener("popstate", routeIfMoved);
+
+  document.addEventListener("click", (e) => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target.closest && e.target.closest("a[href^='#']");
+    if (!a) return;
+    const hash = a.getAttribute("href");
+    const target = hash.slice(1).split("/")[0];
+    if (!target || !isRoute(target) || location.hash === hash) return;
+    if (viewFor(pageFromHash()) === "home") return;
+    e.preventDefault();
+    if (viewFor(target) === "home") {
+      if (history.state && history.state.bksPage) {
+        pendingHome = target === "home" ? "" : target;
+        history.back();
+      } else {
+        history.replaceState(null, "", baseUrl() + (target === "home" ? "" : hash));
+        onRoute();
+      }
+      return;
+    }
+    history.replaceState({ bksPage: true }, "", baseUrl() + hash);
+    onRoute();
   });
   if (toggle) {
     toggle.addEventListener("click", () => {
@@ -1384,6 +1445,14 @@
     if (LANGS.indexOf(q) !== -1) lang = q;
   } catch (e) { /* ignore */ }
   if (LANGS.indexOf(lang) === -1) lang = "en";
+  // Opened straight on a page: put the homepage underneath it, so Back goes home.
+  if (viewFor(pageFromHash()) !== "home" && !(history.state && history.state.bksPage)) {
+    const hash = location.hash;
+    history.replaceState(null, "", baseUrl());
+    history.pushState({ bksPage: true }, "", baseUrl() + hash);
+  }
+  lastView = viewFor(pageFromHash());
+  routedHref = location.href;
   show(pageFromHash());
 
   Promise.all([
@@ -1398,7 +1467,7 @@
     .then(([, , , events, stories, navSpec, campaign]) => {
       state.events = events;
       state.stories = stories;
-      state.navSpec = navSpec;
+      state.navSpec = withProgressPage(navSpec);
       state.campaign = campaign;
       setLang(lang);
       show(pageFromHash());
