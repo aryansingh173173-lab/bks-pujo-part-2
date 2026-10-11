@@ -368,58 +368,102 @@
   }
 })();
 
-/* Invitation deck: three pages of the KRL invitation, flipped by arrows, numbers, swipe or on their own. */
+
+/* Invitation deck, turned by scrolling: the section holds on screen while page 2
+   and then page 3 slide up over the cover; then the page carries on. Arrows and
+   numbers jump to the matching scroll position. Reduced motion: plain buttons. */
 (function () {
   var deck = document.querySelector("[data-deck]");
-  if (!deck) return;
+  var section = deck && deck.closest(".invite");
+  if (!section) return;
   var pages = [].slice.call(deck.querySelectorAll("[data-deck-page]"));
   var dots = [].slice.call(deck.querySelectorAll("[data-deck-go]"));
-  var n = pages.length, cur = 0, timer = 0, hover = false, inView = false;
+  var n = pages.length;
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var cur = 0;
 
-  function show(i) {
-    cur = (i + n) % n;
+  function mark(i) {
+    if (i === cur && pages[i].classList.contains("is-on")) return;
+    cur = i;
     pages.forEach(function (p, k) {
-      var rel = (k - cur + n) % n;
-      p.classList.toggle("is-on", rel === 0);
-      p.classList.toggle("is-next", rel === 1);
-      p.classList.toggle("is-prev", rel === n - 1 && n > 2);
-      p.setAttribute("tabindex", rel === 0 ? "0" : "-1");
-      p.setAttribute("aria-hidden", rel === 0 ? "false" : "true");
+      p.classList.toggle("is-on", k === i);
+      p.setAttribute("tabindex", k === i ? "0" : "-1");
+      p.setAttribute("aria-hidden", k === i ? "false" : "true");
     });
     dots.forEach(function (d, k) {
-      d.classList.toggle("is-on", k === cur);
-      if (k === cur) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
+      d.classList.toggle("is-on", k === i);
+      if (k === i) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
     });
   }
-  function schedule() {
-    clearTimeout(timer);
-    if (reduce || hover || !inView) return;
-    timer = setTimeout(function () { show(cur + 1); schedule(); }, 6000);
+
+  if (reduce) {
+    // No scroll animation: show one page at a time with the buttons.
+    section.classList.add("is-static");
+    deck.addEventListener("click", function (e) {
+      var step = e.target.closest("[data-deck-step]"), go = e.target.closest("[data-deck-go]");
+      if (step) mark((cur + Number(step.getAttribute("data-deck-step")) + n) % n);
+      else if (go) mark(Number(go.getAttribute("data-deck-go")));
+    });
+    mark(0);
+    return;
+  }
+
+  section.classList.add("is-scrolly");
+  var header = document.querySelector(".site-header");
+  function setHeader() {
+    var h = header ? Math.round(header.getBoundingClientRect().height) : 0;
+    section.style.setProperty("--hdr", h + "px");
+  }
+
+  // 0..(n-1): how far through the pages the reader has scrolled
+  function stepFromScroll() {
+    var r = section.getBoundingClientRect();
+    var range = section.offsetHeight - (window.innerHeight - (parseFloat(section.style.getPropertyValue("--hdr")) || 0));
+    if (range <= 0) return 0;
+    var hdr = parseFloat(section.style.getPropertyValue("--hdr")) || 0;
+    var p = (hdr - r.top) / range;
+    p = Math.min(1, Math.max(0, (p - 0.08) / 0.84)); // a short rest at the start and the end
+    return p * (n - 1);
+  }
+
+  function paint() {
+    var s = stepFromScroll();
+    pages.forEach(function (pg, k) {
+      var d = s - k, y = 0, sc = 1, rot = 0, op = 1, br = 1;
+      if (d < -1) { y = 115; rot = 7; op = 0; }
+      else if (d < 0) { y = -d * 115; rot = -d * 7; op = Math.min(1, (1 + d) * 2.5); }
+      else if (k < n - 1) { var c = Math.min(1, d); sc = 1 - 0.1 * c; y = -7 * c; rot = -2.5 * c; br = 1 - 0.4 * c; op = 1 - 0.15 * c; }
+      pg.style.transform = "translateY(" + y.toFixed(2) + "%) rotate(" + rot.toFixed(2) + "deg) scale(" + sc.toFixed(3) + ")";
+      pg.style.opacity = op.toFixed(3);
+      pg.style.filter = br < 1 ? "brightness(" + br.toFixed(3) + ")" : "";
+      pg.style.zIndex = String(10 + k);
+    });
+    mark(Math.min(n - 1, Math.round(s)));
+  }
+
+  var queued = false;
+  function onScroll() {
+    if (document.hidden) { paint(); return; }   // background tabs pause animation frames
+    if (!queued) { queued = true; requestAnimationFrame(function () { queued = false; paint(); }); }
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", function () { setHeader(); paint(); });
+
+  // Arrows and numbers scroll to the matching page.
+  function scrollToPage(i) {
+    i = Math.max(0, Math.min(n - 1, i));
+    var hdr = parseFloat(section.style.getPropertyValue("--hdr")) || 0;
+    var range = section.offsetHeight - (window.innerHeight - hdr);
+    var p = 0.08 + 0.84 * (i / (n - 1));
+    var top = section.getBoundingClientRect().top + window.scrollY - hdr + p * range;
+    window.scrollTo({ top: top, behavior: "smooth" });
   }
   deck.addEventListener("click", function (e) {
-    var step = e.target.closest("[data-deck-step]");
-    var go = e.target.closest("[data-deck-go]");
-    if (step) show(cur + Number(step.getAttribute("data-deck-step")));
-    else if (go) show(Number(go.getAttribute("data-deck-go")));
-    else return;
-    schedule();
+    var step = e.target.closest("[data-deck-step]"), go = e.target.closest("[data-deck-go]");
+    if (step) scrollToPage(cur + Number(step.getAttribute("data-deck-step")));
+    else if (go) scrollToPage(Number(go.getAttribute("data-deck-go")));
   });
-  deck.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") { show(cur + 1); schedule(); }
-    else if (e.key === "ArrowLeft") { show(cur - 1); schedule(); }
-  });
-  deck.addEventListener("pointerenter", function () { hover = true; clearTimeout(timer); });
-  deck.addEventListener("pointerleave", function () { hover = false; schedule(); });
-  var x0 = null;
-  deck.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
-  deck.addEventListener("touchend", function (e) {
-    if (x0 === null) return;
-    var dx = e.changedTouches[0].clientX - x0; x0 = null;
-    if (Math.abs(dx) > 40) { show(cur + (dx < 0 ? 1 : -1)); schedule(); }
-  });
-  if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (en) { inView = en[0].isIntersecting; schedule(); }, { threshold: 0.4 }).observe(deck);
-  }
-  show(0);
+
+  setHeader();
+  paint();
 })();

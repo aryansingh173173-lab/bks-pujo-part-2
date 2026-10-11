@@ -991,3 +991,39 @@ body.story-full .call-fab, html.lb-open .call-fab { display: none; }
 .invite-deck__dot.is-on { background: #f5e9d0; color: #bf2b54; }
 .invite-deck__arrow:focus-visible, .invite-deck__dot:focus-visible { outline: 2px solid #f5e9d0; outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .invite-deck__page { transition: none; } }
+
+/* ===== Invitation deck turned by scrolling ===== */
+.invite.is-scrolly { height: 300vh; height: 300svh; padding: 0; overflow: clip; }
+.invite.is-scrolly .invite__inner {
+  position: sticky; top: var(--hdr, 116px);
+  min-height: calc(100vh - var(--hdr, 116px)); min-height: calc(100svh - var(--hdr, 116px));
+  padding-top: clamp(1rem, 3vh, 2rem); padding-bottom: clamp(1rem, 3vh, 2rem);
+  align-content: center;
+}
+.invite.is-scrolly .invite-deck__page { transition: none; will-change: transform, opacity; opacity: 1; pointer-events: none; }
+.invite.is-scrolly .invite-deck__page.is-on { pointer-events: auto; }
+.invite.is-scrolly .invite-deck__page.is-next, .invite.is-scrolly .invite-deck__page.is-prev { transform: none; }
+.invite.is-scrolly .invite-deck__stage { aspect-ratio: 16 / 11; }
+/* a small hint that scrolling turns the pages */
+.invite-deck__hint { display: none; }
+.invite.is-scrolly .invite-deck__hint {
+  display: block; margin: 0.6rem 0 0; text-align: center; color: #f8e2d8; font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+@media (max-width: 860px) {
+  .invite.is-scrolly .invite__inner { gap: 0.9rem; }
+  .invite.is-scrolly .invite-deck__stage { aspect-ratio: 4 / 3; }
+  .invite.is-scrolly .invite-deck__nav { margin-top: 0.5rem; }
+  .invite.is-scrolly .invite-deck__arrow { width: 2.2rem; height: 2.2rem; font-size: 1.3rem; }
+  .invite.is-scrolly .invite-deck__dot { width: 1.9rem; height: 1.9rem; }
+  .invite.is-scrolly h2 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+  .invite.is-scrolly .invite__lede { margin-bottom: 0.8rem; font-size: 0.92rem; }
+  .invite.is-scrolly .invite-deck__hint { display: none; }
+}
+/* Reduced motion: one page at a time, no stack */
+.invite.is-static .invite-deck__page { transition: none; }
+.invite.is-static .invite-deck__page.is-on { opacity: 1; transform: none; }
+@media (max-width: 860px) {
+  .invite.is-scrolly .invite-deck__stage { overflow: hidden; border-radius: 10px; }
+  .invite.is-scrolly .invite-deck__page { inset: 5% 4%; }
+}
