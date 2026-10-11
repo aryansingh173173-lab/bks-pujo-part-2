@@ -1027,3 +1027,27 @@ body.story-full .call-fab, html.lb-open .call-fab { display: none; }
   .invite.is-scrolly .invite-deck__stage { overflow: hidden; border-radius: 10px; }
   .invite.is-scrolly .invite-deck__page { inset: 5% 4%; }
 }
+/* Each page fits whole: the card area takes the screen height that is actually free,
+   so tall pages (the letter) are never cut off. */
+.invite.is-scrolly .invite-deck__stage {
+  aspect-ratio: auto;
+  height: calc(100vh - var(--hdr, 116px) - 7.5rem);
+  height: calc(100svh - var(--hdr, 116px) - 7.5rem);
+  max-height: 46rem;
+}
+.invite.is-scrolly .invite-deck__page { inset: 3% 4%; }
+@media (max-width: 860px) {
+  .invite.is-scrolly .invite-deck__stage {
+    height: calc(100vh - var(--hdr, 138px) - 17rem);
+    height: calc(100svh - var(--hdr, 138px) - 17rem);
+    min-height: 15rem;
+  }
+}
+/* Hold every page inside the card area by height as well as width */
+.invite-deck__page { display: flex; align-items: center; justify-content: center; }
+.invite-deck__page img { max-height: 100%; max-width: 100%; object-fit: contain; }
+@media (max-width: 860px) {
+  /* sized to the tallest page (the letter), so nothing is cut and nothing is wasted */
+  .invite.is-scrolly .invite-deck__stage { height: auto; min-height: 0; aspect-ratio: 1280 / 1096; max-height: calc(100svh - var(--hdr, 138px) - 17rem); }
+  .invite.is-scrolly .invite-deck__page { inset: 2% 2%; }
+}
