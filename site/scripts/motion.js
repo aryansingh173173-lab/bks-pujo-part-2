@@ -282,9 +282,9 @@
 (function () {
   var URL_LIVE = "https://bks-pujoo.vercel.app/";
   var MSG = {
-    en: "You are invited: Durga Puja 2026, 16 to 20 October, at Munshir Bheri, Salt Lake Sector V, Kolkata. Ma Durga invites you and your family.",
-    bn: "আপনি আমন্ত্রিত: দুর্গাপূজা ২০২৬, ১৬ থেকে ২০ অক্টোবর, মুনশির ভেড়ি, সল্টলেক সেক্টর ফাইভ, কলকাতা। মা দুর্গা আপনাকে আর আপনার পরিবারকে আমন্ত্রণ জানাচ্ছেন।",
-    hi: "आप आमंत्रित हैं: दुर्गा पूजा 2026, 16 से 20 अक्टूबर, मुंशीर भेड़ी, साल्ट लेक सेक्टर V, कोलकाता। माँ दुर्गा आपको और आपके परिवार को आमंत्रित करती हैं।"
+    en: "You are invited: Durga Puja 2026, 16 to 20 October, at Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata. Ma Durga invites you and your family.",
+    bn: "আপনি আমন্ত্রিত: দুর্গাপূজা ২০২৬, ১৬ থেকে ২০ অক্টোবর, মুন্সি ভেড়ি, মহিষ বাথান, সল্টলেক সেক্টর ফাইভ, কলকাতা। মা দুর্গা আপনাকে আর আপনার পরিবারকে আমন্ত্রণ জানাচ্ছেন।",
+    hi: "आप आमंत्रित हैं: दुर्गा पूजा 2026, 16 से 20 अक्टूबर, मुंशी भेड़ी, महिष बथान, साल्ट लेक सेक्टर 5, कोलकाता। माँ दुर्गा आपको और आपके परिवार को आमंत्रित करती हैं।"
   };
   var DONE = { en: "Link copied", bn: "লিংক কপি হয়েছে", hi: "लिंक कॉपी हो गया" };
   function lang() { var l = (document.documentElement.lang || "en").slice(0, 2); return MSG[l] ? l : "en"; }
@@ -307,4 +307,63 @@
     };
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
   });
+})();
+
+/* Find the Puja Prangan: site map / Google map tabs, copy address, floating Call button. */
+(function () {
+  var COPIED = { en: "Address copied", bn: "ঠিকানা কপি হয়েছে", hi: "पता कॉपी हो गया" };
+  function lang() { var l = (document.documentElement.lang || "en").slice(0, 2); return COPIED[l] ? l : "en"; }
+
+  document.addEventListener("click", function (e) {
+    var tab = e.target.closest && e.target.closest("[data-findus-tab]");
+    if (tab) {
+      var box = tab.closest(".findus");
+      var which = tab.getAttribute("data-findus-tab");
+      box.querySelectorAll("[data-findus-tab]").forEach(function (t) {
+        var on = t === tab; t.classList.toggle("is-on", on); t.setAttribute("aria-selected", String(on));
+      });
+      box.querySelectorAll("[data-findus-pane]").forEach(function (p) {
+        var on = p.getAttribute("data-findus-pane") === which; p.hidden = !on; p.classList.toggle("is-on", on);
+      });
+      var live = box.querySelector(".findus__live");
+      if (which === "live" && live && !live.querySelector("iframe")) {
+        var f = document.createElement("iframe");
+        f.src = live.getAttribute("data-embed");
+        f.title = "Google map: Puja Prangan, Munshi Bheri, Mahish Bathan";
+        f.loading = "lazy";
+        f.referrerPolicy = "no-referrer-when-downgrade";
+        live.appendChild(f);
+      }
+      return;
+    }
+    var copy = e.target.closest && e.target.closest("[data-copy]");
+    if (copy) {
+      var text = copy.getAttribute("data-copy");
+      var done = function () {
+        var old = copy.textContent; copy.textContent = COPIED[lang()];
+        setTimeout(function () { copy.textContent = old; }, 1800);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(done, function () {});
+      return;
+    }
+    var fab = document.querySelector("[data-call-fab]");
+    if (!fab) return;
+    var btn = fab.querySelector(".call-fab__btn"), list = fab.querySelector(".call-fab__list");
+    if (e.target.closest(".call-fab__btn")) {
+      var open = list.hidden;
+      list.hidden = !open; btn.setAttribute("aria-expanded", String(open)); fab.classList.toggle("is-open", open);
+    } else if (!e.target.closest("[data-call-fab]") && !list.hidden) {
+      list.hidden = true; btn.setAttribute("aria-expanded", "false"); fab.classList.remove("is-open");
+    }
+  });
+
+  // The route draws itself and the pins drop in when the map scrolls into view.
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
+    }, { threshold: 0.3 });
+    document.querySelectorAll(".findus__plan-frame").forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll(".findus__plan-frame").forEach(function (el) { el.classList.add("is-in"); });
+  }
 })();

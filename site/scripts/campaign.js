@@ -234,9 +234,9 @@
       "<p class='legend'><span class='badge'>LOCATION</span> " +
       escapeHtml(puja.venue && puja.venue.detail ? (puja.venue.detail[lang] || puja.venue.detail.en) : "") +
       " · " + escapeHtml(puja.ceremony ? (puja.ceremony[lang] || puja.ceremony.en) : "") + "</p>" +
-      "<p><a class='maps-link' href='https://www.google.com/maps/search/?api=1&amp;query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal' target='_blank' rel='noopener noreferrer'>View on Google Maps</a></p>" +
-      "<div class='visit-map'><iframe title='Map: Munshir Bheri, Salt Lake Sector V, Kolkata 700091' loading='lazy' referrerpolicy='no-referrer-when-downgrade' " +
-      "src='https://maps.google.com/maps?q=Munshir%20Bheri%2C%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20Kolkata%20700091&amp;z=15&amp;output=embed'></iframe></div>" +
+      "<p><a class='maps-link' href='https://maps.app.goo.gl/Q5kKe1CzzhV9XQar9' target='_blank' rel='noopener noreferrer'>View on Google Maps</a></p>" +
+      "<div class='visit-map'><iframe title='Map: Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata 700102' loading='lazy' referrerpolicy='no-referrer-when-downgrade' " +
+      "src='https://maps.google.com/maps?q=22.569384,88.444820&amp;z=16&amp;output=embed'></iframe></div>" +
       "<div class='programme-list'><div><strong>" + escapeHtml(d.prog1) + "</strong><span> " +
       escapeHtml(d.prog1Text) + "</span></div><div><strong>" + escapeHtml(d.prog2) +
       "</strong><span> " + escapeHtml(d.prog2Text) + "</span></div><div><strong>" +

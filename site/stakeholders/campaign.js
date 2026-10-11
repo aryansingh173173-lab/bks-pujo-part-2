@@ -3,7 +3,7 @@
 
   var YT_ID = "LMWeL35RiTo";
   var MAPS =
-    "https://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal";
+    "https://maps.app.goo.gl/Q5kKe1CzzhV9XQar9";
   var MAIN = "https://bks-durga-puja-2026.vercel.app/site/";
   var videoLoaded = false;
 

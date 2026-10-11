@@ -832,3 +832,128 @@ html[data-sec="night"] .next-stop::before, html[data-sec="night"] .next-stop::af
 @media (min-width: 1100px) { .site-plan__legend { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .site-plan__legend li { padding-left: 0.2rem; }
 .site-plan__legend li::marker { color: #f5e9d0; font-weight: 800; }
+
+/* ===== Find the Puja Prangan ===== */
+.findus { padding: clamp(2.2rem, 5vw, 3.6rem) 0; }
+.findus__head { margin-bottom: 1.3rem; }
+.findus__head h2 { margin: 0 0 0.35rem; color: #f5e9d0; font-size: clamp(1.8rem, 4vw, 2.8rem); }
+.findus__head p { margin: 0; color: #f8e2d8; }
+.findus__grid { display: grid; gap: 1.2rem; }
+@media (min-width: 1000px) { .findus__grid { grid-template-columns: minmax(0, 1.75fr) minmax(19rem, 1fr); align-items: stretch; } }
+.findus__stage { min-width: 0; }
+.findus__tabs { display: inline-flex; gap: 3px; padding: 3px; margin-bottom: 0.8rem; border-radius: 999px; background: rgba(245, 233, 208, 0.12); border: 1px solid rgba(245, 233, 208, 0.3); }
+.findus__tab { min-height: 36px; padding: 0 1rem; border: 0; border-radius: 999px; cursor: pointer; background: transparent; color: #f5e9d0; font: 700 0.85rem/1 var(--font-body, inherit); }
+.findus__tab.is-on { background: #f5e9d0; color: #bf2b54; }
+.findus__tab:focus-visible { outline: 2px solid #f5e9d0; outline-offset: 2px; }
+.findus__plan-frame {
+  position: relative; display: block; overflow: hidden; line-height: 0; cursor: zoom-in;
+  border-radius: 12px; border: 2px solid #f5e9d0; box-shadow: 10px 10px 0 #8f1d40; background: #8f1d40;
+}
+.findus__plan-frame img { display: block; width: 100%; height: auto; }
+.findus__plan-frame:focus-visible { outline: 3px solid #f5e9d0; outline-offset: 4px; }
+/* The road in: a dashed route that draws itself, then keeps flowing */
+.findus__route { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.findus__route-line {
+  fill: none; stroke: #bf2b54; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 14 12;
+  filter: drop-shadow(0 0 4px rgba(245, 233, 208, 0.9));
+  opacity: 0; stroke-dashoffset: 520;
+}
+.findus__plan-frame.is-in .findus__route-line { opacity: 1; animation: route-draw 1.6s ease-out forwards, route-flow 1.2s linear 1.6s infinite; }
+@keyframes route-draw { from { stroke-dashoffset: 520; } to { stroke-dashoffset: 0; } }
+@keyframes route-flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -26; } }
+/* Pins */
+.findus__ping { position: absolute; width: 0; height: 0; line-height: 1.2; }
+.findus__ping i {
+  position: absolute; left: -9px; top: -9px; width: 18px; height: 18px; border-radius: 50%;
+  background: #bf2b54; border: 3px solid #f5e9d0; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transform: scale(0); transition: transform 0.5s cubic-bezier(.3,1.6,.5,1);
+}
+.findus__ping i::after { content: ""; position: absolute; inset: -3px; border-radius: 50%; border: 3px solid #bf2b54; opacity: 0; }
+.findus__ping--you i { background: #f5e9d0; border-color: #bf2b54; }
+.findus__plan-frame.is-in .findus__ping--you i { transform: scale(1); transition-delay: 0.1s; }
+.findus__plan-frame.is-in .findus__ping--pandal i { transform: scale(1.25); transition-delay: 1.5s; }
+.findus__plan-frame.is-in .findus__ping--pandal i::after { animation: ping 1.8s ease-out 1.8s infinite; }
+@keyframes ping { 0% { transform: scale(1); opacity: 0.9; } 100% { transform: scale(3.2); opacity: 0; } }
+.findus__ping b {
+  position: absolute; left: 50%; bottom: 16px; transform: translate(-50%, 6px); opacity: 0; white-space: nowrap;
+  padding: 0.3rem 0.65rem; border-radius: 999px; background: #bf2b54; color: #f5e9d0;
+  font: 800 clamp(0.62rem, 1.3vw, 0.85rem)/1 var(--font-display, inherit); box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  transition: opacity 0.5s ease 1.9s, transform 0.5s ease 1.9s;
+}
+.findus__plan-frame.is-in .findus__ping b { opacity: 1; transform: translate(-50%, 0); }
+@media (prefers-reduced-motion: reduce) {
+  .findus__plan-frame .findus__route-line { opacity: 1; stroke-dashoffset: 0; animation: none !important; }
+  .findus__plan-frame .findus__ping i { transform: scale(1); transition: none; }
+  .findus__plan-frame .findus__ping i::after { animation: none !important; }
+  .findus__plan-frame .findus__ping b { opacity: 1; transform: translate(-50%, 0); transition: none; }
+}
+.findus__live { position: relative; aspect-ratio: 1280 / 498; min-height: 260px; border-radius: 12px; overflow: hidden; border: 2px solid #f5e9d0; box-shadow: 10px 10px 0 #8f1d40; background: #8f1d40; }
+.findus__live iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+/* Address card */
+.findus__card {
+  display: flex; flex-direction: column; gap: 0.7rem; padding: clamp(1.2rem, 3vw, 1.6rem);
+  border-radius: 12px; background: #f5e9d0; color: #8f1d40; box-shadow: 10px 10px 0 #8f1d40;
+}
+.findus__label { margin: 0; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #bf2b54; }
+html[data-sec="night"] .findus__addr { margin: 0; font: 800 clamp(1.15rem, 2vw, 1.4rem)/1.3 var(--font-display, inherit); color: #8f1d40; }
+.findus__landmark {
+  margin: 0; display: flex; gap: 0.5rem; align-items: flex-start; padding: 0.65rem 0.8rem; border-radius: 10px;
+  background: #bf2b54; color: #f5e9d0; font-weight: 700;
+}
+.findus__landmark svg { flex: 0 0 auto; width: 20px; height: 20px; margin-top: 1px; }
+.findus__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.2rem 0 0; }
+html[data-sec="night"] .findus__card .btn-primary { background: #bf2b54; color: #f5e9d0; border-color: #bf2b54; }
+html[data-sec="night"] .findus__card .btn-ghost { background: transparent; color: #bf2b54; border: 1.5px solid #bf2b54; }
+.findus__copy { min-height: 44px; padding: 0 1rem; border-radius: 999px; cursor: pointer; background: transparent; color: #8f1d40; border: 1.5px dashed #bf2b54; font: 700 0.88rem/1 var(--font-display, inherit); }
+.findus__poc { margin-top: auto; padding-top: 0.8rem; border-top: 1.5px solid rgba(191, 43, 84, 0.25); display: grid; gap: 0.45rem; }
+.site-plan__key { margin: 0 0 0.8rem; color: #f5e9d0; font-size: 1.1rem; }
+
+/* ===== Event contact numbers ===== */
+.poc-links { display: inline-flex; flex-wrap: wrap; gap: 0.45rem; }
+.poc-link {
+  display: inline-flex; align-items: center; gap: 0.4rem; min-height: 40px; padding: 0 0.85rem; border-radius: 999px;
+  background: #bf2b54; color: #f5e9d0; text-decoration: none; font: 800 0.92rem/1 var(--font-display, inherit); white-space: nowrap;
+}
+.poc-link svg { width: 16px; height: 16px; }
+.poc-link:hover { background: #8f1d40; }
+.strip-poc { margin: 0 0 0 auto; display: inline-flex; align-items: center; gap: 0.5rem; }
+.strip-poc__label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #f8e2d8; }
+.poc-links--strip .poc-link { min-height: 30px; padding: 0 0.7rem; font-size: 0.8rem; background: rgba(245, 233, 208, 0.14); border: 1px solid rgba(245, 233, 208, 0.35); }
+.poc-links--strip .poc-link:hover { background: #f5e9d0; color: #bf2b54; }
+@media (max-width: 1099px) { .strip-poc { display: none; } }
+.visit-list .poc-links, .footer-poc .poc-links, .contact-poc .poc-links { margin-top: 0.3rem; }
+.visit-card .poc-link, .footer-poc .poc-link, .contact-poc .poc-link, .call-fab__list .poc-link { background: #bf2b54; color: #f5e9d0; }
+.visit-card .poc-link { background: #f5e9d0; color: #bf2b54; }
+.footer-poc { display: grid; gap: 0.35rem; margin: 0.9rem 0; color: #f5e9d0; }
+.footer-poc .poc-link, .contact-poc .poc-link { background: #f5e9d0; color: #bf2b54; }
+/* Floating Call button: phones and tablets, where the header line has no room */
+.call-fab { position: fixed; right: 14px; bottom: 14px; z-index: 900; display: none; }
+@media (max-width: 1099px) { .call-fab { display: block; } }
+.call-fab__btn {
+  display: inline-flex; align-items: center; gap: 0.45rem; min-height: 50px; padding: 0 1.15rem; border-radius: 999px; cursor: pointer;
+  border: 2px solid #bf2b54; background: #f5e9d0; color: #bf2b54; font: 800 0.95rem/1 var(--font-display, inherit);
+  box-shadow: 0 10px 24px rgba(60, 8, 24, 0.45);
+}
+.call-fab__btn svg { width: 18px; height: 18px; }
+@media (prefers-reduced-motion: no-preference) {
+  .call-fab:not(.is-open) .call-fab__btn { animation: fab-nudge 6s ease-in-out 3s infinite; }
+}
+@keyframes fab-nudge { 0%, 88%, 100% { transform: none; } 91% { transform: rotate(-8deg); } 94% { transform: rotate(8deg); } 97% { transform: rotate(-4deg); } }
+.call-fab__list {
+  position: absolute; right: 0; bottom: 60px; min-width: 15rem; padding: 0.9rem; border-radius: 14px;
+  background: #f5e9d0; box-shadow: 0 16px 34px rgba(60, 8, 24, 0.5); display: grid; gap: 0.5rem;
+}
+.call-fab__list[hidden] { display: none; }
+.call-fab__title { margin: 0; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #bf2b54; }
+.call-fab__list .poc-links { flex-direction: column; }
+body.story-full .call-fab, html.lb-open .call-fab { display: none; }
+.strip-poc { flex: 0 0 auto; }
+.poc-links--strip { flex-wrap: nowrap; }
+.header-strip__title { flex: 1 1 auto; }
+/* Map full width; the address card sits under it */
+@media (min-width: 1000px) {
+  .findus__grid { grid-template-columns: 1fr; }
+  .findus__card { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 0.7rem 2rem; align-items: start; }
+  .findus__card > .findus__label, .findus__addr, .findus__landmark, .findus__actions { grid-column: 1; }
+  .findus__poc { grid-column: 2; grid-row: 1 / span 4; margin-top: 0; padding-top: 0; padding-left: 2rem; border-top: 0; border-left: 1.5px solid rgba(191, 43, 84, 0.25); align-self: stretch; align-content: center; }
+}

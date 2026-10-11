@@ -225,6 +225,7 @@
   var MEDIA = [
     { key: "invitation", kind: "static", imgs: ["assets/invitation/protyabortan-2026.jpg?v=1"] },
     { key: "siteplan", kind: "static", imgs: ["assets/renders/site-plan.jpg?v=2"] },
+    { key: "siteplan-visit", kind: "static", imgs: ["assets/renders/site-plan.jpg?v=2"] },
     { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
       imgs: ["assets/renders/pandal-aerial.jpg?v=2", "assets/renders/lamp-path.jpg?v=2", "assets/renders/pandal-entrance.jpg?v=2"] },
     { key: "puja-strip", kind: "strip", before: "[data-view='puja'] > .glance",

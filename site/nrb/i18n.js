@@ -36,7 +36,7 @@ window.BKS_I18N = {
         "How you can take part",
         "What ₹1 lakh means",
         "The 5,000-farm vision",
-        "Munshir Bheri",
+        "Munshi Bheri",
         "Express Supporter Interest",
         "Puja Memories",
         "FAQ",
@@ -58,7 +58,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Durga Puja 2026 is a Puja in Kolkata: 16–20 October 2026, at Munshir Bheri in the East Kolkata Wetlands. Worship remains at the centre. Then the gathering names the annadata, the person who grows the food, and a live integrated farm is being built on the same ground."
+          "text": "Durga Puja 2026 is a Puja in Kolkata: 16–20 October 2026, at Munshi Bheri in the East Kolkata Wetlands. Worship remains at the centre. Then the gathering names the annadata, the person who grows the food, and a live integrated farm is being built on the same ground."
         },
         {
           "type": "p",
@@ -209,7 +209,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "The live demonstration of this idea is being built at Munshir Bheri, on the same ground as the Puja. It is not a finished showpiece. Mix, scale and results will vary from village to village."
+          "text": "The live demonstration of this idea is being built at Munshi Bheri, on the same ground as the Puja. It is not a finished showpiece. Mix, scale and results will vary from village to village."
         }
       ]
     },
@@ -323,17 +323,17 @@ window.BKS_I18N = {
       ]
     },
     "venue": {
-      "label": "Munshir Bheri",
+      "label": "Munshi Bheri",
       "headline": "The Puja and the live farm share the same ground.",
-      "mapsCta": "View on Google Maps\n\nhttps://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal",
+      "mapsCta": "View on Google Maps\n\nhttps://maps.app.goo.gl/Q5kKe1CzzhV9XQar9",
       "blocks": [
         {
           "type": "lines",
           "items": [
-            "Munshir Bheri Management / Fishermen's Committee",
-            "Near Sukantanagar / Salt Lake Sector V",
+            "Munshi Bheri, Mahish Bathan",
+            "Salt Lake Sector 5 · near Panache residential complex",
             "(East Kolkata Wetlands)",
-            "Kolkata: 700091, West Bengal"
+            "Kolkata 700102, West Bengal"
           ]
         },
         {
@@ -353,7 +353,7 @@ window.BKS_I18N = {
           "text": "Programme details will be announced shortly."
         }
       ],
-      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal"
+      "mapsUrl": "https://maps.app.goo.gl/Q5kKe1CzzhV9XQar9"
     },
     "farmtech": {
       "label": "Careful tools",
@@ -401,7 +401,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Munshir Bheri is in the East Kolkata Wetlands: a living water landscape, not a sealed hall. Beside the pandal, a live integrated farm is being built, so darshan and the living farm share the same ground. A visitor can feel soil, water, plants, food and community in the same week as the idol."
+          "text": "Munshi Bheri is in the East Kolkata Wetlands: a living water landscape, not a sealed hall. Beside the pandal, a live integrated farm is being built, so darshan and the living farm share the same ground. A visitor can feel soil, water, plants, food and community in the same week as the idol."
         },
         {
           "type": "p",
@@ -427,7 +427,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "It is not a government department. It is not asking this page to become an application for official partnership. It is the organising hand behind the week, and behind the live farm being built at Munshir Bheri."
+          "text": "It is not a government department. It is not asking this page to become an application for official partnership. It is the organising hand behind the week, and behind the live farm being built at Munshi Bheri."
         },
         {
           "type": "p",
@@ -582,7 +582,7 @@ window.BKS_I18N = {
         },
         {
           "q": "Where is the Puja?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal. A live farm is being built at the same place."
+          "a": "Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata 700102 (near Panache residential complex). A live farm is being built at the same place."
         },
         {
           "q": "When is it?",
@@ -613,7 +613,7 @@ window.BKS_I18N = {
         "Durga Puja 2026",
         "Organised by KarmYog for the 21st Century",
         "Organising partner: Bharatiya Krishak Samaj",
-        "Munshir Bheri, Kolkata, 16–20 October 2026",
+        "Munshi Bheri, Kolkata, 16–20 October 2026",
         "contact@bkswbengal.org",
         "Back to Durga Puja 2026",
         "---"
@@ -657,7 +657,7 @@ window.BKS_I18N = {
         "কীভাবে অংশ নেবেন",
         "₹1 lakh কী",
         "৫,০০০ খামারের দৃষ্টি",
-        "Munshir Bheri",
+        "Munshi Bheri",
         "সমর্থক আগ্রহ জানান",
         "পুজোর স্মৃতি",
         "প্রশ্নোত্তর",
@@ -679,7 +679,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Durga Puja 2026, দুর্গাপূজা ২০২৬, কলকাতার দুর্গাপূজা: ১৬–২০ অক্টোবর ২০২৬, পূর্ব কলকাতার জলাভূমিতে Munshir Bheri। পূজা কেন্দ্রে থাকে। তারপর জমায়েত অন্নদাতার নাম করে, যিনি খাবার ফলান, আর একই মাটিতে একটি লাইভ সমন্বিত খামার গড়ে উঠছে।"
+          "text": "Durga Puja 2026, দুর্গাপূজা ২০২৬, কলকাতার দুর্গাপূজা: ১৬–২০ অক্টোবর ২০২৬, পূর্ব কলকাতার জলাভূমিতে Munshi Bheri। পূজা কেন্দ্রে থাকে। তারপর জমায়েত অন্নদাতার নাম করে, যিনি খাবার ফলান, আর একই মাটিতে একটি লাইভ সমন্বিত খামার গড়ে উঠছে।"
         },
         {
           "type": "p",
@@ -830,7 +830,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "এই ধারণার লাইভ প্রদর্শনী Munshir Bheri-তে, পূজার একই মাটিতে গড়ার কাজ চলছে। শেষ শোপিস নয়। মিশ্রণ, মাপ ও ফল গ্রামে গ্রামে আলাদা হবে।"
+          "text": "এই ধারণার লাইভ প্রদর্শনী Munshi Bheri-তে, পূজার একই মাটিতে গড়ার কাজ চলছে। শেষ শোপিস নয়। মিশ্রণ, মাপ ও ফল গ্রামে গ্রামে আলাদা হবে।"
         }
       ]
     },
@@ -944,17 +944,17 @@ window.BKS_I18N = {
       ]
     },
     "venue": {
-      "label": "Munshir Bheri",
+      "label": "Munshi Bheri",
       "headline": "পূজা ও লাইভ খামার একই মাটি ভাগ করে।",
-      "mapsCta": "Google Maps-এ দেখুন\n\nhttps://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal",
+      "mapsCta": "Google Maps-এ দেখুন\n\nhttps://maps.app.goo.gl/Q5kKe1CzzhV9XQar9",
       "blocks": [
         {
           "type": "lines",
           "items": [
-            "Munshir Bheri Management / Fishermen's Committee",
-            "Near Sukantanagar / Salt Lake Sector V",
+            "Munshi Bheri, Mahish Bathan",
+            "Salt Lake Sector 5 · near Panache residential complex",
             "(East Kolkata Wetlands)",
-            "Kolkata: 700091, West Bengal"
+            "Kolkata 700102, West Bengal"
           ]
         },
         {
@@ -974,7 +974,7 @@ window.BKS_I18N = {
           "text": "অনুষ্ঠানের বিবরণ শিগগির জানানো হবে।"
         }
       ],
-      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal"
+      "mapsUrl": "https://maps.app.goo.gl/Q5kKe1CzzhV9XQar9"
     },
     "farmtech": {
       "label": "সতর্ক সরঞ্জাম",
@@ -1022,7 +1022,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Munshir Bheri পূর্ব কলকাতার জলাভূমিতে: জীবন্ত জলের ভূগোল, বন্ধ ঘর নয়। প্যান্ডেলের পাশে লাইভ সমন্বিত খামার গড়ার কাজ চলছে, যাতে দর্শন ও জীবন্ত খামার একই মাটি ভাগ করে। প্রতিমার সঙ্গে একই সপ্তাহে মাটি, জল, গাছ, খাবার ও সম্প্রদায় অনুভব করা যায়।"
+          "text": "Munshi Bheri পূর্ব কলকাতার জলাভূমিতে: জীবন্ত জলের ভূগোল, বন্ধ ঘর নয়। প্যান্ডেলের পাশে লাইভ সমন্বিত খামার গড়ার কাজ চলছে, যাতে দর্শন ও জীবন্ত খামার একই মাটি ভাগ করে। প্রতিমার সঙ্গে একই সপ্তাহে মাটি, জল, গাছ, খাবার ও সম্প্রদায় অনুভব করা যায়।"
         },
         {
           "type": "p",
@@ -1048,7 +1048,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "সরকারি দপ্তর নয়। এই পাতাকে সরকারি অংশীদারিত্বের আবেদন বানাতে চাইছে না। সপ্তাহের আয়োজক হাত, আর Munshir Bheri-তে গড়ে উঠতে থাকা লাইভ খামারেরও।"
+          "text": "সরকারি দপ্তর নয়। এই পাতাকে সরকারি অংশীদারিত্বের আবেদন বানাতে চাইছে না। সপ্তাহের আয়োজক হাত, আর Munshi Bheri-তে গড়ে উঠতে থাকা লাইভ খামারেরও।"
         },
         {
           "type": "p",
@@ -1203,7 +1203,7 @@ window.BKS_I18N = {
         },
         {
           "q": "পূজা কোথায়?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal। লাইভ খামার একই স্থানে গড়ার কাজ চলছে।"
+          "a": "Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata 700102 (near Panache residential complex)। লাইভ খামার একই স্থানে গড়ার কাজ চলছে।"
         },
         {
           "q": "কখন?",
@@ -1234,7 +1234,7 @@ window.BKS_I18N = {
         "Durga Puja 2026",
         "আয়োজনে KarmYog for the 21st Century",
         "আয়োজক অংশীদার: Bharatiya Krishak Samaj",
-        "Munshir Bheri, কলকাতা, ১৬–২০ অক্টোবর ২০২৬",
+        "Munshi Bheri, কলকাতা, ১৬–২০ অক্টোবর ২০২৬",
         "contact@bkswbengal.org",
         "Durga Puja 2026-তে ফিরুন",
         "---"
@@ -1278,7 +1278,7 @@ window.BKS_I18N = {
         "कैसे भाग लें",
         "₹1 lakh का अर्थ",
         "5,000-फार्म दृष्टि",
-        "Munshir Bheri",
+        "Munshi Bheri",
         "समर्थक रुचि व्यक्त करें",
         "पूजा स्मृतियाँ",
         "प्रश्नोत्तर",
@@ -1300,7 +1300,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Durga Puja 2026, दुर्गा पूजा 2026, कोलकाता की दुर्गा पूजा है: 16–20 अक्टूबर 2026, पूर्व कोलकाता आर्द्रभूमि में Munshir Bheri। पूजा केंद्र में रहती है। फिर जमावड़ा अन्नदाता का नाम लेता है, जो भोजन उगाता है, और उसी ज़मीन पर एक लाइव समेकित फार्म बन रहा है।"
+          "text": "Durga Puja 2026, दुर्गा पूजा 2026, कोलकाता की दुर्गा पूजा है: 16–20 अक्टूबर 2026, पूर्व कोलकाता आर्द्रभूमि में Munshi Bheri। पूजा केंद्र में रहती है। फिर जमावड़ा अन्नदाता का नाम लेता है, जो भोजन उगाता है, और उसी ज़मीन पर एक लाइव समेकित फार्म बन रहा है।"
         },
         {
           "type": "p",
@@ -1451,7 +1451,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "इस विचार का लाइव प्रदर्शन Munshir Bheri पर, पूजा की उसी ज़मीन पर बन रहा है। तैयार शोपीस नहीं। मिश्रण, पैमाना और परिणाम गाँव-गाँव अलग होंगे।"
+          "text": "इस विचार का लाइव प्रदर्शन Munshi Bheri पर, पूजा की उसी ज़मीन पर बन रहा है। तैयार शोपीस नहीं। मिश्रण, पैमाना और परिणाम गाँव-गाँव अलग होंगे।"
         }
       ]
     },
@@ -1565,17 +1565,17 @@ window.BKS_I18N = {
       ]
     },
     "venue": {
-      "label": "Munshir Bheri",
+      "label": "Munshi Bheri",
       "headline": "पूजा और लाइव फार्म एक ही ज़मीन साझा करते हैं।",
-      "mapsCta": "Google Maps पर देखें\n\nhttps://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal",
+      "mapsCta": "Google Maps पर देखें\n\nhttps://maps.app.goo.gl/Q5kKe1CzzhV9XQar9",
       "blocks": [
         {
           "type": "lines",
           "items": [
-            "Munshir Bheri Management / Fishermen's Committee",
-            "Near Sukantanagar / Salt Lake Sector V",
+            "Munshi Bheri, Mahish Bathan",
+            "Salt Lake Sector 5 · near Panache residential complex",
             "(East Kolkata Wetlands)",
-            "Kolkata: 700091, West Bengal"
+            "Kolkata 700102, West Bengal"
           ]
         },
         {
@@ -1595,7 +1595,7 @@ window.BKS_I18N = {
           "text": "कार्यक्रम शीघ्र बताया जाएगा।"
         }
       ],
-      "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Munshir%20Bheri%20Management%20Fishermen%27s%20Committee%2C%20Near%20Sukantanagar%2C%20Salt%20Lake%20Sector%20V%2C%20East%20Kolkata%20Wetlands%2C%20Kolkata%20700091%2C%20West%20Bengal"
+      "mapsUrl": "https://maps.app.goo.gl/Q5kKe1CzzhV9XQar9"
     },
     "farmtech": {
       "label": "सावधान औज़ार",
@@ -1643,7 +1643,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "Munshir Bheri पूर्व कोलकाता आर्द्रभूमि में है: जीवित जल का भूगोल, बंद हाल नहीं। पंडाल के पास लाइव समेकित फार्म बन रहा है, ताकि दर्शन और जीवित फार्म एक ज़मीन साझा करें। प्रतिमा के साथ उसी सप्ताह मिट्टी, जल, पौधे, भोजन और समुदाय महसूस किए जा सकते हैं।"
+          "text": "Munshi Bheri पूर्व कोलकाता आर्द्रभूमि में है: जीवित जल का भूगोल, बंद हाल नहीं। पंडाल के पास लाइव समेकित फार्म बन रहा है, ताकि दर्शन और जीवित फार्म एक ज़मीन साझा करें। प्रतिमा के साथ उसी सप्ताह मिट्टी, जल, पौधे, भोजन और समुदाय महसूस किए जा सकते हैं।"
         },
         {
           "type": "p",
@@ -1669,7 +1669,7 @@ window.BKS_I18N = {
         },
         {
           "type": "p",
-          "text": "सरकारी विभाग नहीं। इस पृष्ठ को आधिकारिक साझेदारी का आवेदन नहीं बनाना चाहता। सप्ताह के पीछे आयोजक हाथ, और Munshir Bheri पर बनते लाइव फार्म के पीछे भी।"
+          "text": "सरकारी विभाग नहीं। इस पृष्ठ को आधिकारिक साझेदारी का आवेदन नहीं बनाना चाहता। सप्ताह के पीछे आयोजक हाथ, और Munshi Bheri पर बनते लाइव फार्म के पीछे भी।"
         },
         {
           "type": "p",
@@ -1824,7 +1824,7 @@ window.BKS_I18N = {
         },
         {
           "q": "पूजा कहाँ है?",
-          "a": "Munshir Bheri Management / Fishermen's Committee, Near Sukantanagar / Salt Lake Sector V, (East Kolkata Wetlands), Kolkata, 700091, West Bengal। लाइव फार्म उसी जगह बन रहा है।"
+          "a": "Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata 700102 (near Panache residential complex)। लाइव फार्म उसी जगह बन रहा है।"
         },
         {
           "q": "कब है?",
@@ -1855,7 +1855,7 @@ window.BKS_I18N = {
         "Durga Puja 2026",
         "आयोजन: KarmYog for the 21st Century",
         "आयोजक साझेदार: Bharatiya Krishak Samaj",
-        "Munshir Bheri, कोलकाता, 16–20 अक्टूबर 2026",
+        "Munshi Bheri, कोलकाता, 16–20 अक्टूबर 2026",
         "contact@bkswbengal.org",
         "Durga Puja 2026 पर लौटें"
       ]
