@@ -367,3 +367,59 @@
     document.querySelectorAll(".findus__plan-frame").forEach(function (el) { el.classList.add("is-in"); });
   }
 })();
+
+/* Invitation deck: three pages of the KRL invitation, flipped by arrows, numbers, swipe or on their own. */
+(function () {
+  var deck = document.querySelector("[data-deck]");
+  if (!deck) return;
+  var pages = [].slice.call(deck.querySelectorAll("[data-deck-page]"));
+  var dots = [].slice.call(deck.querySelectorAll("[data-deck-go]"));
+  var n = pages.length, cur = 0, timer = 0, hover = false, inView = false;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function show(i) {
+    cur = (i + n) % n;
+    pages.forEach(function (p, k) {
+      var rel = (k - cur + n) % n;
+      p.classList.toggle("is-on", rel === 0);
+      p.classList.toggle("is-next", rel === 1);
+      p.classList.toggle("is-prev", rel === n - 1 && n > 2);
+      p.setAttribute("tabindex", rel === 0 ? "0" : "-1");
+      p.setAttribute("aria-hidden", rel === 0 ? "false" : "true");
+    });
+    dots.forEach(function (d, k) {
+      d.classList.toggle("is-on", k === cur);
+      if (k === cur) d.setAttribute("aria-current", "true"); else d.removeAttribute("aria-current");
+    });
+  }
+  function schedule() {
+    clearTimeout(timer);
+    if (reduce || hover || !inView) return;
+    timer = setTimeout(function () { show(cur + 1); schedule(); }, 6000);
+  }
+  deck.addEventListener("click", function (e) {
+    var step = e.target.closest("[data-deck-step]");
+    var go = e.target.closest("[data-deck-go]");
+    if (step) show(cur + Number(step.getAttribute("data-deck-step")));
+    else if (go) show(Number(go.getAttribute("data-deck-go")));
+    else return;
+    schedule();
+  });
+  deck.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") { show(cur + 1); schedule(); }
+    else if (e.key === "ArrowLeft") { show(cur - 1); schedule(); }
+  });
+  deck.addEventListener("pointerenter", function () { hover = true; clearTimeout(timer); });
+  deck.addEventListener("pointerleave", function () { hover = false; schedule(); });
+  var x0 = null;
+  deck.addEventListener("touchstart", function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  deck.addEventListener("touchend", function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { show(cur + (dx < 0 ? 1 : -1)); schedule(); }
+  });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (en) { inView = en[0].isIntersecting; schedule(); }, { threshold: 0.4 }).observe(deck);
+  }
+  show(0);
+})();

@@ -223,7 +223,7 @@
   var S = "assets/stories/2026/";
   var MEM = "assets/memories-2025/";
   var MEDIA = [
-    { key: "invitation", kind: "static", imgs: ["assets/invitation/protyabortan-2026.jpg?v=1"] },
+    { key: "invitation", kind: "static", imgs: ["assets/invitation/krl/krl-invite-1.jpg?v=1", "assets/invitation/krl/krl-invite-2.jpg?v=1", "assets/invitation/krl/krl-invite-3.jpg?v=1"] },
     { key: "siteplan", kind: "static", imgs: ["assets/renders/site-plan.jpg?v=2"] },
     { key: "siteplan-visit", kind: "static", imgs: ["assets/renders/site-plan.jpg?v=2"] },
     { key: "puja-gallery", kind: "gallery", after: "[data-view='puja'] > .page-head",
@@ -357,7 +357,8 @@
   document.addEventListener("click", function (e) {
     var opener = e.target.closest && e.target.closest("[data-lb-open]");
     if (opener) {
-      var item = document.querySelector("[data-media='" + opener.getAttribute("data-lb-open") + "'] [data-lb]");
+      var sel = "[data-media='" + opener.getAttribute("data-lb-open") + "']";
+      var item = document.querySelector(sel + " [data-lb].is-on") || document.querySelector(sel + " [data-lb]");
       if (item && lbFromTarget(item)) { lbReturn = opener; e.preventDefault(); }
       return;
     }

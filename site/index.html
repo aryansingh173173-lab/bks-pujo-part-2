@@ -40,15 +40,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/fonts.css">
-  <link rel="stylesheet" href="styles/fonts-sunflare.css?v=z5">
-  <link rel="stylesheet" href="styles/tokens.css?v=z5">
-  <link rel="stylesheet" href="styles/app.css?v=z5">
-  <link rel="stylesheet" href="styles/art.css?v=z5">
-  <link rel="stylesheet" href="memories.css?v=z5">
-  <link rel="stylesheet" href="ifs.css?v=z5">
-  <link rel="stylesheet" href="styles/sunflare.css?v=z5">
-  <link rel="stylesheet" href="styles/palette.css?v=z5">
-  <link rel="stylesheet" href="styles/secondary.css?v=z5">
+  <link rel="stylesheet" href="styles/fonts-sunflare.css?v=d1">
+  <link rel="stylesheet" href="styles/tokens.css?v=d1">
+  <link rel="stylesheet" href="styles/app.css?v=d1">
+  <link rel="stylesheet" href="styles/art.css?v=d1">
+  <link rel="stylesheet" href="memories.css?v=d1">
+  <link rel="stylesheet" href="ifs.css?v=d1">
+  <link rel="stylesheet" href="styles/sunflare.css?v=d1">
+  <link rel="stylesheet" href="styles/palette.css?v=d1">
+  <link rel="stylesheet" href="styles/secondary.css?v=d1">
 </head>
 <body>
   <a class="skip" href="#main" data-ui="skip">Skip to content</a>
@@ -68,8 +68,8 @@
       <div class="brand-row">
         <a class="brand-logo" href="#home" aria-label="KarmYog for the 21st Century and Bharatiya Krishak Samaj: home">
           <picture>
-            <source srcset="assets/logo/logo-header.webp?v=z5" type="image/webp">
-            <img src="assets/logo/logo-header.png?v=z5" width="529" height="112" alt="KarmYog for the 21st Century | Bharatiya Krishak Samaj">
+            <source srcset="assets/logo/logo-header.webp?v=d1" type="image/webp">
+            <img src="assets/logo/logo-header.png?v=d1" width="529" height="112" alt="KarmYog for the 21st Century | Bharatiya Krishak Samaj">
           </picture>
         </a>
         <div class="header-tools">
@@ -142,20 +142,20 @@
         <div class="wrap-wide invite__inner">
           <div class="invite__copy">
             <h2 id="invite-h" data-en="Your invitation card" data-bn="আপনার আমন্ত্রণপত্র" data-hi="आपका निमंत्रण पत्र">Your invitation card</h2>
-            <p class="invite__lede" data-en="Ma Durga invites you and your family. Share this card with everyone you would like to bring." data-bn="মা দুর্গা আপনাকে আর আপনার পরিবারকে আমন্ত্রণ জানাচ্ছেন। যাঁদের সঙ্গে আনতে চান, তাঁদের সবাইকে এই কার্ড পাঠান।" data-hi="माँ दुर्गा आपको और आपके परिवार को आमंत्रित करती हैं। जिन्हें साथ लाना चाहते हैं, उन सबको यह कार्ड भेजें।">Ma Durga invites you and your family. Share this card with everyone you would like to bring.</p>
+            <p class="invite__lede" data-en="Ma Durga invites you and your family. Turn the pages, then share the invitation with everyone you would like to bring." data-bn="মা দুর্গা আপনাকে আর আপনার পরিবারকে আমন্ত্রণ জানাচ্ছেন। পাতাগুলো উল্টে দেখুন, তারপর যাঁদের সঙ্গে আনতে চান, তাঁদের সবাইকে আমন্ত্রণ পাঠান।" data-hi="माँ दुर्गा आपको और आपके परिवार को आमंत्रित करती हैं। पन्ने पलटिए, फिर जिन्हें साथ लाना चाहते हैं, उन सबको निमंत्रण भेजिए।">Ma Durga invites you and your family. Turn the pages, then share the invitation with everyone you would like to bring.</p>
             <p class="invite__actions">
               <a class="btn btn-primary invite__wa" data-share="whatsapp" href="https://wa.me/?text=You%20are%20invited%3A%20Durga%20Puja%202026%2C%2016%E2%80%9320%20October%2C%20Munshi%20Bheri%2C%20Salt%20Lake%20Sector%20V%2C%20Kolkata.%20https%3A%2F%2Fbks-pujoo.vercel.app%2F" rel="noopener noreferrer" data-en="Share on WhatsApp" data-bn="হোয়াটসঅ্যাপে পাঠান" data-hi="व्हाट्सऐप पर भेजें">Share on WhatsApp</a>
               <button type="button" class="invite__zoom" data-share="native" data-en="Share the invitation" data-bn="আমন্ত্রণ পাঠান" data-hi="निमंत्रण भेजें">Share the invitation</button>
               <button type="button" class="invite__zoom" data-lb-open="invitation" data-en="View full size" data-bn="পুরো মাপে দেখুন" data-hi="पूरे आकार में देखें">View full size</button>
             </p>
           </div>
-          <figure class="invite__card" data-media="invitation">
-            <span class="invite__frame" data-lb="0" role="button" tabindex="0" aria-label="Open the invitation full size">
-              <picture>
-                <source srcset="assets/invitation/protyabortan-2026.webp?v=1" type="image/webp">
-                <img src="assets/invitation/protyabortan-2026.jpg?v=1" width="1280" height="720" loading="lazy" decoding="async" alt="Invitation: Ebare pujoy Protyabortan. Roots, possibility, prosperity. KarmYog for the 21st Century with Bharatiya Krishak Samaj, with a conch player and the face of Durga.">
-              </picture>
-            </span>
+          <figure class="invite__card invite-deck" data-media="invitation" data-deck>
+            <div class="invite-deck__stage"><span class="invite-deck__page is-on" data-lb="0" data-deck-page="0" role="button" tabindex="0" aria-label="Open invitation page 1 of 3"><picture><source srcset="assets/invitation/krl/krl-invite-1.webp?v=1" type="image/webp"><img src="assets/invitation/krl/krl-invite-1.jpg?v=1" width="1280" height="548" alt="Invitation card, page 1: Ebar pujoy Protyabortan 1. Roots, possibility, prosperity. Jointly organised by KarmYog for the 21st Century and Bharatiya Krishak Samaj." loading="eager" decoding="async"></picture></span><span class="invite-deck__page" data-lb="1" data-deck-page="1" role="button" tabindex="-1" aria-label="Open invitation page 2 of 3"><picture><source srcset="assets/invitation/krl/krl-invite-2.webp?v=1" type="image/webp"><img src="assets/invitation/krl/krl-invite-2.jpg?v=1" width="1280" height="1096" alt="Invitation card, page 2: the invitation letter in Bengali, with design views of the Sacred Nelumbo Sanctuary, the Ayurvedic Spiral, the water body and the agri farming area, signed by Sourabh J Sarkar and Rinku Majumdar Ghosh." loading="lazy" decoding="async"></picture></span><span class="invite-deck__page" data-lb="2" data-deck-page="2" role="button" tabindex="-1" aria-label="Open invitation page 3 of 3"><picture><source srcset="assets/invitation/krl/krl-invite-3.webp?v=1" type="image/webp"><img src="assets/invitation/krl/krl-invite-3.jpg?v=1" width="1280" height="697" alt="Invitation card, page 3: dedication to everyone who built the Puja, with Mahacharya Sourabh J Sarkar, Gurumata Reena J Sarkar and the idol artist Soumen Pal." loading="lazy" decoding="async"></picture></span></div>
+            <figcaption class="invite-deck__nav">
+              <button type="button" class="invite-deck__arrow" data-deck-step="-1" aria-label="Previous page">&#8249;</button>
+              <span class="invite-deck__dots"><button type="button" class="invite-deck__dot is-on" data-deck-go="0" aria-label="Page 1 of 3" aria-current="true">1</button><button type="button" class="invite-deck__dot" data-deck-go="1" aria-label="Page 2 of 3">2</button><button type="button" class="invite-deck__dot" data-deck-go="2" aria-label="Page 3 of 3">3</button></span>
+              <button type="button" class="invite-deck__arrow" data-deck-step="1" aria-label="Next page">&#8250;</button>
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -572,13 +572,13 @@
       </nav>
     </div>
   </footer>
-  <script src="scripts/offline-data.js?v=z5"></script>
-  <script src="scripts/campaign.js?v=z5" defer></script>
-  <script src="scripts/app.js?v=z5" defer></script>
-  <script src="memories.js?v=z5" defer></script>
-  <script src="ifs.js?v=z5" defer></script>
-  <script src="scripts/journey.js?v=z5" defer></script>
-  <script src="scripts/motion.js?v=z5" defer></script>
-  <script src="scripts/bks-network.js?v=z5" data-inject="false" defer></script>
+  <script src="scripts/offline-data.js?v=d1"></script>
+  <script src="scripts/campaign.js?v=d1" defer></script>
+  <script src="scripts/app.js?v=d1" defer></script>
+  <script src="memories.js?v=d1" defer></script>
+  <script src="ifs.js?v=d1" defer></script>
+  <script src="scripts/journey.js?v=d1" defer></script>
+  <script src="scripts/motion.js?v=d1" defer></script>
+  <script src="scripts/bks-network.js?v=d1" data-inject="false" defer></script>
 </body>
 </html>
