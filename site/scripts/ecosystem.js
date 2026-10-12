@@ -434,7 +434,7 @@
     if (id === "public") {
       return "<section class='eco-section' id='holding'><p class='eco-kicker'>The Puja</p>" +
         "<h2>Programme, theme, awards and visit notes live on the main Puja pages.</h2>" +
-        "<p>Details that are not yet confirmed, venue, committee, ritual clocks, remain to be announced. This page does not invent them.</p>" +
+        "<p>The venue is Munshi Bheri, Mahish Bathan, Salt Lake Sector 5, Kolkata. Details that are not yet confirmed, committee and ritual clocks, remain to be announced. This page does not invent them.</p>" +
         "<p><a href='../index.html#puja'>The Puja</a> · <a href='../index.html#visit'>Visit</a> · <a href='../index.html#awards'>Awards</a> · <a href='../index.html#programme'>Programme</a></p></section>" +
         renderFaq(exp, s);
     }
@@ -520,7 +520,7 @@
 
   function boot() {
     const base = document.documentElement.getAttribute("data-base") || "..";
-    fetch(base + "/data/content/ecosystem.json?v=eco5")
+    fetch(base + "/data/content/ecosystem.json?v=eco6")
       .then(function (res) {
         if (!res.ok) throw new Error("ecosystem json");
         return res.json();

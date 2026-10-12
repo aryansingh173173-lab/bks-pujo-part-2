@@ -1043,7 +1043,7 @@
                     "<a class='explore-card' href='https://bks-pujo-sponsor.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='9' r='6'/><path d='M8.5 14 7 22l5-3 5 3-1.5-8'/></svg></span><p class='kicker'>Organisations</p><h3>Sponsors</h3><p>Express sponsor interest. No payment.</p><span class='door-arrow'>Open this door</span></a>" +
       "<a class='explore-card' href='https://bks-pujo-government.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3 3 8h18z'/><path d='M4 10h16M3 21h18M6 10v8M10 10v8M14 10v8M18 10v8'/></svg></span><p class='kicker'>Institutions</p><h3>Government &amp; Influencers</h3><p>Request a briefing. No endorsement claimed.</p><span class='door-arrow'>Open this door</span></a>" +
       "<a class='explore-card' href='https://bks-pujo-farmtech-agritech.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 21v-9'/><path d='M12 12C12 7 8.5 5 4 5c0 5 3.5 7 8 7z'/><path d='M12 14c0-4 3-6 8-6 0 4-3 6-8 6z'/></svg></span><p class='kicker'>Livelihood</p><h3>Farmers / FarmTech + AgriTech</h3><p>Express farmer interest. Not enrolment.</p><span class='door-arrow'>Open this door</span></a>" +
-      "<a class='explore-card' href='https://bks-pujo-public.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3c2 3 3 4.5 3 6.5a3 3 0 0 1-6 0C9 7.5 10 6 12 3z'/><path d='M4 15h16c-1 3-4 5-8 5s-7-2-8-5z'/></svg></span><p class='kicker'>Gathering</p><h3>Public / Puja</h3><p>Explore the Puja. Venue still TBA.</p><span class='door-arrow'>Open this door</span></a>" +
+      "<a class='explore-card' href='https://bks-pujo-public.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3c2 3 3 4.5 3 6.5a3 3 0 0 1-6 0C9 7.5 10 6 12 3z'/><path d='M4 15h16c-1 3-4 5-8 5s-7-2-8-5z'/></svg></span><p class='kicker'>Gathering</p><h3>Public / Puja</h3><p>Explore the Puja at Munshi Bheri, Salt Lake Sector 5.</p><span class='door-arrow'>Open this door</span></a>" +
       "<a class='explore-card' href='https://bks-pujo-nrb.vercel.app/'><span class='door-icon' aria-hidden='true'><svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'/><path d='M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18'/></svg></span><p class='kicker'>Diaspora</p><h3>NRB / Supporters</h3><p>Express supporter interest. No UPI or 80G here.</p><span class='door-arrow'>Open this door</span></a>" +
       "</div></section>" +
       "<div class='grid cols-2'>" + paths + "</div>" +
@@ -1206,7 +1206,6 @@
       const title = ev.title[lang] || ev.title.en;
       const desc = ev.description[lang] || ev.description.en;
       const timeLabel = lang === "bn" ? "সময়: TBA" : lang === "hi" ? "समय: TBA" : "Time: TBA";
-      const placeLabel = lang === "bn" ? "স্থান: TBA" : lang === "hi" ? "स्थान: TBA" : "Place: TBA";
       const shareLabel = lang === "bn" ? "শেয়ারের খসড়া" : lang === "hi" ? "साझा मसौदा" : "Share draft text";
       const civic = lang === "bn" ? "নাগরিক ছুটি: বি কে এস অনুষ্ঠান নয়" : lang === "hi" ? "नागरिक छुट्टी: बीकेएस कार्यक्रम नहीं" : "Civic holiday, not a BKS event";
       const d = formatCivicDate(ev.date, lang);
@@ -1218,7 +1217,7 @@
         "<span class='badge badge-tba'>TBA</span>" +
         "<h3>" + title + "</h3>" +
         "<p class='muted'>" + civic + "</p>" +
-        "<p class='event-meta'><time datetime='" + ev.date + "'>" + ev.date + "</time> · " + timeLabel + " · " + placeLabel + "</p>" +
+        "<p class='event-meta'><time datetime='" + ev.date + "'>" + ev.date + "</time> · " + timeLabel + "</p>" +
         "<p>" + desc + "</p>" +
         "<p class='event-actions'><button type='button' class='btn btn-secondary' data-share='" + ev.event_id + "'>" + shareLabel + "</button></p>" +
         "</div>";
