@@ -54,7 +54,8 @@
     participate: { en: "How to Participate", bn: "কীভাবে অংশ নেবেন", hi: "कैसे भाग लें" },
     "pujo-2025": { en: "BKS Pujo 2025", bn: "BKS পুজো ২০২৫", hi: "BKS पूजा 2025" },
     visit: { en: "Plan your visit", bn: "আসার পরিকল্পনা", hi: "आने की योजना" },
-    progress: { en: "Puja Progress", bn: "পুজোর প্রস্তুতি", hi: "पूजा की तैयारी" }
+    progress: { en: "Puja Progress", bn: "পুজোর প্রস্তুতি", hi: "पूजा की तैयारी" },
+    glimpses: { en: "Glimpses", bn: "ঝলক", hi: "झलकियाँ" }
   };
   const CONTACT_CTA = { en: "Contact us", bn: "যোগাযোগ করুন", hi: "संपर्क करें" };
   const RELATED_LABEL = { en: "Related sites", bn: "সম্পর্কিত সাইট", hi: "संबंधित साइटें" };
@@ -296,6 +297,8 @@
     if (!spec || !spec.items || spec.items.some((item) => item.id === "progress")) return spec;
     const at = spec.items.findIndex((item) => item.id === "participate");
     spec.items.splice(at + 1, 0, { id: "progress", href: "#progress", labelPath: ["nav", "progress"], desktop: true, kind: "page" });
+    // Glimpses of Durga Puja follows Puja Progress.
+    spec.items.splice(at + 2, 0, { id: "glimpses", href: "#glimpses", labelPath: ["nav", "glimpses"], desktop: true, kind: "page" });
     return spec;
   }
 
@@ -371,7 +374,7 @@
       const RELATED = ["bks-bengal", "pujo-2025", "jai-kisan", "krl-media", "krl-teams"];
       const ABOUT = { en: "About us", bn: "আমাদের কথা", hi: "हमारे बारे में" };
       let html = "";
-      ["home", "puja", "visit", "participate", "progress"].forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
+      ["home", "puja", "visit", "participate", "progress", "glimpses"].forEach(function (id) { if (byId[id]) html += itemLink(byId[id], false); });
       html += "<a href='#contact' data-nav-kind='page'>" + (CONTACT_CTA[state.lang] || CONTACT_CTA.en) + "</a>";
       html += "<a href='#history' data-nav-kind='page'>" + (ABOUT[state.lang] || ABOUT.en) + "</a>";
       html += "<p class='nav-group-label' id='nav-g-related'>" + (RELATED_LABEL[state.lang] || RELATED_LABEL.en) + "</p>";
@@ -1278,6 +1281,7 @@
       participate: "How to Participate",
       memories: "Puja & Farming",
       visit: "Plan your visit",
+      glimpses: "Glimpses of Durga Puja",
       history: "About us",
       mission: "The Mission",
       programme: "Programme",
