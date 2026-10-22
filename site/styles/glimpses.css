@@ -253,3 +253,10 @@ html[data-sec="night"] .gl-end .btn-primary { background: #bf2b54; color: #f5e9d
 }
 .gl-hero__title { filter: drop-shadow(0 4px 0 rgba(60, 8, 24, 0.55)) drop-shadow(0 10px 30px rgba(60, 8, 24, 0.6)); }
 .gl-hero__lede { text-shadow: 0 2px 10px rgba(60, 8, 24, 0.85); color: #fff6ec; }
+
+/* Facebook video playing in place */
+.gl-fb__frame {
+  display: block; width: 100%; aspect-ratio: 9 / 14; border-radius: 14px; border: 3px solid transparent; overflow: hidden;
+  background: linear-gradient(#000, #000) padding-box, conic-gradient(from var(--gl-a), #ffd27a, #f5e9d0, #da6c81, #ffd27a) border-box;
+}
+@media (prefers-reduced-motion: no-preference) { .gl-fb__frame { animation: gl-spin 6s linear infinite; } }

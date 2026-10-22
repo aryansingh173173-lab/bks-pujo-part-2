@@ -48,6 +48,30 @@
     btn.replaceWith(frame);
   });
 
+  /* ---------- Facebook: play in place with Facebook's own player ---------- */
+  page.addEventListener("click", function (e) {
+    var card = e.target.closest("[data-fb]");
+    if (!card) return;
+    e.preventDefault();
+    var w = Math.max(220, Math.round(card.getBoundingClientRect().width));
+    var frame = document.createElement("iframe");
+    frame.src = "https://www.facebook.com/plugins/video.php?href=" + encodeURIComponent(card.getAttribute("data-fb")) +
+      "&show_text=false&autoplay=true&width=" + w;
+    frame.title = "Facebook video";
+    frame.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+    frame.allowFullscreen = true;
+    frame.setAttribute("scrolling", "no");
+    frame.className = "gl-fb__frame";
+    var li = card.parentNode;
+    li.classList.add("is-playing");
+    card.replaceWith(frame);
+    var out = document.createElement("a");
+    out.className = "gl-out"; out.href = card.href; out.target = "_blank"; out.rel = "noopener noreferrer";
+    var go = card.querySelector(".gl-fb__go");
+    out.textContent = go ? go.textContent : "Watch on Facebook ↗";
+    li.appendChild(out);
+  });
+
   /* ---------- Count up and rise in ---------- */
   function countUp(el) {
     var end = Number(el.getAttribute("data-gl-count")) || 0;
